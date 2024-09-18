@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Resume</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=SUSE:wght@100..800&display=swap" rel="stylesheet">
+
+  <style>
+    html, body {
+      height: 100%;
+      margin: 0;
+      font-family: "SUSE", sans-serif;
+    }
+    .container-wrapper {
+      min-height: 100vh; /* Full viewport height */
+      display: flex;
+      flex-direction: column;
+    }
+    .content-wrapper {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+    }
+    .container {
+      width: 100%;
+    }
+    .footer {
+      background-color: #f0f0fc; /* Lighter cyber pink */
+      padding: 10px;
+      text-align: center;
+    }
+    .navbar {
+      background-color: #f0f0fc; /* Slightly lighter cyber pink */
+    }
+    .section-title {
+      font-size: 2.5rem; /* Larger font size for section titles */
+      margin-top: 40px; /* Increased space above section titles */
+      margin-bottom: 20px; /* Increased space below section titles */
+      color: #25ced1; /* Use cyan for section titles */
+    }
+    .section-content {
+      margin-top: 10px;
+    }
+    .contact-info {
+      margin-top: 20px;
+    }
+    .contact-info a {
+      display: block;
+      margin-bottom: 10px;
+      color: #25ced1;
+      text-decoration: none;
+    }
+    .contact-info a:hover {
+      text-decoration: underline;
+    }
+    .office-address {
+      margin-top: 20px;
+    }
+    .office-address p {
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+<body>
+  <!-- Wrapper to ensure footer sticks to bottom -->
+  <div class="container-wrapper">
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light">
+      <a class="navbar-brand" href="#">Lorenzo Palazzetti</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="resume.html">Resume</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="research.html">Research Activities</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="publications.html">Publications</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Centered Content Section -->
+    <div class="content-wrapper">
+      <div class="container">
+
+        <!-- Contact Information Section -->
+        <div class="section">
+          <h2 class="section-title">Contact Information</h2>
+          <div class="section-content contact-info">
+            <div class="row">
+              <div class="col-md-4">
+                <a href="mailto:lorenzo.palazzetti@unipg.it"><i class="fas fa-envelope"></i> lorenzo.palazzetti@unipg.it</a>
+                <a href="mailto:lorenzo.palazzetti@collaboratori.unipg.it"><i class="fas fa-envelope"></i> lorenzo.palazzetti@collaboratori.unipg.it</a>
+                <a href="mailto:lorenzo.palazzetti@unifi.it"><i class="fas fa-envelope"></i> lorenzo.palazzetti@unifi.it</a>
+              </div>
+              <div class="col-md-4">
+                <a href="https://dblp.org/pid/306/6867.html" target="_blank"><i class="fas fa-book"></i> DBLP Profile</a>
+                <a href="https://scholar.google.it/citations?user=pHADTUQAAAAJ&hl=it" target="_blank"><i class="fas fa-graduation-cap"></i> Google Scholar</a>
+                <a href="https://www.linkedin.com/in/lorenzo-palazzetti-a706b61a3/" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
+              </div>
+              <div class="col-md-4">
+                <a href="https://www.scopus.com/authid/detail.uri?authorId=57422576800" target="_blank"><i class="fas fa-book"></i> Scopus</a>
+                <a href="https://orcid.org/0000-0003-3069-3971" target="_blank"><i class="fas fa-id-badge"></i> ORCID</a>
+                <a href="https://github.com/TheAnswer96/" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Office Address Section -->
+        <div class="section">
+          <h2 class="section-title">Office Address</h2>
+          <div class="section-content office-address">
+            <p><i class="fas fa-map-marker-alt"></i> Lorenzo Palazzetti</p>
+            <p>Università degli Studi di Perugia, Dipartimento di Matematica e Informatica</p>
+            <p>Via Vanvitelli, 1 06123 Perugia, Italy</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <p>&copy; 2024 Your Company. All rights reserved.</p>
+    </footer>
+  </div>
+
+  <!-- Bootstrap JS and dependencies -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

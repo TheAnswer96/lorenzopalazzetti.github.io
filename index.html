@@ -1,547 +1,134 @@
 <!DOCTYPE html>
-<html lang="en" class="fsvs">
-	<head>
-		<!-- Required meta tags -->
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-		<title>Lorenzo Palazzetti - Resume</title>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Profile Page</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=SUSE:wght@100..800&display=swap" rel="stylesheet">
 
-		<!--CSS-->
-		<link rel="stylesheet" href="css/fsvs.css">
-		<link href="https://fonts.googleapis.com/css?family=Hind+Vadodara:300,400,500,600,700" rel="stylesheet">
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
-		<link rel="stylesheet" href="css/chocolat.css">
-		<link rel="stylesheet" href="css/styles.css">
-		<link rel="stylesheet" href="css/font-awesome.min.css">
+  <style>
+    html, body {
+      height: 100%;
+      margin: 0;
+      font-family: "SUSE", sans-serif;
+    }
+    .container-wrapper {
+      min-height: 100vh; /* Full viewport height */
+      display: flex;
+      flex-direction: column;
+    }
+    .content-wrapper {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .container {
+      width: 100%;
+    }
+    .profile-pic {
+      border-radius: 15%;
+      width: 250px;
+      height: 300px;
+      object-fit: cover;
+    }
+    .footer {
+      background-color: #f0f0fc;
+      padding: 10px;
+      text-align: center;
+    }
+    .navbar {
+        background-color: #f0f0fc;
+    }
+    .bio {
+      margin-top: 20px;
+    }
+    .bio p {
+        text-align: justify; /* Justify text alignment */
+      letter-spacing: 1.5px; /* Adjust letter spacing here */
+    }
+    .profile-section {
+      text-align: left;
+    }
+    .navbar-brand i {
+      font-size: 1.5rem; /* Adjust icon size */
+    }
+  </style>
 
+</head>
+<body>
+  <!-- Wrapper to ensure footer sticks to bottom -->
+  <div class="container-wrapper">
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #f0f0fc;">
+      <a class="navbar-brand" href="index.html">Lorenzo Palazzetti</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="resume.html">Resume</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="research.html">Research Activities</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="publications.html">Publications</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
 
+    <!-- Centered Content Section -->
+    <div class="content-wrapper">
+      <div class="container profile-section">
+        <div class="row">
+          <div class="col-md-4 text-center">
+            <!-- Profile Picture -->
+            <img src="images/profile.jpg" alt="Profile Picture" class="profile-pic">
+          </div>
+          <div class="col-md-8">
+            <!-- Current Position -->
+            <h1 class="mt-3">Lorenzo Palazzetti</h1>
+            <h4 class="text-muted">Postdoctoral Researcher at University of Perugia</h4>
+            <!-- Biography -->
+            <div class="bio">
+              <h5>Bio</h5>
+              <p>
+                  I received the Bachelor and Master degrees in Computer Science from the University of Perugia, Italy, in 2018 and 2020, respectively.
+                  I earned a PhD in Computer Science with praise at the University of Florence, Italy, in 2024.
+                  I was a HALY.ID Research Fellow at University of Perugia.
+                  I am currently a Postdoctoral researcher at University of Perugia.
+                  My research interests include design and analysis of algorithms, combinatorial optimization, unmanned vehicles, computer vision.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
+    <!-- Footer -->
+    <footer class="footer">
+      <p>&copy; 2024 Your Company. All rights reserved.</p>
+    </footer>
+  </div>
 
-	</head>
-	<body>
-		<nav class="navigation">
-			<ul>
-				<li><a href="#slide-1">Home</a></li>
-				<li><a href="#slide-2">Education</a></li>
-				<li><a href="#slide-3">Experience</a></li>
-				<li><a href="#slide-4">Research Activities</a></li>
-				<li><a href="#slide-5">Publications</a></li>
-				<li><a href="#slide-6">Last Updates</a></li>
-				<li><a href="#slide-7">Contact</a></li>
-			</ul>
-		</nav>
-
-		<div id="fsvs-body" class="site-wrapper">
-
-			<div class="slide">
-			 	<div class="slide-wrapper">
-				 	<div class="slide-wrapper-inner">
-
-						<img src="images/profile_blurjpg.jpg" width="200" class="logo mb-3">
-
-						<h1>Lorenzo Palazzetti</h1>
-						<p class="subtitle mt-3">Computer Scientist, HALY.ID Fellow at the University of Perugia. &nbsp;|&nbsp; <a href="mailto:lorenzo.palazzetti@unifi.it">lorenzo.palazzetti@collaboratori.unipg.it</a>
-
-						<p class="lead">
-							He received the Bachelor and Master degrees in Computer Science from the University of Perugia, Italy, in 2018 and 2020, respectively.
-							He earned a PhD in Computer Science with praise at the University of Florence, Italy, in 2024.
-							He is currently a HALY.ID Fellow at Univerisity of Perugia.
-							His research interests include design and analysis of algorithms, combinatorial optimization, unmanned vehicles, computer vision.
-						</p>
-
-					</div>
-				</div>
-			</div><!--/ .slide-->
-
-			<div class="slide">
-			 	<div class="slide-wrapper">
-				 	<div class="slide-wrapper-inner">
-						<h2>Education</h2>
-
-						<div class="item">
-							<div class="row">
-								<div class="col-sm-12 col-md-3 text-left border-right pr-4">
-									<div class="date">2020-2023</div>
-									<h3>University of Florence</h3>
-									<p class="subtitle">PhD Student</p>
-									<p class="subtitle">
-										<b>Judgment:</b><br>
-										excellent with praise
-									</p>
-								</div>
-
-								<div class="col text-left mt-md-3">
-									<p class="pl-md-2 item-description">
-										Lorenzo explored and optimized drone-based solutions for last-mile delivery and smart agriculture. He devised novel strategies for complex combinatorial problems in route optimization and agricultural operations. Additionally, Lorenzo investigated computer vision techniques for pest monitoring in orchards using drones, leading to an autonomous protocol for pest management. His dissertation, "Optimizing Drone-based Applications for Delivery and Smart Agriculture," reflects his contributions to the field. Lorenzo was honored with a PhD with distinction for his significant contributions.
-									</p>
-								</div>
-							</div>
-						</div>
-
-						<div class="item">
-							<div class="row">
-								<div class="col-sm-12 col-md-3 text-left border-right pr-4">
-									<div class="date">2018-2020</div>
-									<h3>University of Perugia</h3>
-									<p class="subtitle">Master of Science</p>
-									<p class="subtitle">
-										<b>Judgment:</b><br>
-										Summa cum laude
-									</p>
-								</div>
-
-								<div class="col text-left mt-md-3">
-									<p class="pl-md-2 item-description">
-										Lorenzo's master's studies covers deeply algorithms, data structures, theoretical computer science, operative research, and artificial intelligence.
-										His thesis, "Routing Drones Being Aware of Wind Conditions," explored the influence of wind on drone routes, particularly in last-mile delivery contexts.
-										He revealed the substantial impact of wind on drone flight paths and optimized routes using various algorithms.
-										Synthetic simulations were employed to conduct feasibility analyses leveraging on those algorithms.
-									</p>
-								</div>
-							</div>
-						</div>
-
-						<div class="item">
-							<div class="row">
-								<div class="col-sm-12 col-md-3 text-left border-right pr-4">
-									<div class="date">2015-2018</div>
-									<h3>University of Perugia</h3>
-									<p class="subtitle">Bachelor of Science</p>
-									<p class="subtitle">
-										<b>Judgment:</b><br>
-										104/110
-									</p>
-								</div>
-
-								<div class="col text-left mt-md-3">
-									<p class="pl-md-2 item-description">
-										During his undergraduate studies, Lorenzo delved into the core principles of computer science, focusing on algorithms, data structures, networking, and programming.
-										For his thesis titled "Lattice-Based Cryptography," Lorenzo embarked on an exploration of cryptographic systems robust against Quantum Computers.
-										Inspired by NTRU, he developed a cryptosystem designed to withstand quantum attacks.
-								</div>
-							</div>
-						</div>
-
-
-					</div>
-				</div>
-			</div><!--/ .slide-->
-
-
-			<div class="slide">
-			 	<div class="slide-wrapper">
-				 	<div class="slide-wrapper-inner">
-						<h2>Experiences</h2>
-
-
-						<div class="row">
-							<div class="col">
-								<h3 style="margin:0.5em">Work Experience</h3>
-								<ul class="list-unstyled">
-									<li><p class="subtitle-resume"> <b>11/2023</b> to <b>06/2024</b> Haly.ID Project Fellow, University of Perugia</p></li>
-									<li><p class="subtitle-resume"> <b>10/2019</b> to <b>12/2019</b> Internship on Recommender Systems, University of Perugia</p></li>
-									<li><p class="subtitle-resume"> <b>04/2018</b> to <b>06/2018</b> System Manager, Umbertide Municipality</p></li>
-									<li><p class="subtitle-resume"> <b>10/2019</b> to <b>12/2019</b> System Manager, Città di Castello Municipality</p></li>
-								</ul>
-							</div>
-							<div class="col">
-								<h3 style="margin:0.5em">Teaching Experience</h3>
-								<ul class="list-unstyled">
-									<li><p class="subtitle-resume"> <b>02/2024</b> to <b>now</b> Algorithm and Data Structures Teaching Assistant, University of Perugia</p></li>
-									<li><p class="subtitle-resume"> <b>10/2019</b> to <b>12/2019</b> Internship on Recommender Systems, University of Perugia</p></li>
-									<li><p class="subtitle-resume"> <b>11/2022</b> to <b>06/2023</b> Algorithm and Data Structures Tutoring, University of Perugia</p></li>
-									<li><p class="subtitle-resume">  <b>03/2022</b> to <b>06/2022</b> Algorithm and Data Structures Tutoring, University of Perugia</p></li>
-								</ul>
-							</div>
-						</div>
-
-					</div>
-				</div>
-
-			</div><!--/ .slide-->
-
-			<div class="slide">
-				<div class="slide-wrapper">
-					<div class="slide-wrapper-inner">
-						<h2>Research Activities</h2>
-						<div class="row">
-
-							<div class="col">
-								<h3>Classes and Seminars</h3>
-								<ul class="list-unstyled">
-								    <li><p class="fs-6" style="text-align:left"><em>A Gentle Introduction to Computer Vision for Pest Management</em>, Parma, Italy. <strong>seminar</strong>.</p></li>
-								    <li><p class="fs-6" style="text-align:left"><em>Introduction to Computer Vision</em>, Perugia, Italy. <strong>class</strong>.</p></li>
-								    <li><p class="fs-6" style="text-align:left"><em>Next-Generation Farming: Drone Technology and Computer Vision to Mitigate Stink Bug Infestations</em>, Braunschweig, Germany. <strong>seminar</strong>.</p></li>
-								    <li><p class="fs-6" style="text-align:left"><em>Transforming Farming with Drones: Harnessing Data for Precision Agriculture</em>, Perugia, Italy. <strong>class</strong>.</p></li>
-								    <li><p class="fs-6" style="text-align:left"><em>Halyomorpha Halys Detection using Drone-Captured Images and YOLOv5</em>, Perugia, Italy. <strong>seminar</strong>.</p></li>
-								    <li><p class="fs-6" style="text-align:left"><em>Exploring the Advancements in Real-Time Object Detection: An Insight into DJI Matrice's Application</em>, Perugia, Italy. <strong>seminar</strong>.</p></li>
-								    <li><p class="fs-6" style="text-align:left"><em>UNIPG Report: Release of the Latest Drone Application, Machine Learning Advancements, and Preliminary Time Series Analysis</em>, Perugia, Italy. <strong>seminar</strong>.</p></li>
-								    <li><p class="fs-6" style="text-align:left"><em>Machine Learning Advancements in Haly.ID project</em>, Perugia, Italy. <strong>seminar</strong>.</p></li>
-								    <li><p class="fs-6" style="text-align:left"><em>A Discussion about Smart Agriculture Technologies for Scouting Halyomorpha halys in Orchards</em>, Rolla, MO, USA. <strong>seminar</strong>.</p></li>
-								    <li><p class="fs-6" style="text-align:left"><em>Routing Drones Being Aware of Wind Conditions</em>, Perugia, Italy. <strong>class</strong>.</p></li>
-								    <li><p class="fs-6" style="text-align:left"><em>Drones & their Applications</em>, Perugia, Italy. <strong>class</strong>.</p></li>
-								    <li><p class="fs-6" style="text-align:left"><em>Transaction & Fork Bitcoin</em>, Perugia, Italy. <strong>seminar</strong>.</p></li>
-								    <li><p class="fs-6" style="text-align:left"><em>Tor & deanonymization attacks</em>, Perugia, Italy. <strong>seminar</strong>.</p></li>
-								</ul>
-							</div>
-							<div class="col">
-								<h3>Technical Program Committee Member</h3>
-								<ul class="list-unstyled">
-									<li>
-										<p class="fs-6" style="text-align:left">2024 IEEE LCN Special Track on Algorithmic Solutions for Drone- and Robot-based Networks (ASDRoNet)</p>
-									</li>
-									<li>
-										<p class="fs-6" style="text-align:left">2024 IEEE Intl. Conf. on Metrology for Agriculture and Forestry</p>
-									</li>
-									<li>
-										<p class="fs-6" style="text-align:left">ALLSENSORS (2024)</p>
-									</li>
-								</ul>
-								<h3>Web Chair</h3>
-								<ul class="list-unstyled">
-									<li>
-										<p class="fs-6" style="text-align:left">2024 IEEE LCN Special Track on Algorithmic Solutions for Drone- and Robot-based Networks (ASDRoNet)</p>
-									</li>
-									<li>
-										<p class="fs-6" style="text-align:left">2024 IEEE Intl. Conf. on Metrology for Agriculture and Forestry</p>
-									</li>
-									<li>
-										<p class="fs-6" style="text-align:left">2023 IEEE Intl. Work. on Wireless Sensors and Drones in the Internet of Things (Wi-DroIT) </p>
-									</li>
-								</ul>
-								<h3>Publicity Chair</h3>
-								<ul class="list-unstyled">
-									<li>
-										<p class="fs-6" style="text-align:left">2024 IEEE LCN Special Track on Algorithmic Solutions for Drone- and Robot-based Networks (ASDRoNet)</p>
-									</li>
-									<li>
-										<p class="fs-6" style="text-align:left">2023 IEEE Intl. Work. on Wireless Sensors and Drones in the Internet of Things (Wi-DroIT) </p>
-									</li>
-								</ul>
-							</div>
-							<div class="col">
-								<h3>Review Activity - Journals</h3>
-								<ul class="list-unstyled">
-									<li>
-										<p class="fs-6" style="text-align:left">Taylor and Francis Transportmetrica B: Transport Dynamics.</p>
-									</li>
-									<li>
-										<p class="fs-6" style="text-align:left">Elsevier Pervasive and Mobile Computing (PMC).</p>
-									</li>
-									<li>
-										<p class="fs-6" style="text-align:left"> IEEE Transactions on Mobile Computing (TMC).</p>
-									</li>
-									<li>
-										<p class="fs-6" style="text-align:left">PAGEPress Journal of Agricultural Engineering (JAE).</p>
-									</li>
-									<li>
-										<p class="fs-6" style="text-align:left"> Tech Science Press Computers, Materials & Continua (CMC).</p>
-									</li>
-								</ul>
-								<h3>Review Activity - Conferences</h3>
-								<ul class="list-unstyled">
-									<li>
-										<p class="fs-6" style="text-align:left">ACM SIGKDD (2022).</p>
-									</li>
-									<li>
-										<p class="fs-6" style="text-align:left">IEEE WoWMoM (2022).</p>
-									</li>
-									<li>
-										<p class="fs-6" style="text-align:left">AAMAS (2022).</p>
-									</li>
-									<li>
-										<p class="fs-6" style="text-align:left">MetroAgriFor (2023).</p>
-									</li>
-									<li>
-										<p class="fs-6" style="text-align:left">IEEE Wi-DroIT (2023, 2024).</p>
-									</li>
-									<li>
-										<p class="fs-6" style="text-align:left">IEEE WoWMoM (2024).</p>
-									</li>
-									<li>
-										<p class="fs-6" style="text-align:left">IEEE DCOSS (2024).</p>
-									</li>
-								</ul>
-							</div>
-						</div>
-					</div>
-
-				</div>
-
-			</div><!--/ .slide-->
-
-			<div class="slide">
-			 	<div class="slide-wrapper">
-				 	<div class="slide-wrapper-inner">
-						<h2>Publications</h2>
-						<div class="row">
-							<div class="col">
-								<h3 style="margin:0.5em">Journal</h3>
-								<ul class="list-unstyled">
-									<li>
-										<p class="fs-5 text-wrap" style="text-align:left">Daniele Giannetti, Niccolò Patelli, <strong>Lorenzo Palazzetti</strong>, Francesco Betti Sorbelli, Cristina M. Pinotti, and Lara Maistrello, "<em>First use of unmanned aerial vehicles to monitor Halyomorpha halys and recognize it using Artificial Intelligence</em>". <strong>Wiley Pest Management Science</strong> (<em>accepted</em>)</p>
-									</li>
-									<li>
-										<p class="fs-5 text-wrap" style="text-align:left">Francesco Betti Sorbelli, Federico Corò, Sajal K. Das, <strong>Lorenzo Palazzetti</strong>, and Cristina M. Pinotti, "<em>Drone-based Bug Detection in Orchards with Nets: A Novel Orienteering Approach</em>". <strong>ACM Transactions on Sensor Networks (TOSN)</strong> (<em>accepted</em>)</p>
-									</li>
-
-									<li>
-										<p class="fs-5 text-wrap" style="text-align:left">Francesco Betti Sorbelli, <strong>Lorenzo Palazzetti</strong>, Cristina M Pinotti, "<em>YOLO-based Detection of Halyomorpha halys in Orchards Using RGB Cameras and Drones</em>".  <strong>Computers and Electronics in Agriculture (CEA)</strong>, 213: 108228 2023</p>
-									</li>
-									<li>
-									     <p class="fs-5 text-wrap" style="text-align:left">Francesco Betti Sorbelli, Alfredo Navarra, <strong>Lorenzo Palazzetti</strong>, Cristina M. Pinotti, and Giuseppe Prencipe. "<em>Wireless IoT Sensors Data Collection Reward Maximization by Leveraging Multiple Energy-and Storage-Constrained UAVs</em>". <strong>Journal of Computer and System Sciences (JCSS)</strong>, 139:103475, 2024</p>
-									 </li>
-								    <li>
-								        <p class="fs-5 text-wrap" style="text-align:left">Francesco Betti Sorbelli, Federico Corò, Sajal K Das, <strong>Lorenzo Palazzetti</strong>, Cristina M Pinotti. "<em>How the Wind Can Be Leveraged for Saving Energy in a Truck-Drone Delivery System</em>". <strong>IEEE Transactions on Intelligent Transportation Systems (T-ITS)</strong>, 24(4):4038–4049, 2023</p>
-								    </li>
-								    <li>
-								        <p class="fs-5 text-wrap" style="text-align:left">Francesco Betti Sorbelli, Federico Corò, Sajal K Das, <strong>Lorenzo Palazzetti</strong>, Cristina M Pinotti. "<em>On the Scheduling of Conflictual Deliveries in a last-mile delivery scenario with truck-carried drones</em>". <strong>Pervasive and Mobile Computing (PMC)</strong>, page 101700, 2022</p>
-								    </li>
-								    <li>
-								        <p class="fs-5 text-wrap" style="text-align:left">Francesco Betti Sorbelli, Federico Corò, Punyasha Chatterjee, Sajjad Ghobadi, <strong>Lorenzo Palazzetti</strong>, and Cristina M.~Pinotti, "<em>A Novel Graph-Based Multi-Layer Framework for Managing Drone BVLoS Operations</em>". <strong>IEEE Transactions on Network and Service Management</strong> (<em>under review</em>)</p>
-								    </li>
-								    <li>
-								        <p class="fs-5 text-wrap" style="text-align:left">Lennart Almstedt, Davide Baltieri, Francesco Betti Sorbelli, Davide Cattozzi, Daniele Giannetti, Amin Kargar, Lara Maistrello, Alfredo Navarra, David Niederprüm, Brendan O’Flynn, <strong>Lorenzo Palazzetti</strong>, Niccolo Patelli, Luca Piccinini, Cristina M Pinotti, Lars Wolf, Dimitrios Zorbas,, "<em>Beyond The Naked Eye: Computer Vision for Detecting Brown Marmorated Stink Bug and Its Punctures</em>". <strong>IEEE Transactions on AgriFood Electronics</strong> (<em>under review</em>)</p>
-								    </li>
-								    <li>
-								        <p class="fs-5 text-wrap" style="text-align:left">Lennart Almstedt, Davide Baltieri, Francesco Betti Sorbelli, Davide Cattozzi, Daniele Giannetti, Amin Kargar, Lara Maistrello, Alfredo Navarra, David Niederprüm, Brendan O’Flynn, <strong>Lorenzo Palazzetti</strong>, Niccolo Patelli, Luca Piccinini, Cristina M Pinotti, Lars Wolf, Dimitrios Zorbas, "<em>A Comprehensive Pest Monitoring System for Brown Marmorated Stink Bug</em>". <strong>IEEE Transactions on AgriFood Electronics</strong> (<em>under review</em>)</p>
-								    </li>
-								    <li>
-								        <p class="fs-5 text-wrap" style="text-align:left"><strong>Lorenzo Palazzetti</strong>, Aravind Krishnaswamy Rangarajan, Alexandru Dinca, Bas Boom, Dan Popescu, Peter Offermans, and Cristina M.~Pinotti, "<em>The Hawk Eye Scan: Halyomorpha Halys Detection Relying on Aerial Tele Photos and Neural Networks</em>" <strong>Computers and Electronics in Agriculture (CEA)</strong> (<em>under review</em>)</p>
-								    </li>
-								</ul>
-							</div>
-							<div class="col">
-								<h3 style="margin:0.5em">Conference</h3>
-								<ul class="list-unstyled">
-									<li>
-								        <p class="fs-6" style="text-align:left">Francesco Betti Sorbelli, <strong>Lorenzo Palazzetti</strong>, Cristina M Pinotti, "<em>A Drone-Based Automated Halyomorpha Halys Scouting: A Case Study on Orchard Monitoring</em>". IEEE International Workshop on Metrology for Agriculture and Forestry, MetroAgriFor 2023 - Proceedings, 2023, pp. 380–385</p>
-								    </li>
-								    <li>
-								        <p class="fs-6" style="text-align:left">Francesco Betti Sorbelli, <strong>Lorenzo Palazzetti</strong>, Cristina M Pinotti, "<em>Preliminary Results for Halyomorpha Halys Monitoring Relying on a Custom Dataset</em>". IEEE International Workshop on Metrology for Agriculture and Forestry, MetroAgriFor 2023 - Proceedings, 2023, pp. 363–368</p>
-								    </li>
-								    <li>
-								        <p class="fs-6" style="text-align:left">Dinca Alexandru, Popescu Dan, Maria Cristina Pinotti, Ichim Loretta, <strong>Lorenzo Palazzetti</strong>, Angelescu Nicoleta, "<em>Halyomorpha Halys Detection in Orchard from UAV Images Using Convolutional Neural Networks</em>". Intl. Work Conf. on Artificial Neural Networks (IWANN): 315-326 (2023)</p>
-								    </li>
-								    <li>
-								        <p class="fs-6" style="text-align:left">Lennart Almstedt, Davide Baltieri, Francesco Betti Sorbelli, Davide Cattozzi, Daniele Giannetti, Amin Kargar, Lara Maistrello, Alfredo Navarra, David Niederprüm, Brendan O’Flynn, <strong>Lorenzo Palazzetti</strong>, Niccolo Patelli, Luca Piccinini, Cristina M Pinotti, Lars Wolf, Dimitrios Zorbas, "<em>Technological Innovations in Agriculture for Scouting Halyomorpha halys in Orchards</em>". 5th Intl. Workshop on Intelligent Systems for the Internet of Things (ISIOT) (2023): pp. 702–709.</p>
-								    </li>
-								    <li>
-								        <p class="fs-6" style="text-align:left">Francesco Betti Sorbelli, Punyasha Chatterjee, Federico Corò, <strong>Lorenzo Palazzetti</strong>, Cristina M Pinotti, "<em>A Novel Multi-Layer Framework for BVLoS Drone Operation: A Preliminary Study</em>". IEEE INFOCOM DroneCom workshop (2023): pp. 1-6.</p>
-								    </li>
-								    <li>
-								        <p class="fs-6" style="text-align:left">Francesco Betti Sorbelli, Alfredo Navarra, <strong>Lorenzo Palazzetti</strong>, Cristina M Pinotti, Giuseppe Prencipe "<em>Optimal and Heuristic Algorithms for Data Collection by Using an Energy-and Storage-Constrained Drone</em>". 18th Intl. Symposium on Algorithms and Experiments for Wireless Sensor Networks, (ALGOSENSORS 2022); pp. 18-30.</p>
-								    </li>
-								    <li>
-								        <p class="fs-6" style="text-align:left">Francesco Betti Sorbelli, Federico Corò, Sajal K. Das, Emanuele Di Bella, Lara Maistrello, <strong>Lorenzo Palazzetti</strong>, Cristina M. Pinotti "<em>A Drone-based Application for Scouting Halyomorpha halys Bugs in Orchards with Multifunctional Nets</em>". The 20th Intl. Conf. on Pervasive Computing and Communications (PerCom 2022), pp. 127–129. (<strong>best demo award</strong>)</p>
-								    </li>
-								    <li>
-								        <p class="fs-6" style="text-align:left">Francesco Betti Sorbelli, Federico Corò, Sajal K. Das, <strong>Lorenzo Palazzetti</strong>, and Cristina M. Pinotti. "<em>Greedy Algorithms for Scheduling Package Delivery with Multiple Drones</em>". 23rd Intl. Conf. on Distributed Computing and Networking (ICDCN 2022); pp. : 31-39. (<strong>best paper award</strong>)</p>
-								    </li>
-								    <li>
-								        <p class="fs-6" style="text-align:left">Francesco Betti Sorbelli, Federico Corò, Sajal K Das, <em>Lorenzo Palazzetti</em>, Cristina M Pinotti "<em>Drone-based optimal and heuristic orienteering algorithms towards bug detection in orchards</em>". 18th Int. Conf. on Distr. Computing in Sensor Systems (DCOSS 2022); pp. 117-124.</p>
-								    </li>
-								    <li>
-								        <p class="fs-6" style="text-align:left">Francesco Betti Sorbelli, Federico Corò, Sajal K. Das, <strong>Lorenzo Palazzetti</strong>, and Cristina M. Pinotti. "<em>Cooperative Truck-Drone Scheduling Approach for Last-Mile Deliveries</em>". In: Italian Conf. on Theoretical Computer Science (ICTCS 2021): pp. 40-45.</p>
-								    </li>
-								    <li>
-								        <p class="fs-6" style="text-align:left"><strong>Lorenzo Palazzetti</strong>, Cristina M. Pinotti, and Giulio Rigoni. "<em>A run in the wind: Favorable winds make the difference in drone delivery</em>". 17th Intl. Conf. on Distributed Computing in Sensor Systems (DCOSS 2021): pp. 109-116.</p>
-								    </li>
-								    <li>
-								        <p class="fs-6" style="text-align:left"><strong>Lorenzo Palazzetti</strong>. "<em>Routing Drones Being Aware of Wind Conditions: a Case Study</em>". 17th Intl. Conf. on Distributed Computing in Sensor Systems (DCOSS 2021): pp. 343-350.</p>
-								    </li>
-								</ul>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div><!--/ .slide-->
-
-
-			<div class="slide">
-				<div class="slide-wrapper">
-					<div class="slide-wrapper-inner">
-						<h2>Last Updates</h2>
-
-						<!--Gallery-->
-						<div class="row gallery chocolat-parent" data-chocolat-title="Portfolio">
-
-							<!--Gallery Item-->
-							<div class="col-sm-6 col-md-4 col-gallery" data-category="1" data-sort="value">
-								<figcaption>
-									<div class="parent">
-										<img src="images/placeholder-image-1.jpg" class="img-fluid w-75 p-3">
-										 <div class="child text-wrap">
-											<h3>Drone-based Bug Detection in Orchards with Nets: A Novel Orienteering Approach</h3>
-											<p>ACM Transactions on Sensor Networks (TOSN)</p>
-											<a href="https://github.com/TheAnswer96/TOSN_SOAP" class="btn chocolat-image" title="Enter your image caption here">More details</a>
-										</div>
-									</div>
-								</figcaption>
-							</div>
-
-							<!--Gallery Item-->
-							<div class="col-6 col-md-4 col-gallery">
-								<figcaption>
-									<div class="parent">
-										<img src="images/placeholder-image-2.jpg" class="img-fluid w-75 p-3">
-										 <div class="child text-wrap">
-											<h3>Wireless IoT Sensors Data Collection Reward Maximization by Leveraging Multiple Energy- and Storage-Constrained UAVs</h3>
-											<p>Journal of Computer and System Sciences (JCSS)</p>
-											<a href="https://github.com/TheAnswer96/JCSS23-Wireless-IoT-Sensors-Data-Collection-Reward-Using-Costrained-Drones" class="btn chocolat-image" title="Enter your image caption here">More details</a>
-										</div>
-									</div>
-								</figcaption>
-							</div>
-
-							<!--Gallery Item-->
-							<div class="col-6 col-md-4 col-gallery">
-								<figcaption>
-									<div class="parent">
-										<img src="images/placeholder-image-3.jpg" class="img-fluid w-75 p-3">
-										 <div class="child text-wrap">
-											<h3>How the Wind Can Be Leveraged for Saving Energy in a Truck-Drone Delivery System</h3>
-											<p>IEEE Transactions on Intelligent Transportation Systems (T-ITS)</p>
-											<a href="https://github.com/TheAnswer96/T-ITS23_bluesky-plugin" class="btn chocolat-image" title="Enter your image caption here">More details</a>
-										</div>
-									</div>
-								</figcaption>
-							</div>
-
-							<!--Gallery Item-->
-							<div class="col-sm-6 col-md-4 col-gallery">
-								<figcaption>
-									<div class="parent">
-										<img src="images/placeholder-image-4.jpg" class="img-fluid w-75 p-3">
-										 <div class="child text-wrap">
-											<h3>YOLO-based Detection of Halyomorpha halys in Orchards Using RGB Cameras and Drones</h3>
-											<p>Computer and Electronics in Agriculture (CEA)</p>
-											<a href="https://www.researchgate.net/publication/373658997_YOLO-based_Detection_of_Halyomorpha_halys_in_Orchards_Using_RGB_Cameras_and_Drones" class="btn chocolat-image" title="Enter your image caption here">More details</a>
-										</div>
-									</div>
-								</figcaption>
-							</div>
-
-							<!--Gallery Item-->
-							<div class="col-6 col-md-4 col-gallery">
-								<figcaption>
-									<div class="parent">
-										<img src="images/placeholder-image-5.jpg" class="img-fluid w-75 p-3">
-										 <div class="child text-wrap">
-											<h3>A Novel Multi-Layer Framework for BVLoS Drone Operation: A Preliminary Study</h3>
-											<p>IEEE Conference on Computer Communications Workshops (INFOCOM WKSHPS)</p>
-											<a href="https://www.researchgate.net/publication/368543363_A_Novel_Multi-Layer_Framework_for_BVLoS_Drone_Operation_A_Preliminary_Study" class="btn chocolat-image" title="Enter your image caption here">More details</a>
-										</div>
-									</div>
-								</figcaption>
-							</div>
-
-							<!--Gallery Item-->
-							<div class="col-6 col-md-4 col-gallery">
-								<figcaption>
-									<div class="parent">
-										<img src="images/placeholder-image-6.jpg" class="img-fluid w-75 p-3">
-										 <div class="child text-wrap">
-											<h3>On the Scheduling of Conflictual Deliveries in a Last-mile Delivery Scenario with Truck-carried Drones</h3>
-											<p>Pervasive and Mobile Computing</p>
-											<a href="https://www.researchgate.net/publication/364060518_On_the_Scheduling_of_Conflictual_Deliveries_in_a_Last-mile_Delivery_Scenario_with_Truck-carried_Drones" class="btn chocolat-image" title="Enter your image caption here">More details</a>
-										</div>
-									</div>
-								</figcaption>
-							</div>
-						</div>
-
-					</div>
-				</div>
-			</div><!--/ .slide-->
-
-			<div class="slide">
-				<div class="slide-wrapper">
-					<div class="slide-wrapper-inner">
-
-						<h2>Contact Details</h2>
-
-						<div class="container contact-details">
-							<div class="row">
-								<div class="col-md text-left">
-									<h2>Social Media</h2>
-									   <div class="row">
-										 <div class="col-md-6 text-center">
-										   <a href="https://github.com/TheAnswer96/"><img src="images/github-square.svg" width="75" height="75" alt="Icon 1"></a>
-										 </div>
-										 <div class="col-md-6 text-center">
-										   <a href="https://www.linkedin.com/in/lorenzo-palazzetti-a706b61a3/"><img src="images/linkedin.svg" width="75" height="75" alt="Icon 2"></a>
-										 </div>
-									   </div>
-									   <div class="row">
-										 <div class="col-md-6 text-center">
-										   <a href="https://orcid.org/0000-0003-3069-3971"><img src="images/orcid.svg" width="75" height="75" alt="Icon 3"></a>
-										 </div>
-										 <div class="col-md-6 text-center">
-										   <a href="https://www.scopus.com/authid/detail.uri?authorId=57422576800"><img src="images/scopus.svg" width="75" height="75" alt="Icon 4"></a>
-										 </div>
-									   </div>
-									   <div class="row">
-										 <div class="col-md-6 text-center">
-										   <a href="https://ieeexplore.ieee.org/author/37089030954"><img src="images/clarivate-square.svg" width="75" height="75" alt="Icon 5"></a>
-										 </div>
-										 <div class="col-md-6 text-center">
-										   <a href="https://scholar.google.it/citations?user=pHADTUQAAAAJ&hl=it"><img src="images/google-scholar-square.svg" width="75" height="75" alt="Icon 6"></a>
-										 </div>
-									   </div>
-									   <div class="row">
-										 <div class="col-md-6 text-center">
-										  <a href="https://www.researchgate.net/profile/Lorenzo-Palazzetti"><img src="images/researchgate.svg" width="75" height="75" alt="Icon 7"></a>
-										 </div>
-										 <div class="col-md-6 text-center">
-										   <a href="https://dblp.org/pid/306/6867.html"><img src="images/dblp-square.svg" width="75" height="75" alt="Icon 8"></a>
-										 </div>
-									   </div>
-								</div>
-								<div class="col-md text-right">
-									<h2>Email</h2>
-									<p class="lead"><a href="mailto:lorenzo.palazzetti@collaboratori.unipg.it">lorenzo.palazzetti@collaboratori.unipg.it</a></p>
-									<p class="lead"><a href="mailto:lorenzo.palazzetti@unifi.it">lorenzo.palazzetti@unifi.it</a></p>
-									<h2>Address</h2>
-									<p class="lead">Università degli Studi di Perugia. via Vanvitelli, 1 06123 Perugia.</p>
-								</div>
-							</div>
-						</div>
-						<div class="mt-4 pt-4" style="color:white;">
-							Template by <a style="color:white;" href="https://www.medialoot.com">Medialoot</a>
-						</div>
-
-					</div>
-				</div>
-			</div><!--/ .slide-->
-
-		</div><!--/ .site-wrapper-->
-
-
-		<!-- jQuery first, then Tether, then Bootstrap JS. -->
-		<script   src="https://code.jquery.com/jquery-3.2.1.slim.min.js"   integrity="sha256-k2WSCIexGzOj3Euiig+TlR8gA0EmPjuc79OEeY5L45g="   crossorigin="anonymous"></script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
-		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
-		<script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
-		<!--Full Screen Vertical Slider-->
-		<script type="text/javascript" src="js/fsvs.js"></script>
-		<script>
-		jQuery(document).ready(function($){
-		    var slider = $.fn.fsvs({
-		        speed               : 1200,
-		        bodyID              : 'fsvs-body',
-		        selector            : '> .slide',
-		        mouseDragEvents     : false
-		    });
-		});
-		</script>
-
-		<!-- Chocolat -->
-		<script type="text/javascript" src="js/jquery.chocolat.min.js"></script>
-		<script type="text/javascript">
-			$(document).ready(function(){
-			    $('.chocolat-parent').Chocolat();
-			});
-		</script>
-	</body>
+  <!-- Bootstrap JS and dependencies -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
 </html>

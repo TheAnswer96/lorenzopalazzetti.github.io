@@ -1,0 +1,356 @@
+<dblpperson name="Lorenzo Palazzetti" pid="306/6867" n="16">
+<person key="homepages/306/6867" mdate="2021-11-19">
+<author pid="306/6867">Lorenzo Palazzetti</author>
+</person>
+<r>
+<article key="journals/jcss/SorbelliNPPP24" mdate="2024-06-08">
+<author pid="25/927">Francesco Betti Sorbelli</author>
+<author pid="n/AlfredoNavarra">Alfredo Navarra</author>
+<author orcid="0000-0003-3069-3971" pid="306/6867">Lorenzo Palazzetti</author>
+<author orcid="0000-0002-8674-868X" pid="p/MCPinotti">Cristina M. Pinotti</author>
+<author pid="p/GiuseppePrencipe">Giuseppe Prencipe</author>
+<title>Wireless IoT sensors data collection reward maximization by leveraging multiple energy- and storage-constrained UAVs.</title>
+<pages>103475</pages>
+<year>2024</year>
+<month>February</month>
+<volume>139</volume>
+<journal>J. Comput. Syst. Sci.</journal>
+<ee type="oa">https://doi.org/10.1016/j.jcss.2023.103475</ee>
+<url>db/journals/jcss/jcss139.html#SorbelliNPPP24</url>
+</article>
+</r>
+<r>
+<article key="journals/tosn/SorbelliCDPP24" mdate="2024-06-18">
+<author orcid="0000-0003-0450-2721" pid="25/927">Francesco Betti Sorbelli</author>
+<author orcid="0000-0002-7321-3467" pid="222/8346">Federico Corò</author>
+<author orcid="0000-0002-9471-0868" pid="d/SajalKDas">Sajal K. Das 0001</author>
+<author orcid="0000-0003-3069-3971" pid="306/6867">Lorenzo Palazzetti</author>
+<author orcid="0000-0002-8674-868X" pid="p/MCPinotti">Cristina M. Pinotti</author>
+<title>Drone-Based Bug Detection in Orchards with Nets: A Novel Orienteering Approach.</title>
+<pages>68:1-68:28</pages>
+<year>2024</year>
+<month>May</month>
+<volume>20</volume>
+<journal>ACM Trans. Sens. Networks</journal>
+<number>3</number>
+<ee>https://doi.org/10.1145/3653713</ee>
+<url>db/journals/tosn/tosn20.html#SorbelliCDPP24</url>
+</article>
+</r>
+<r>
+<article key="journals/cea/SorbelliPP23" mdate="2024-02-05">
+<author orcid="0000-0003-0450-2721" pid="25/927">Francesco Betti Sorbelli</author>
+<author pid="306/6867">Lorenzo Palazzetti</author>
+<author orcid="0000-0002-8674-868X" pid="p/MCPinotti">Cristina M. Pinotti</author>
+<title>
+YOLO-based detection of
+<i>Halyomorpha halys</i>
+in orchards using RGB cameras and drones.
+</title>
+<pages>108228</pages>
+<year>2023</year>
+<month>October</month>
+<volume>213</volume>
+<journal>Comput. Electron. Agric.</journal>
+<ee type="oa">https://doi.org/10.1016/j.compag.2023.108228</ee>
+<url>db/journals/cea/cea213.html#SorbelliPP23</url>
+</article>
+</r>
+<r>
+<article key="journals/tits/SorbelliCPPR23" mdate="2023-07-27">
+<author orcid="0000-0003-0450-2721" pid="25/927">Francesco Betti Sorbelli</author>
+<author orcid="0000-0002-7321-3467" pid="222/8346">Federico Corò</author>
+<author orcid="0000-0003-3069-3971" pid="306/6867">Lorenzo Palazzetti</author>
+<author orcid="0000-0002-8674-868X" pid="p/MCPinotti">Cristina M. Pinotti</author>
+<author orcid="0000-0003-1901-5758" pid="226/3881">Giulio Rigoni</author>
+<title>How the Wind Can Be Leveraged for Saving Energy in a Truck-Drone Delivery System.</title>
+<pages>4038-4049</pages>
+<year>2023</year>
+<month>April</month>
+<volume>24</volume>
+<journal>IEEE Trans. Intell. Transp. Syst.</journal>
+<number>4</number>
+<ee type="oa">https://doi.org/10.1109/TITS.2023.3234627</ee>
+<url>db/journals/tits/tits24.html#SorbelliCPPR23</url>
+</article>
+</r>
+<r>
+<inproceedings key="conf/dcoss/AlmstedtBSCGKMN23" mdate="2024-08-04">
+<author orcid="0000-0002-0537-4955" pid="253/7142">Lennart Almstedt</author>
+<author pid="58/7404">Davide Baltieri</author>
+<author pid="25/927">Francesco Betti Sorbelli</author>
+<author pid="378/0136">Davide Cattozzi</author>
+<author pid="378/0259">Daniele Giannetti</author>
+<author pid="186/3391">Amin Kargar</author>
+<author orcid="0000-0002-2996-8993" pid="319/9973">Lara Maistrello</author>
+<author pid="n/AlfredoNavarra">Alfredo Navarra</author>
+<author pid="378/0686">David Niederprüm</author>
+<author orcid="0000-0002-5522-2597" pid="51/6418">Brendan O'Flynn</author>
+<author pid="306/6867">Lorenzo Palazzetti</author>
+<author pid="378/0283">Niccolò Patelli</author>
+<author pid="378/0839">Luca Piccinini</author>
+<author orcid="0000-0002-8674-868X" pid="p/MCPinotti">Cristina M. Pinotti</author>
+<author pid="w/LarsCWolf">Lars C. Wolf</author>
+<author pid="70/8084">Dimitrios Zorbas</author>
+<title>Technological Innovations in Agriculture for Scouting Halyomorpha Halys in Orchards.</title>
+<pages>702-709</pages>
+<year>2023</year>
+<booktitle>DCOSS-IoT</booktitle>
+<ee>https://doi.org/10.1109/DCOSS-IoT58021.2023.00110</ee>
+<crossref>conf/dcoss/2023</crossref>
+<url>db/conf/dcoss/dcoss2023.html#AlmstedtBSCGKMN23</url>
+</inproceedings>
+</r>
+<r>
+<inproceedings key="conf/infocom/SorbelliCCPP23" mdate="2024-02-05">
+<author pid="25/927">Francesco Betti Sorbelli</author>
+<author pid="76/3511">Punyasha Chatterjee</author>
+<author pid="222/8346">Federico Coro</author>
+<author pid="306/6867">Lorenzo Palazzetti</author>
+<author orcid="0000-0002-8674-868X" pid="p/MCPinotti">Cristina M. Pinotti</author>
+<title>A Novel Multi-Layer Framework for BVLoS Drone Operation: A Preliminary Study.</title>
+<pages>1-6</pages>
+<year>2023</year>
+<booktitle>INFOCOM Workshops</booktitle>
+<ee>https://doi.org/10.1109/INFOCOMWKSHPS57453.2023.10225806</ee>
+<crossref>conf/infocom/2023w</crossref>
+<url>db/conf/infocom/infocom2023w.html#SorbelliCCPP23</url>
+</inproceedings>
+</r>
+<r>
+<inproceedings key="conf/iwann/DincaPPIPA23" mdate="2024-02-05">
+<author pid="85/589">Alexandru Dinca</author>
+<author pid="13/2073-2">Dan Popescu 0002</author>
+<author orcid="0000-0002-8674-868X" pid="p/MCPinotti">Cristina Maria Pinotti</author>
+<author pid="82/2364">Loretta Ichim</author>
+<author pid="306/6867">Lorenzo Palazzetti</author>
+<author pid="143/2178">Nicoleta Angelescu</author>
+<title>Halyomorpha Halys Detection in Orchard from UAV Images Using Convolutional Neural Networks.</title>
+<pages>315-326</pages>
+<year>2023</year>
+<booktitle>IWANN (2)</booktitle>
+<ee>https://doi.org/10.1007/978-3-031-43078-7_26</ee>
+<crossref>conf/iwann/2023-2</crossref>
+<url>db/conf/iwann/iwann2023-2.html#DincaPPIPA23</url>
+</inproceedings>
+</r>
+<r>
+<article publtype="informal" key="journals/corr/abs-2301-05835" mdate="2023-09-30">
+<author pid="25/927">Francesco Betti Sorbelli</author>
+<author orcid="0000-0002-8787-6923" pid="76/3511">Punyasha Chatterjee</author>
+<author pid="222/8346">Federico Corò</author>
+<author pid="306/6867">Lorenzo Palazzetti</author>
+<author orcid="0000-0002-8674-868X" pid="p/MCPinotti">Cristina M. Pinotti</author>
+<title>A Novel Multi-Layer Framework for BVLoS Drone Operation: A Preliminary Study.</title>
+<year>2023</year>
+<volume>abs/2301.05835</volume>
+<journal>CoRR</journal>
+<ee type="oa">https://doi.org/10.48550/arXiv.2301.05835</ee>
+<url>db/journals/corr/corr2301.html#abs-2301-05835</url>
+</article>
+</r>
+<r>
+<article key="journals/percom/SorbelliCDPP22" mdate="2023-03-21">
+<author pid="25/927">Francesco Betti Sorbelli</author>
+<author pid="222/8346">Federico Corò</author>
+<author pid="d/SajalKDas">Sajal K. Das 0001</author>
+<author orcid="0000-0003-3069-3971" pid="306/6867">Lorenzo Palazzetti</author>
+<author orcid="0000-0002-8674-868X" pid="p/MCPinotti">Cristina M. Pinotti</author>
+<title>On the Scheduling of Conflictual Deliveries in a last-mile delivery scenario with truck-carried drones.</title>
+<pages>101700</pages>
+<year>2022</year>
+<volume>87</volume>
+<journal>Pervasive Mob. Comput.</journal>
+<ee>https://doi.org/10.1016/j.pmcj.2022.101700</ee>
+<url>db/journals/percom/percom87.html#SorbelliCDPP22</url>
+</article>
+</r>
+<r>
+<inproceedings key="conf/algosensors/SorbelliNPPP22" mdate="2023-03-21">
+<author pid="25/927">Francesco Betti Sorbelli</author>
+<author pid="n/AlfredoNavarra">Alfredo Navarra</author>
+<author pid="306/6867">Lorenzo Palazzetti</author>
+<author orcid="0000-0002-8674-868X" pid="p/MCPinotti">Cristina M. Pinotti</author>
+<author pid="p/GiuseppePrencipe">Giuseppe Prencipe</author>
+<title>Optimal and Heuristic Algorithms for Data Collection by Using an Energy- and Storage-Constrained Drone.</title>
+<pages>18-30</pages>
+<year>2022</year>
+<booktitle>ALGOSENSORS</booktitle>
+<ee>https://doi.org/10.1007/978-3-031-22050-0_2</ee>
+<crossref>conf/algosensors/2022</crossref>
+<url>db/conf/algosensors/algosensors2022.html#SorbelliNPPP22</url>
+</inproceedings>
+</r>
+<r>
+<inproceedings key="conf/dcoss/SorbelliCDPP22" mdate="2023-03-21">
+<author orcid="0000-0003-0450-2721" pid="25/927">Francesco Betti Sorbelli</author>
+<author pid="222/8346">Federico Corò</author>
+<author pid="d/SajalKDas">Sajal K. Das 0001</author>
+<author pid="306/6867">Lorenzo Palazzetti</author>
+<author orcid="0000-0002-8674-868X" pid="p/MCPinotti">Cristina M. Pinotti</author>
+<title>Drone-based Optimal and Heuristic Orienteering Algorithms Towards Bug Detection in Orchards.</title>
+<pages>117-124</pages>
+<year>2022</year>
+<booktitle>DCOSS</booktitle>
+<ee>https://doi.org/10.1109/DCOSS54816.2022.00032</ee>
+<crossref>conf/dcoss/2022</crossref>
+<url>db/conf/dcoss/dcoss2022.html#SorbelliCDPP22</url>
+</inproceedings>
+</r>
+<r>
+<inproceedings key="conf/icdcn/SorbelliC0PP22" mdate="2023-03-21">
+<author orcid="0000-0003-0450-2721" pid="25/927">Francesco Betti Sorbelli</author>
+<author pid="222/8346">Federico Corò</author>
+<author pid="d/SajalKDas">Sajal K. Das 0001</author>
+<author pid="306/6867">Lorenzo Palazzetti</author>
+<author orcid="0000-0002-8674-868X" pid="p/MCPinotti">Cristina M. Pinotti</author>
+<title>Greedy Algorithms for Scheduling Package Delivery with Multiple Drones.</title>
+<pages>31-39</pages>
+<year>2022</year>
+<booktitle>ICDCN</booktitle>
+<ee>https://doi.org/10.1145/3491003.3491028</ee>
+<crossref>conf/icdcn/2022</crossref>
+<url>db/conf/icdcn/icdcn2022.html#SorbelliC0PP22</url>
+</inproceedings>
+</r>
+<r>
+<inproceedings key="conf/percom/SorbelliCDBMPP22" mdate="2023-09-30">
+<author orcid="0000-0003-0450-2721" pid="25/927">Francesco Betti Sorbelli</author>
+<author pid="222/8346">Federico Corò</author>
+<author pid="d/SajalKDas">Sajal K. Das 0001</author>
+<author pid="320/0364">Emanuele Di Bella</author>
+<author orcid="0000-0002-2996-8993" pid="319/9973">Lara Maistrello</author>
+<author pid="306/6867">Lorenzo Palazzetti</author>
+<author orcid="0000-0002-8674-868X" pid="p/MCPinotti">Cristina M. Pinotti</author>
+<title>A Drone-based Application for Scouting Halyomorpha halys Bugs in Orchards with Multifunctional Nets.</title>
+<pages>127-129</pages>
+<year>2022</year>
+<booktitle>PerCom Workshops</booktitle>
+<ee>https://doi.org/10.1109/PerComWorkshops53856.2022.9767309</ee>
+<crossref>conf/percom/2022w</crossref>
+<url>db/conf/percom/percomw2022.html#SorbelliCDBMPP22</url>
+</inproceedings>
+</r>
+<r>
+<inproceedings key="conf/dcoss/PalazzettiPR21" mdate="2024-02-05">
+<author pid="306/6867">Lorenzo Palazzetti</author>
+<author orcid="0000-0002-8674-868X" pid="p/MCPinotti">Cristina M. Pinotti</author>
+<author orcid="0000-0003-1901-5758" pid="226/3881">Giulio Rigoni</author>
+<title>A run in the wind: favorable winds make the difference in drone delivery.</title>
+<pages>109-116</pages>
+<year>2021</year>
+<booktitle>DCOSS</booktitle>
+<ee>https://doi.org/10.1109/DCOSS52077.2021.00031</ee>
+<crossref>conf/dcoss/2021</crossref>
+<url>db/conf/dcoss/dcoss2021.html#PalazzettiPR21</url>
+</inproceedings>
+</r>
+<r>
+<inproceedings key="conf/dcoss/Palazzetti21" mdate="2021-11-19">
+<author pid="306/6867">Lorenzo Palazzetti</author>
+<title>Routing Drones Being Aware of Wind Conditions: a Case Study.</title>
+<pages>343-350</pages>
+<year>2021</year>
+<booktitle>DCOSS</booktitle>
+<ee>https://doi.org/10.1109/DCOSS52077.2021.00062</ee>
+<crossref>conf/dcoss/2021</crossref>
+<url>db/conf/dcoss/dcoss2021.html#Palazzetti21</url>
+</inproceedings>
+</r>
+<r>
+<inproceedings key="conf/ictcs/SorbelliC0PP21" mdate="2023-03-10">
+<author pid="25/927">Francesco Betti Sorbelli</author>
+<author pid="222/8346">Federico Corò</author>
+<author pid="d/SajalKDas">Sajal K. Das 0001</author>
+<author pid="306/6867">Lorenzo Palazzetti</author>
+<author pid="p/MCPinotti">Cristina M. Pinotti</author>
+<title>Cooperative Truck-Drone Scheduling Approach for Last-Mile Deliveries.</title>
+<pages>40-45</pages>
+<year>2021</year>
+<booktitle>ICTCS</booktitle>
+<ee type="oa">https://ceur-ws.org/Vol-3072/paper4.pdf</ee>
+<crossref>conf/ictcs/2021</crossref>
+<url>db/conf/ictcs/ictcs2021.html#SorbelliC0PP21</url>
+</inproceedings>
+</r>
+<coauthors n="25" nc="1">
+<co c="0">
+<na f="a/Almstedt:Lennart" pid="253/7142">Lennart Almstedt</na>
+</co>
+<co c="0">
+<na f="a/Angelescu:Nicoleta" pid="143/2178">Nicoleta Angelescu</na>
+</co>
+<co c="0">
+<na f="b/Baltieri:Davide" pid="58/7404">Davide Baltieri</na>
+</co>
+<co c="0">
+<na f="b/Bella:Emanuele_Di" pid="320/0364">Emanuele Di Bella</na>
+</co>
+<co c="0">
+<na f="c/Cattozzi:Davide" pid="378/0136">Davide Cattozzi</na>
+</co>
+<co c="0">
+<na f="c/Chatterjee:Punyasha" pid="76/3511">Punyasha Chatterjee</na>
+</co>
+<co c="0" n="2">
+<na f="c/Coro:Federico" pid="222/8346">Federico Coro</na>
+<na>Federico Corò</na>
+</co>
+<co c="0">
+<na f="d/Das_0001:Sajal_K=" pid="d/SajalKDas">Sajal K. Das 0001</na>
+</co>
+<co c="0">
+<na f="d/Dinca:Alexandru" pid="85/589">Alexandru Dinca</na>
+</co>
+<co c="0">
+<na f="g/Giannetti:Daniele" pid="378/0259">Daniele Giannetti</na>
+</co>
+<co c="0">
+<na f="i/Ichim:Loretta" pid="82/2364">Loretta Ichim</na>
+</co>
+<co c="0">
+<na f="k/Kargar:Amin" pid="186/3391">Amin Kargar</na>
+</co>
+<co c="0">
+<na f="m/Maistrello:Lara" pid="319/9973">Lara Maistrello</na>
+</co>
+<co c="0">
+<na f="n/Navarra:Alfredo" pid="n/AlfredoNavarra">Alfredo Navarra</na>
+</co>
+<co c="0">
+<na f="n/Niederpr=uuml=m:David" pid="378/0686">David Niederprüm</na>
+</co>
+<co c="0">
+<na f="o/O=Flynn:Brendan" pid="51/6418">Brendan O'Flynn</na>
+</co>
+<co c="0">
+<na f="p/Patelli:Niccol=ograve=" pid="378/0283">Niccolò Patelli</na>
+</co>
+<co c="0">
+<na f="p/Piccinini:Luca" pid="378/0839">Luca Piccinini</na>
+</co>
+<co c="0" n="3">
+<na f="p/Pinotti:Maria_Cristina" pid="p/MCPinotti">Maria Cristina Pinotti</na>
+<na>Cristina Maria Pinotti</na>
+<na>Cristina M. Pinotti</na>
+</co>
+<co c="0">
+<na f="p/Popescu_0002:Dan" pid="13/2073-2">Dan Popescu 0002</na>
+</co>
+<co c="0">
+<na f="p/Prencipe:Giuseppe" pid="p/GiuseppePrencipe">Giuseppe Prencipe</na>
+</co>
+<co c="0">
+<na f="r/Rigoni:Giulio" pid="226/3881">Giulio Rigoni</na>
+</co>
+<co c="0">
+<na f="s/Sorbelli:Francesco_Betti" pid="25/927">Francesco Betti Sorbelli</na>
+</co>
+<co c="0">
+<na f="w/Wolf:Lars_C=" pid="w/LarsCWolf">Lars C. Wolf</na>
+</co>
+<co c="0">
+<na f="z/Zorbas:Dimitrios" pid="70/8084">Dimitrios Zorbas</na>
+</co>
+</coauthors>
+</dblpperson>

@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Publications</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=SUSE:wght@100..800&display=swap" rel="stylesheet">
+
+  <style>
+    html, body {
+      height: 100%;
+      margin: 0;
+      font-family: "SUSE", sans-serif;
+    }
+    .container-wrapper {
+      min-height: 100vh; /* Full viewport height */
+      display: flex;
+      flex-direction: column;
+    }
+    .content-wrapper {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+    }
+    .container {
+      width: 100%;
+    }
+    .footer {
+      background-color: #f0f0fc; /* Lighter cyber pink */
+      padding: 10px;
+      text-align: center;
+    }
+    .navbar {
+      background-color: #f0f0fc; /* Slightly lighter cyber pink */
+    }
+    .section-title {
+      font-size: 2.5rem; /* Larger font size for section titles */
+      margin-top: 40px; /* Increased space above section titles */
+      margin-bottom: 20px; /* Increased space below section titles */
+      color: #25ced1; /* Use cyan for section titles */
+    }
+    .section-content {
+      margin-top: 10px;
+    }
+    .entry {
+      margin-bottom: 20px;
+      position: relative;
+      padding-bottom: 20px;
+    }
+    .entry:after {
+      content: '';
+      display: block;
+      width: 100%;
+      height: 2px;
+      background-color: #9eb3c2;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      margin-top: 20px;
+    }
+    .entry:last-child:after {
+      display: none; /* Remove line for the last entry */
+    }
+    .btn-custom {
+      background-color: #25ced1; /* Same color as the section title */
+      color: #fff; /* White text color */
+      border: none; /* Remove default border */
+      padding: 10px 20px; /* Add padding */
+      font-size: 1rem; /* Font size */
+      border-radius: 5px; /* Rounded corners */
+      text-decoration: none; /* Remove underline */
+      margin-bottom: 10px;
+    }
+    .btn-custom:hover {
+      background-color: #7bdff2; /* Darker shade for hover effect */
+    }
+  </style>
+</head>
+<body>
+  <!-- Wrapper to ensure footer sticks to bottom -->
+  <div class="container-wrapper">
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light">
+      <a class="navbar-brand" href="#">Lorenzo Palazzetti</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="resume.html">Resume</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="research.html">Research Activities</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="publications.html">Publications</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Centered Content Section -->
+    <div class="content-wrapper">
+      <div class="container">
+        <!-- Journal Publications Section -->
+        <div class="section">
+          <h2 class="section-title">Publications</h2>
+          <div class="section-content">
+              <div id="publications">
+                  <ol>
+                    <li class="publication">Francesco Betti Sorbelli, Alfredo Navarra, <b>Lorenzo Palazzetti</b>, Cristina M. Pinotti, Giuseppe Prencipe. "Wireless IoT sensors data collection reward maximization by leveraging multiple energy- and storage-constrained UAVs.". J. Comput. Syst. Sci. (2024) 103475. DOI: <a href="https://doi.org/10.1016/j.jcss.2023.103475" target="_blank">https://doi.org/10.1016/j.jcss.2023.103475</a></li>
+                    <li class="publication">Francesco Betti Sorbelli, Federico Corò, Sajal K. Das 0001, <b>Lorenzo Palazzetti</b>, Cristina M. Pinotti. "Drone-Based Bug Detection in Orchards with Nets: A Novel Orienteering Approach.". ACM Trans. Sens. Networks (2024) 68:1-68:28. DOI: <a href="https://doi.org/10.1145/3653713" target="_blank">https://doi.org/10.1145/3653713</a></li>
+                    <li class="publication">Francesco Betti Sorbelli, <b>Lorenzo Palazzetti</b>, Cristina M. Pinotti. "
+                  YOLO-based detection of
+                  ". Comput. Electron. Agric. (2023) 108228. DOI: <a href="https://doi.org/10.1016/j.compag.2023.108228" target="_blank">https://doi.org/10.1016/j.compag.2023.108228</a></li>
+                    <li class="publication">Francesco Betti Sorbelli, Federico Corò, <b>Lorenzo Palazzetti</b>, Cristina M. Pinotti, Giulio Rigoni. "How the Wind Can Be Leveraged for Saving Energy in a Truck-Drone Delivery System.". IEEE Trans. Intell. Transp. Syst. (2023) 4038-4049. DOI: <a href="https://doi.org/10.1109/TITS.2023.3234627" target="_blank">https://doi.org/10.1109/TITS.2023.3234627</a></li>
+                    <li class="publication">Francesco Betti Sorbelli, Punyasha Chatterjee, Federico Corò, <b>Lorenzo Palazzetti</b>, Cristina M. Pinotti. "A Novel Multi-Layer Framework for BVLoS Drone Operation: A Preliminary Study.". CoRR (2023) . DOI: <a href="https://doi.org/10.48550/arXiv.2301.05835" target="_blank">https://doi.org/10.48550/arXiv.2301.05835</a></li>
+                    <li class="publication">Francesco Betti Sorbelli, Federico Corò, Sajal K. Das 0001, <b>Lorenzo Palazzetti</b>, Cristina M. Pinotti. "On the Scheduling of Conflictual Deliveries in a last-mile delivery scenario with truck-carried drones.". Pervasive Mob. Comput. (2022) 101700. DOI: <a href="https://doi.org/10.1016/j.pmcj.2022.101700" target="_blank">https://doi.org/10.1016/j.pmcj.2022.101700</a></li>
+                    <li class="publication">Lennart Almstedt, Davide Baltieri, Francesco Betti Sorbelli, Davide Cattozzi, Daniele Giannetti, Amin Kargar, Lara Maistrello, Alfredo Navarra, David Niederprüm, Brendan O'Flynn, <b>Lorenzo Palazzetti</b>, Niccolò Patelli, Luca Piccinini, Cristina M. Pinotti, Lars C. Wolf, Dimitrios Zorbas. "Technological Innovations in Agriculture for Scouting Halyomorpha Halys in Orchards.". DCOSS-IoT (2023) 702-709. DOI: <a href="https://doi.org/10.1109/DCOSS-IoT58021.2023.00110" target="_blank">https://doi.org/10.1109/DCOSS-IoT58021.2023.00110</a></li>
+                    <li class="publication">Francesco Betti Sorbelli, Punyasha Chatterjee, Federico Coro, <b>Lorenzo Palazzetti</b>, Cristina M. Pinotti. "A Novel Multi-Layer Framework for BVLoS Drone Operation: A Preliminary Study.". INFOCOM Workshops (2023) 1-6. DOI: <a href="https://doi.org/10.1109/INFOCOMWKSHPS57453.2023.10225806" target="_blank">https://doi.org/10.1109/INFOCOMWKSHPS57453.2023.10225806</a></li>
+                    <li class="publication">Alexandru Dinca, Dan Popescu 0002, Cristina Maria Pinotti, Loretta Ichim, <b>Lorenzo Palazzetti</b>, Nicoleta Angelescu. "Halyomorpha Halys Detection in Orchard from UAV Images Using Convolutional Neural Networks.". IWANN (2) (2023) 315-326. DOI: <a href="https://doi.org/10.1007/978-3-031-43078-7_26" target="_blank">https://doi.org/10.1007/978-3-031-43078-7_26</a></li>
+                    <li class="publication">Francesco Betti Sorbelli, Alfredo Navarra, <b>Lorenzo Palazzetti</b>, Cristina M. Pinotti, Giuseppe Prencipe. "Optimal and Heuristic Algorithms for Data Collection by Using an Energy- and Storage-Constrained Drone.". ALGOSENSORS (2022) 18-30. DOI: <a href="https://doi.org/10.1007/978-3-031-22050-0_2" target="_blank">https://doi.org/10.1007/978-3-031-22050-0_2</a></li>
+                    <li class="publication">Francesco Betti Sorbelli, Federico Corò, Sajal K. Das 0001, <b>Lorenzo Palazzetti</b>, Cristina M. Pinotti. "Drone-based Optimal and Heuristic Orienteering Algorithms Towards Bug Detection in Orchards.". DCOSS (2022) 117-124. DOI: <a href="https://doi.org/10.1109/DCOSS54816.2022.00032" target="_blank">https://doi.org/10.1109/DCOSS54816.2022.00032</a></li>
+                    <li class="publication">Francesco Betti Sorbelli, Federico Corò, Sajal K. Das 0001, <b>Lorenzo Palazzetti</b>, Cristina M. Pinotti. "Greedy Algorithms for Scheduling Package Delivery with Multiple Drones.". ICDCN (2022) 31-39. DOI: <a href="https://doi.org/10.1145/3491003.3491028" target="_blank">https://doi.org/10.1145/3491003.3491028</a></li>
+                    <li class="publication">Francesco Betti Sorbelli, Federico Corò, Sajal K. Das 0001, Emanuele Di Bella, Lara Maistrello, <b>Lorenzo Palazzetti</b>, Cristina M. Pinotti. "A Drone-based Application for Scouting Halyomorpha halys Bugs in Orchards with Multifunctional Nets.". PerCom Workshops (2022) 127-129. DOI: <a href="https://doi.org/10.1109/PerComWorkshops53856.2022.9767309" target="_blank">https://doi.org/10.1109/PerComWorkshops53856.2022.9767309</a></li>
+                    <li class="publication"><b>Lorenzo Palazzetti</b>, Cristina M. Pinotti, Giulio Rigoni. "A run in the wind: favorable winds make the difference in drone delivery.". DCOSS (2021) 109-116. DOI: <a href="https://doi.org/10.1109/DCOSS52077.2021.00031" target="_blank">https://doi.org/10.1109/DCOSS52077.2021.00031</a></li>
+                    <li class="publication"><b>Lorenzo Palazzetti</b>. "Routing Drones Being Aware of Wind Conditions: a Case Study.". DCOSS (2021) 343-350. DOI: <a href="https://doi.org/10.1109/DCOSS52077.2021.00062" target="_blank">https://doi.org/10.1109/DCOSS52077.2021.00062</a></li>
+                    <li class="publication">Francesco Betti Sorbelli, Federico Corò, Sajal K. Das 0001, <b>Lorenzo Palazzetti</b>, Cristina M. Pinotti. "Cooperative Truck-Drone Scheduling Approach for Last-Mile Deliveries.". ICTCS (2021) 40-45. DOI: <a href="https://ceur-ws.org/Vol-3072/paper4.pdf" target="_blank">https://ceur-ws.org/Vol-3072/paper4.pdf</a></li>
+                  </ol>
+              </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- Footer -->
+    <footer class="footer">
+      <p>&copy; 2024 Lorenzo Palazzetti. All rights reserved.</p>
+    </footer>
+  </div>
+
+  <!-- Bootstrap JS and dependencies -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

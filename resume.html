@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Resume</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=SUSE:wght@100..800&display=swap" rel="stylesheet">
+
+  <style>
+    html, body {
+      height: 100%;
+      margin: 0;
+      font-family: "SUSE", sans-serif;
+    }
+    .container-wrapper {
+      min-height: 100vh; /* Full viewport height */
+      display: flex;
+      flex-direction: column;
+    }
+    .content-wrapper {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+    }
+    .container {
+      width: 100%;
+    }
+    .footer {
+      background-color: #f0f0fc; /* Lighter cyber pink */
+      padding: 10px;
+      text-align: center;
+    }
+    .navbar {
+      background-color: #f0f0fc; /* Slightly lighter cyber pink */
+    }
+    .section-title {
+      font-size: 2.5rem; /* Larger font size for section titles */
+      margin-top: 40px; /* Increased space above section titles */
+      margin-bottom: 20px; /* Increased space below section titles */
+      color: #25ced1; /* Use cyan for section titles */
+    }
+    .section-content {
+      margin-top: 10px;
+    }
+    .education-entry, .work-experience-entry, .teaching-experience-entry {
+      margin-bottom: 20px;
+    }
+    .education-entry, .work-experience-entry, .teaching-experience-entry {
+      position: relative;
+      padding-bottom: 20px;
+    }
+    .education-entry:after, .work-experience-entry:after, .teaching-experience-entry:after {
+      content: '';
+      display: block;
+      width: 100%;
+      height: 2px;
+      background-color: #9eb3c2; /* Same color as the section title */
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      margin-top: 20px;
+    }
+    .education-entry:last-child:after, .work-experience-entry:last-child:after, .teaching-experience-entry:last-child:after {
+      display: none; /* Remove line for the last entry */
+    }
+    .education-details, .work-experience-details, .teaching-experience-details {
+      margin-top: 20px; /* Increased space above thesis details */
+    }
+    .education-details p, .work-experience-details p, .teaching-experience-details p {
+      font-size: 0.9rem; /* Reduced font size for details */
+      margin: 10px 0; /* Added vertical margin for spacing */
+    }
+    .work-experience-period, .teaching-experience-period {
+      color: #25ced1; /* Same color as the section title */
+    }
+
+    .btn-custom {
+  background-color: #25ced1; /* Same color as the section title */
+  color: #fff; /* White text color */
+  border: none; /* Remove default border */
+  padding: 10px 20px; /* Add padding */
+  font-size: 1rem; /* Font size */
+  border-radius: 5px; /* Rounded corners */
+  text-decoration: none; /* Remove underline */
+  margin-bottom: 10px;
+}
+
+.btn-custom:hover {
+  background-color: #7bdff2; /* Darker shade for hover effect */
+}
+
+  </style>
+</head>
+<body>
+  <!-- Wrapper to ensure footer sticks to bottom -->
+  <div class="container-wrapper">
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light">
+      <a class="navbar-brand" href="#">Lorenzo Palazzetti</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="resume.html">Resume</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="research.html">Research Activities</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="publications.html">Publications</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Centered Content Section -->
+    <div class="content-wrapper">
+      <div class="container">
+        <!-- Educational Activities Section -->
+        <div class="section">
+          <h2 class="section-title">Education</h2>
+          <div class="section-content">
+            <div class="education-entry">
+              <h4>PhD in Computer Science</h4>
+              <p><strong>Institution:</strong> University of Florence</p>
+              <p><strong>Period:</strong> <span class="work-experience-period">2020-2023</span></p>
+              <p><strong>Grade:</strong> Excellent with praise</p>
+              <div class="education-details">
+                <p><strong>Thesis Title:</strong> Optimizing Drone-based Applications for Delivery and Smart Agriculture</p>
+                <p><strong>Advisor:</strong> Professor Maria Cristina Pinotti</p>
+                <p><strong>Thesis in Brief:</strong> I explored and optimized drone-based solutions for last-mile delivery and smart agriculture.
+                    I devised novel strategies for complex combinatorial problems in route optimization and agricultural operations.
+                    Additionally, I investigated computer vision techniques for pest monitoring in orchards using drones, leading to an autonomous protocol for pest management.
+                    I was honored with a PhD with distinction for his significant contributions.</p>
+              </div>
+            </div>
+
+            <div class="education-entry">
+              <h4>Master of Science in Computer Science</h4>
+              <p><strong>Institution:</strong> University of Perugia</p>
+              <p><strong>Period:</strong> <span class="work-experience-period">2018-2020</span></p>
+              <p><strong>Grade:</strong> Summa cum laude</p>
+              <div class="education-details">
+                <p><strong>Thesis Title:</strong> Routing Drones Being Aware of Wind Conditions</p>
+                <p><strong>Advisor:</strong> Professor Maria Cristina Pinotti</p>
+                <p><strong>Thesis in Brief:</strong>
+                    My thesis, "Routing Drones Being Aware of Wind Conditions", explored the influence of wind on drone routes, particularly in last-mile delivery contexts.
+                    I demonstrated for the first time that wind can be leveraged to extend drone flight paths.
+                    I developed several algorithms to optimize drone routes in presence of winds that can dynamically change over the time.
+                    Synthetic simulations were employed to conduct feasibility analyses leveraging on those algorithms and prove theoretical results.
+                </p>
+              </div>
+            </div>
+
+            <div class="education-entry">
+              <h4>Bachelor of Science in Computer Science</h4>
+              <p><strong>Institution:</strong> University of Perugia</p>
+              <p><strong>Period:</strong> <span class="work-experience-period">2015-2018</span></p>
+              <p><strong>Grade:</strong> 104/110</p>
+              <div class="education-details">
+                <p><strong>Thesis Title:</strong> Lattice-Based Cryptography</p>
+                <p><strong>Advisor:</strong> Professor Marco Baioletti</p>
+                <p><strong>Thesis in Brief:</strong>
+                    During my undergraduate studies, I delved into the core principles of computer science, focusing on algorithms, data structures, networking, and programming.
+                    In my thesis titled "Lattice-Based Cryptography", I embarked on an exploration of cryptographic systems robust against Quantum Computers.
+                    Inspired by NTRU, I developed a cryptosystem designed to withstand quantum attacks.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Work Experience Section -->
+        <div class="section">
+          <h2 class="section-title">Work Experience</h2>
+          <div class="section-content">
+            <div class="work-experience-entry">
+              <p><strong>Postdoctoral Researcher</strong>, University of Perugia, <span class="work-experience-period">2024 to Now</span></p>
+            </div>
+            <div class="work-experience-entry">
+              <p><strong>HALY.ID Research Fellow</strong>, University of Perugia, <span class="work-experience-period">2020 to 2024</span></p>
+            </div>
+            <div class="work-experience-entry">
+              <p><strong>Haly.ID Project Fellow</strong>, University of Perugia, <span class="work-experience-period">11/2023 to 06/2024</span></p>
+            </div>
+            <div class="work-experience-entry">
+              <p><strong>Internship on Recommender Systems</strong>, University of Perugia, <span class="work-experience-period">10/2019 to 12/2019</span></p>
+            </div>
+            <div class="work-experience-entry">
+              <p><strong>System Manager</strong>, Umbertide Municipality, <span class="work-experience-period">04/2018 to 06/2018</span></p>
+            </div>
+            <div class="work-experience-entry">
+              <p><strong>System Manager</strong>, Città di Castello Municipality, <span class="work-experience-period">10/2019 to 12/2019</span></p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Teaching Experience Section -->
+        <div class="section">
+          <h2 class="section-title">Teaching Experience</h2>
+          <div class="section-content">
+            <div class="teaching-experience-entry">
+              <p><strong>Algorithm and Data Structures Teaching Assistant</strong>, University of Perugia, <span class="teaching-experience-period">02/2024 to Now</span></p>
+            </div>
+            <div class="teaching-experience-entry">
+              <p><strong>Internship on Recommender Systems</strong>, University of Perugia, <span class="teaching-experience-period">10/2019 to 12/2019</span></p>
+            </div>
+            <div class="teaching-experience-entry">
+              <p><strong>Algorithm and Data Structures Tutoring</strong>, University of Perugia, <span class="teaching-experience-period">11/2022 to 06/2023</span></p>
+            </div>
+            <div class="teaching-experience-entry">
+              <p><strong>Algorithm and Data Structures Tutoring</strong>, University of Perugia, <span class="teaching-experience-period">03/2022 to 06/2022</span></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Download Button Section -->
+    <div class="section text-center">
+      <a href="src/cv.pdf" class="btn btn-custom">Download Brief Version</a>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <p>&copy; 2024 Your Company. All rights reserved.</p>
+    </footer>
+  </div>
+
+  <!-- Bootstrap JS and dependencies -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
