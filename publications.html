@@ -3,162 +3,536 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Publications</title>
-  <!-- Bootstrap CSS -->
-  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-  <!-- Font Awesome for icons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <title>Publications — Lorenzo Palazzetti</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=SUSE:wght@100..800&display=swap" rel="stylesheet">
-
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,800;1,400;1,600&family=Inter:wght@300;400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
   <style>
-    html, body {
-      height: 100%;
-      margin: 0;
-      font-family: "SUSE", sans-serif;
+    /* ── Skeleton loader ────────────────────────────────── */
+    .skeleton {
+      background: linear-gradient(90deg, var(--surface-2) 25%, #e8eaed 50%, var(--surface-2) 75%);
+      background-size: 200% 100%;
+      animation: shimmer 1.5s infinite;
+      border-radius: 5px;
     }
-    .container-wrapper {
-      min-height: 100vh; /* Full viewport height */
-      display: flex;
-      flex-direction: column;
+    @keyframes shimmer { 0%{background-position:200% 0} 100%{background-position:-200% 0} }
+    .sk-card { background: var(--white); border: 1px solid var(--line); border-radius: var(--radius); padding: 22px; margin-bottom: 8px; }
+    .sk-line  { height: 13px; margin-bottom: 9px; }
+    .w-90{width:90%} .w-70{width:70%} .w-40{width:40%}
+
+    /* ── Source badge (top of page) ─────────────────────── */
+    .source-badge {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: var(--white); border: 1px solid var(--line);
+      border-radius: 100px; padding: 6px 14px 6px 10px;
+      font-family: var(--font-mono); font-size: .72rem;
+      color: var(--ink-soft); margin-bottom: 32px;
     }
-    .content-wrapper {
-      flex: 1;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      padding: 20px;
+    .source-badge .dot {
+      width: 7px; height: 7px; border-radius: 50%; background: #22c55e;
+      animation: pulse 2.2s ease-in-out infinite;
     }
-    .container {
-      width: 100%;
+    @keyframes pulse { 0%,100%{opacity:1;transform:scale(1)} 50%{opacity:.5;transform:scale(.85)} }
+
+    /* ── Stats row ──────────────────────────────────────── */
+    .pub-stats {
+      display: flex; gap: 0; flex-wrap: wrap;
+      margin-bottom: 32px;
+      background: var(--white); border: 1px solid var(--line);
+      border-radius: var(--radius); overflow: hidden;
     }
-    .footer {
-      background-color: #f0f0fc; /* Lighter cyber pink */
-      padding: 10px;
-      text-align: center;
+    .pub-stat {
+      flex: 1; min-width: 100px;
+      padding: 18px 24px; text-align: center;
+      border-right: 1px solid var(--line);
     }
-    .navbar {
-      background-color: #f0f0fc; /* Slightly lighter cyber pink */
+    .pub-stat:last-child { border-right: none; }
+    .pub-stat__num {
+      font-family: var(--font-display); font-size: 1.65rem;
+      font-weight: 700; color: var(--accent); line-height: 1;
     }
-    .section-title {
-      font-size: 2.5rem; /* Larger font size for section titles */
-      margin-top: 40px; /* Increased space above section titles */
-      margin-bottom: 20px; /* Increased space below section titles */
-      color: #25ced1; /* Use cyan for section titles */
+    .pub-stat__label {
+      font-size: .68rem; color: var(--ink-muted);
+      font-family: var(--font-mono); letter-spacing: .07em;
+      text-transform: uppercase; margin-top: 4px;
     }
-    .section-content {
-      margin-top: 10px;
+
+    /* ── Filter bar ─────────────────────────────────────── */
+    .filter-row {
+      display: flex; align-items: center;
+      gap: 8px; flex-wrap: wrap; margin-bottom: 28px;
     }
-    .entry {
-      margin-bottom: 20px;
-      position: relative;
-      padding-bottom: 20px;
+    .filter-label {
+      font-family: var(--font-mono); font-size: .7rem;
+      color: var(--ink-muted); letter-spacing: .08em;
+      text-transform: uppercase; margin-right: 4px;
     }
-    .entry:after {
-      content: '';
-      display: block;
-      width: 100%;
-      height: 2px;
-      background-color: #9eb3c2;
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      margin-top: 20px;
+
+    /* ── Year section ───────────────────────────────────── */
+    .year-section { margin-bottom: 44px; }
+    .year-heading {
+      font-family: var(--font-display);
+      font-size: 1.25rem; font-weight: 700;
+      color: var(--ink); margin-bottom: 12px;
+      padding-bottom: 10px;
+      border-bottom: 1.5px solid var(--line);
+      display: flex; align-items: baseline; gap: 10px;
     }
-    .entry:last-child:after {
-      display: none; /* Remove line for the last entry */
+    .year-count {
+      font-family: var(--font-mono); font-size: .72rem;
+      color: var(--ink-muted); font-weight: 400;
     }
-    .btn-custom {
-      background-color: #25ced1; /* Same color as the section title */
-      color: #fff; /* White text color */
-      border: none; /* Remove default border */
-      padding: 10px 20px; /* Add padding */
-      font-size: 1rem; /* Font size */
-      border-radius: 5px; /* Rounded corners */
-      text-decoration: none; /* Remove underline */
-      margin-bottom: 10px;
+
+    /* ── Publication card ───────────────────────────────── */
+    .pub-card {
+      background: var(--white);
+      border: 1px solid var(--line);
+      border-left: 3px solid transparent;
+      border-radius: 0 var(--radius) var(--radius) 0;
+      padding: 18px 20px 16px;
+      margin-bottom: 7px;
+      transition: border-left-color .18s, transform .18s, box-shadow .18s;
     }
-    .btn-custom:hover {
-      background-color: #7bdff2; /* Darker shade for hover effect */
+    .pub-card:hover {
+      border-left-color: var(--accent);
+      transform: translateX(3px);
+      box-shadow: 0 2px 16px rgba(13,17,23,.06);
     }
+    .pub-card__title {
+      font-size: .95rem; font-weight: 600; color: var(--ink);
+      line-height: 1.45; margin-bottom: 5px;
+    }
+    .pub-card__authors {
+      font-size: .815rem; color: var(--ink-muted);
+      margin-bottom: 9px; line-height: 1.55;
+    }
+    .pub-card__authors .me { color: var(--ink); font-weight: 600; }
+    .pub-card__footer {
+      display: flex; gap: 7px; flex-wrap: wrap; align-items: center;
+    }
+    .pub-card__venue {
+      font-size: .8rem; color: var(--ink-soft); font-style: italic;
+      flex: 1; min-width: 0;
+      white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+    }
+    .pub-tag {
+      display: inline-block;
+      font-family: var(--font-mono); font-size: .67rem;
+      letter-spacing: .06em; text-transform: uppercase;
+      padding: 2px 8px; border-radius: 100px; white-space: nowrap;
+    }
+    .tag-j  { background: rgba(0,201,177,.12);  color: #007a6d; }
+    .tag-c  { background: rgba(26,108,245,.10); color: #1152c4; }
+    .tag-p  { background: rgba(245,99,26,.10);  color: #a83a00; }
+    .tag-b  { background: rgba(139,92,246,.10); color: #6d28d9; }
+
+    .pub-doi {
+      font-family: var(--font-mono); font-size: .7rem;
+      color: var(--accent-2); text-decoration: none;
+      white-space: nowrap; transition: color .15s;
+    }
+    .pub-doi:hover { color: var(--accent); text-decoration: underline; }
+
+    .pub-cites {
+      display: inline-flex; align-items: center; gap: 3px;
+      font-family: var(--font-mono); font-size: .7rem;
+      color: var(--ink-muted); background: var(--surface-2);
+      padding: 2px 7px; border-radius: 100px; white-space: nowrap;
+    }
+    .pub-oa {
+      display: inline-flex; align-items: center; gap: 3px;
+      font-family: var(--font-mono); font-size: .67rem;
+      color: #b45309; background: rgba(251,191,36,.12);
+      padding: 2px 7px; border-radius: 100px; white-space: nowrap;
+      text-decoration: none;
+    }
+    .pub-oa:hover { text-decoration: underline; }
+
+    /* ── Error ──────────────────────────────────────────── */
+    .err-box {
+      background: #fff5f5; border: 1.5px solid #feb2b2;
+      border-radius: var(--radius); padding: 20px 24px;
+      color: #9b2c2c; font-size: .875rem; display: none;
+    }
+    .err-box strong { display: block; margin-bottom: 4px; }
+
+    /* ── Empty state ────────────────────────────────────── */
+    .empty { display:none; text-align:center; padding:56px 0; color:var(--ink-muted); }
+    .empty i { font-size:2rem; margin-bottom:12px; display:block; opacity:.4; }
+
+    /* ── Refresh hint ───────────────────────────────────── */
+    .refresh-hint {
+      font-family: var(--font-mono); font-size: .72rem;
+      color: var(--ink-muted); margin-left: auto;
+      display: flex; align-items: center; gap: 6px; cursor: pointer;
+      padding: 5px 10px; border-radius: 6px;
+      transition: background .15s;
+    }
+    .refresh-hint:hover { background: var(--surface-2); color: var(--ink); }
   </style>
 </head>
 <body>
-  <!-- Wrapper to ensure footer sticks to bottom -->
-  <div class="container-wrapper">
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-light">
-      <a class="navbar-brand" href="#">Lorenzo Palazzetti</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ml-auto">
-          <li class="nav-item">
-            <a class="nav-link" href="index.html">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="resume.html">Resume</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="research.html">Research Activities</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="publications.html">Publications</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="contact.html">Contact</a>
-          </li>
-        </ul>
-      </div>
-    </nav>
 
-    <!-- Centered Content Section -->
-    <div class="content-wrapper">
-      <div class="container">
-        <!-- Journal Publications Section -->
-        <div class="section">
-          <h2 class="section-title">Publications</h2>
-          <div class="section-content">
-              <div id="publications">
-                  <ol>
-                    <li class="publication">Francesco Betti Sorbelli, Alfredo Navarra, <b>Lorenzo Palazzetti</b>, Cristina M. Pinotti, Giuseppe Prencipe. "Wireless IoT sensors data collection reward maximization by leveraging multiple energy- and storage-constrained UAVs.". J. Comput. Syst. Sci. (2024) 103475. DOI: <a href="https://doi.org/10.1016/j.jcss.2023.103475" target="_blank">https://doi.org/10.1016/j.jcss.2023.103475</a></li>
-                    <li class="publication">Francesco Betti Sorbelli, Federico Corò, Sajal K. Das 0001, <b>Lorenzo Palazzetti</b>, Cristina M. Pinotti. "Drone-Based Bug Detection in Orchards with Nets: A Novel Orienteering Approach.". ACM Trans. Sens. Networks (2024) 68:1-68:28. DOI: <a href="https://doi.org/10.1145/3653713" target="_blank">https://doi.org/10.1145/3653713</a></li>
-                    <li class="publication">Francesco Betti Sorbelli, <b>Lorenzo Palazzetti</b>, Cristina M. Pinotti. "
-                  YOLO-based detection of
-                  ". Comput. Electron. Agric. (2023) 108228. DOI: <a href="https://doi.org/10.1016/j.compag.2023.108228" target="_blank">https://doi.org/10.1016/j.compag.2023.108228</a></li>
-                    <li class="publication">Francesco Betti Sorbelli, Federico Corò, <b>Lorenzo Palazzetti</b>, Cristina M. Pinotti, Giulio Rigoni. "How the Wind Can Be Leveraged for Saving Energy in a Truck-Drone Delivery System.". IEEE Trans. Intell. Transp. Syst. (2023) 4038-4049. DOI: <a href="https://doi.org/10.1109/TITS.2023.3234627" target="_blank">https://doi.org/10.1109/TITS.2023.3234627</a></li>
-                    <li class="publication">Francesco Betti Sorbelli, Punyasha Chatterjee, Federico Corò, <b>Lorenzo Palazzetti</b>, Cristina M. Pinotti. "A Novel Multi-Layer Framework for BVLoS Drone Operation: A Preliminary Study.". CoRR (2023) . DOI: <a href="https://doi.org/10.48550/arXiv.2301.05835" target="_blank">https://doi.org/10.48550/arXiv.2301.05835</a></li>
-                    <li class="publication">Francesco Betti Sorbelli, Federico Corò, Sajal K. Das 0001, <b>Lorenzo Palazzetti</b>, Cristina M. Pinotti. "On the Scheduling of Conflictual Deliveries in a last-mile delivery scenario with truck-carried drones.". Pervasive Mob. Comput. (2022) 101700. DOI: <a href="https://doi.org/10.1016/j.pmcj.2022.101700" target="_blank">https://doi.org/10.1016/j.pmcj.2022.101700</a></li>
-                    <li class="publication">Lennart Almstedt, Davide Baltieri, Francesco Betti Sorbelli, Davide Cattozzi, Daniele Giannetti, Amin Kargar, Lara Maistrello, Alfredo Navarra, David Niederprüm, Brendan O'Flynn, <b>Lorenzo Palazzetti</b>, Niccolò Patelli, Luca Piccinini, Cristina M. Pinotti, Lars C. Wolf, Dimitrios Zorbas. "Technological Innovations in Agriculture for Scouting Halyomorpha Halys in Orchards.". DCOSS-IoT (2023) 702-709. DOI: <a href="https://doi.org/10.1109/DCOSS-IoT58021.2023.00110" target="_blank">https://doi.org/10.1109/DCOSS-IoT58021.2023.00110</a></li>
-                    <li class="publication">Francesco Betti Sorbelli, Punyasha Chatterjee, Federico Coro, <b>Lorenzo Palazzetti</b>, Cristina M. Pinotti. "A Novel Multi-Layer Framework for BVLoS Drone Operation: A Preliminary Study.". INFOCOM Workshops (2023) 1-6. DOI: <a href="https://doi.org/10.1109/INFOCOMWKSHPS57453.2023.10225806" target="_blank">https://doi.org/10.1109/INFOCOMWKSHPS57453.2023.10225806</a></li>
-                    <li class="publication">Alexandru Dinca, Dan Popescu 0002, Cristina Maria Pinotti, Loretta Ichim, <b>Lorenzo Palazzetti</b>, Nicoleta Angelescu. "Halyomorpha Halys Detection in Orchard from UAV Images Using Convolutional Neural Networks.". IWANN (2) (2023) 315-326. DOI: <a href="https://doi.org/10.1007/978-3-031-43078-7_26" target="_blank">https://doi.org/10.1007/978-3-031-43078-7_26</a></li>
-                    <li class="publication">Francesco Betti Sorbelli, Alfredo Navarra, <b>Lorenzo Palazzetti</b>, Cristina M. Pinotti, Giuseppe Prencipe. "Optimal and Heuristic Algorithms for Data Collection by Using an Energy- and Storage-Constrained Drone.". ALGOSENSORS (2022) 18-30. DOI: <a href="https://doi.org/10.1007/978-3-031-22050-0_2" target="_blank">https://doi.org/10.1007/978-3-031-22050-0_2</a></li>
-                    <li class="publication">Francesco Betti Sorbelli, Federico Corò, Sajal K. Das 0001, <b>Lorenzo Palazzetti</b>, Cristina M. Pinotti. "Drone-based Optimal and Heuristic Orienteering Algorithms Towards Bug Detection in Orchards.". DCOSS (2022) 117-124. DOI: <a href="https://doi.org/10.1109/DCOSS54816.2022.00032" target="_blank">https://doi.org/10.1109/DCOSS54816.2022.00032</a></li>
-                    <li class="publication">Francesco Betti Sorbelli, Federico Corò, Sajal K. Das 0001, <b>Lorenzo Palazzetti</b>, Cristina M. Pinotti. "Greedy Algorithms for Scheduling Package Delivery with Multiple Drones.". ICDCN (2022) 31-39. DOI: <a href="https://doi.org/10.1145/3491003.3491028" target="_blank">https://doi.org/10.1145/3491003.3491028</a></li>
-                    <li class="publication">Francesco Betti Sorbelli, Federico Corò, Sajal K. Das 0001, Emanuele Di Bella, Lara Maistrello, <b>Lorenzo Palazzetti</b>, Cristina M. Pinotti. "A Drone-based Application for Scouting Halyomorpha halys Bugs in Orchards with Multifunctional Nets.". PerCom Workshops (2022) 127-129. DOI: <a href="https://doi.org/10.1109/PerComWorkshops53856.2022.9767309" target="_blank">https://doi.org/10.1109/PerComWorkshops53856.2022.9767309</a></li>
-                    <li class="publication"><b>Lorenzo Palazzetti</b>, Cristina M. Pinotti, Giulio Rigoni. "A run in the wind: favorable winds make the difference in drone delivery.". DCOSS (2021) 109-116. DOI: <a href="https://doi.org/10.1109/DCOSS52077.2021.00031" target="_blank">https://doi.org/10.1109/DCOSS52077.2021.00031</a></li>
-                    <li class="publication"><b>Lorenzo Palazzetti</b>. "Routing Drones Being Aware of Wind Conditions: a Case Study.". DCOSS (2021) 343-350. DOI: <a href="https://doi.org/10.1109/DCOSS52077.2021.00062" target="_blank">https://doi.org/10.1109/DCOSS52077.2021.00062</a></li>
-                    <li class="publication">Francesco Betti Sorbelli, Federico Corò, Sajal K. Das 0001, <b>Lorenzo Palazzetti</b>, Cristina M. Pinotti. "Cooperative Truck-Drone Scheduling Approach for Last-Mile Deliveries.". ICTCS (2021) 40-45. DOI: <a href="https://ceur-ws.org/Vol-3072/paper4.pdf" target="_blank">https://ceur-ws.org/Vol-3072/paper4.pdf</a></li>
-                  </ol>
-              </div>
-          </div>
-        </div>
-      </div>
-    </div>
+<nav class="nav">
+  <div class="nav__inner">
+    <a class="nav__brand" href="index.html">Lorenzo <span>Palazzetti</span></a>
+    <ul class="nav__links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="resume.html">Resume</a></li>
+      <li><a href="research.html">Research</a></li>
+      <li><a href="publications.html">Publications</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div class="nav__hamburger"><span></span><span></span><span></span></div>
+  </div>
+  <div class="nav__mobile" style="display:none">
+    <a href="index.html">Home</a>
+    <a href="resume.html">Resume</a>
+    <a href="research.html">Research</a>
+    <a href="publications.html">Publications</a>
+    <a href="contact.html">Contact</a>
+  </div>
+</nav>
 
+<main class="page">
 
-    <!-- Footer -->
-    <footer class="footer">
-      <p>&copy; 2024 Lorenzo Palazzetti. All rights reserved.</p>
-      <p>Last update: 18/09/2024</p>
-    </footer>
+  <!-- Header -->
+  <div class="page-header fade-up">
+    <div class="page-header__kicker">Peer-reviewed output</div>
+    <h1 class="page-header__title">Publications</h1>
+    <p style="color:var(--ink-muted);font-size:.875rem;margin-top:10px;">
+      <a href="https://scholar.google.it/citations?user=pHADTUQAAAAJ" target="_blank" rel="noopener">Google Scholar</a> &nbsp;·&nbsp;
+      <a href="https://www.scopus.com/authid/detail.uri?authorId=57422576800" target="_blank" rel="noopener">Scopus</a> &nbsp;·&nbsp;
+      <a href="https://dblp.org/pid/306/6867.html" target="_blank" rel="noopener">DBLP</a> &nbsp;·&nbsp;
+      <a href="https://orcid.org/0000-0003-3069-3971" target="_blank" rel="noopener">ORCID</a>
+    </p>
   </div>
 
-  <!-- Bootstrap JS and dependencies -->
-  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <!-- Live badge -->
+  <div class="source-badge fade-up-2" id="sourceBadge" style="display:none">
+    <span class="dot"></span>
+    Live data · <a href="https://openalex.org" target="_blank" rel="noopener" style="color:inherit;font-weight:600;">OpenAlex</a>
+    &nbsp;· cached 6 h
+    <span class="refresh-hint" onclick="forceRefresh()" title="Force refresh from OpenAlex">
+      <i class="fas fa-sync-alt" style="font-size:.65rem;"></i> refresh
+    </span>
+  </div>
+
+  <!-- Error -->
+  <div class="err-box" id="errBox">
+    <strong id="errTitle">Could not load publications</strong>
+    <span id="errMsg"></span>
+    <p style="margin-top:10px;font-size:.82rem;">
+      OpenAlex may be temporarily unavailable. Your publications are always visible on
+      <a href="https://openalex.org/authors/orcid:0000-0003-3069-3971" target="_blank" rel="noopener">OpenAlex</a>,
+      <a href="https://dblp.org/pid/306/6867.html" target="_blank" rel="noopener">DBLP</a>, and
+      <a href="https://scholar.google.it/citations?user=pHADTUQAAAAJ" target="_blank" rel="noopener">Google Scholar</a>.
+    </p>
+  </div>
+
+  <!-- Stats -->
+  <div class="pub-stats fade-up-3" id="statsRow" style="display:none">
+    <div class="pub-stat"><div class="pub-stat__num" id="sTotal">—</div><div class="pub-stat__label">Publications</div></div>
+    <div class="pub-stat"><div class="pub-stat__num" id="sJournals">—</div><div class="pub-stat__label">Journals</div></div>
+    <div class="pub-stat"><div class="pub-stat__num" id="sConfs">—</div><div class="pub-stat__label">Conferences</div></div>
+    <div class="pub-stat"><div class="pub-stat__num" id="sCites">—</div><div class="pub-stat__label">Citations</div></div>
+    <div class="pub-stat"><div class="pub-stat__num" id="sHindex">—</div><div class="pub-stat__label">h-index</div></div>
+  </div>
+
+  <!-- Filters -->
+  <div class="filter-row" id="filterRow" style="display:none">
+    <span class="filter-label">Filter</span>
+    <button class="filter-btn active" data-f="all">All</button>
+    <button class="filter-btn" data-f="j">Journals</button>
+    <button class="filter-btn" data-f="c">Conferences</button>
+    <button class="filter-btn" data-f="p">Preprints</button>
+    <button class="filter-btn" data-f="b">Books / Chapters</button>
+  </div>
+
+  <!-- Skeletons -->
+  <div id="loader">
+    <div class="sk-card"><div class="skeleton sk-line w-90"></div><div class="skeleton sk-line w-70"></div><div class="skeleton sk-line w-40"></div></div>
+    <div class="sk-card"><div class="skeleton sk-line w-70"></div><div class="skeleton sk-line w-90"></div><div class="skeleton sk-line w-40"></div></div>
+    <div class="sk-card"><div class="skeleton sk-line w-90"></div><div class="skeleton sk-line w-40"></div><div class="skeleton sk-line w-70"></div></div>
+    <div class="sk-card"><div class="skeleton sk-line w-70"></div><div class="skeleton sk-line w-90"></div><div class="skeleton sk-line w-40"></div></div>
+  </div>
+
+  <!-- Publication list -->
+  <div id="pubList"></div>
+
+  <!-- Empty state -->
+  <div class="empty" id="empty">
+    <i class="fas fa-search"></i>
+    No publications match this filter.
+  </div>
+
+</main>
+
+<footer class="footer">
+  <div class="footer__inner">
+    <p>© 2026 Lorenzo Palazzetti &nbsp;·&nbsp; University of Perugia</p>
+  </div>
+</footer>
+
+<script src="nav.js"></script>
+<script>
+/* ═══════════════════════════════════════════════════
+   CONFIGURATION  — edit only these if needed
+═══════════════════════════════════════════════════ */
+const ORCID        = '0000-0003-3069-3971';
+const POLITE_EMAIL = 'lorenzo.palazzetti@unipg.it'; // sent as mailto= param (OpenAlex polite pool)
+const CACHE_KEY    = 'oa_pubs_v1';
+const CACHE_TS_KEY = 'oa_pubs_ts_v1';
+const CACHE_TTL    = 6 * 60 * 60 * 1000; // 6 hours
+
+/* ═══════════════════════════════════════════════════
+   ENTRY POINT
+═══════════════════════════════════════════════════ */
+window.addEventListener('DOMContentLoaded', loadPublications);
+
+async function loadPublications() {
+  // Try serving from cache first (instant load for repeat visitors)
+  const cached = getCache();
+  if (cached) {
+    render(cached);
+    return;
+  }
+  await fetchFromOpenAlex();
+}
+
+function forceRefresh() {
+  clearCache();
+  document.getElementById('pubList').innerHTML = '';
+  document.getElementById('statsRow').style.display  = 'none';
+  document.getElementById('filterRow').style.display = 'none';
+  document.getElementById('sourceBadge').style.display = 'none';
+  document.getElementById('loader').style.display = '';
+  fetchFromOpenAlex();
+}
+
+/* ═══════════════════════════════════════════════════
+   OPENALEX FETCH
+   Strategy: 
+     1. Resolve ORCID → OpenAlex author ID + h-index
+     2. Fetch all works paginated via author.id filter
+═══════════════════════════════════════════════════ */
+async function fetchFromOpenAlex() {
+  const BASE = 'https://api.openalex.org';
+  const MAIL = `mailto=${encodeURIComponent(POLITE_EMAIL)}`;
+
+  try {
+    // Step 1 — Resolve author
+    const authorRes  = await fetch(`${BASE}/authors/orcid:${ORCID}?${MAIL}`);
+    if (!authorRes.ok) throw new Error(`Author lookup failed (HTTP ${authorRes.status}). OpenAlex may be temporarily down.`);
+    const author     = await authorRes.json();
+    const authorId   = author.id.replace('https://openalex.org/', '');
+    const hindex     = author.summary_stats?.h_index ?? '—';
+    const totalCites = author.cited_by_count ?? 0;
+
+    // Step 2 — Fetch works (paginated, 200 per page = usually 1 call)
+    const PER_PAGE = 200;
+    let allWorks  = [];
+    let cursor    = '*';
+
+    while (true) {
+      const url = `${BASE}/works?filter=author.id:${authorId}&per_page=${PER_PAGE}&cursor=${encodeURIComponent(cursor)}&sort=publication_year:desc&select=id,title,authorships,publication_year,primary_location,type,cited_by_count,doi,open_access,biblio&${MAIL}`;
+      const res  = await fetch(url);
+      if (!res.ok) throw new Error(`Works fetch failed (HTTP ${res.status}).`);
+      const json = await res.json();
+      const results = json.results || [];
+      allWorks = allWorks.concat(results);
+      const nextCursor = json.meta?.next_cursor;
+      if (!nextCursor || results.length === 0) break;
+      cursor = nextCursor;
+    }
+
+    const data = { works: allWorks, hindex, totalCites };
+    setCache(data);
+    render(data);
+
+  } catch (err) {
+    document.getElementById('loader').style.display = 'none';
+    const box = document.getElementById('errBox');
+    document.getElementById('errMsg').textContent = ' ' + err.message;
+    box.style.display = '';
+  }
+}
+
+/* ═══════════════════════════════════════════════════
+   RENDER
+═══════════════════════════════════════════════════ */
+function render({ works, hindex, totalCites }) {
+  document.getElementById('loader').style.display = 'none';
+  document.getElementById('sourceBadge').style.display = '';
+
+  if (!works.length) {
+    document.getElementById('empty').style.display = 'block';
+    return;
+  }
+
+  // --- Stats ---
+  const journals = works.filter(w => classifyType(w) === 'j').length;
+  const confs    = works.filter(w => classifyType(w) === 'c').length;
+  document.getElementById('sTotal').textContent   = works.length;
+  document.getElementById('sJournals').textContent = journals;
+  document.getElementById('sConfs').textContent   = confs;
+  document.getElementById('sCites').textContent   = totalCites.toLocaleString();
+  document.getElementById('sHindex').textContent  = hindex;
+  document.getElementById('statsRow').style.display  = 'flex';
+  document.getElementById('filterRow').style.display = 'flex';
+
+  // --- Group by year ---
+  const byYear = {};
+  works.forEach(w => {
+    const yr = w.publication_year ?? 'Unknown';
+    (byYear[yr] = byYear[yr] || []).push(w);
+  });
+
+  const list = document.getElementById('pubList');
+  list.innerHTML = '';
+
+  Object.keys(byYear)
+    .sort((a, b) => Number(b) - Number(a))
+    .forEach(yr => {
+      const section = document.createElement('div');
+      section.className = 'year-section';
+      const count = byYear[yr].length;
+      section.innerHTML = `
+        <div class="year-heading">
+          ${yr}
+          <span class="year-count">${count} paper${count !== 1 ? 's' : ''}</span>
+        </div>`;
+      byYear[yr].forEach(w => section.appendChild(buildCard(w)));
+      list.appendChild(section);
+    });
+
+  bindFilters();
+}
+
+/* ═══════════════════════════════════════════════════
+   CARD BUILDER
+═══════════════════════════════════════════════════ */
+function buildCard(work) {
+  const title   = work.title || 'Untitled';
+  const year    = work.publication_year ?? '';
+  const doi     = work.doi ? work.doi.replace('https://doi.org/', '') : '';
+  const cites   = work.cited_by_count ?? 0;
+  const type    = classifyType(work);
+  const typeLabel = { j:'Journal', c:'Conference', p:'Preprint', b:'Book/Chapter' }[type] || 'Other';
+  const venue   = work.primary_location?.source?.display_name ?? '';
+  const oaUrl   = work.open_access?.oa_url ?? '';
+  const isOA    = work.open_access?.is_oa;
+
+  // Author list — bold "Palazzetti"
+  const authorships = work.authorships || [];
+  const authorsHtml = authorships.map(a => {
+    const name = a.author?.display_name ?? '';
+    const isMe = name.toLowerCase().includes('palazzetti');
+    return isMe ? `<span class="me">${esc(name)}</span>` : esc(name);
+  }).join(', ');
+
+  // Biblio (volume/pages) if available
+  const biblio = work.biblio;
+  let biblioStr = '';
+  if (biblio) {
+    const parts = [biblio.volume && `Vol. ${biblio.volume}`, biblio.first_page && `pp. ${biblio.first_page}–${biblio.last_page ?? '?'}`].filter(Boolean);
+    if (parts.length) biblioStr = parts.join(', ');
+  }
+
+  const card = document.createElement('div');
+  card.className = 'pub-card';
+  card.dataset.type = type;
+
+  card.innerHTML = `
+    <div class="pub-card__title">${esc(title)}</div>
+    <div class="pub-card__authors">${authorsHtml || '<em style="color:var(--ink-muted)">Authors unavailable</em>'}</div>
+    <div class="pub-card__footer">
+      <span class="pub-tag tag-${type}">${typeLabel}</span>
+      ${venue ? `<span class="pub-card__venue" title="${esc(venue)}">${esc(venue)}${biblioStr ? ' · ' + esc(biblioStr) : ''}</span>` : ''}
+      ${doi ? `<a class="pub-doi" href="https://doi.org/${doi}" target="_blank" rel="noopener">DOI&nbsp;↗</a>` : ''}
+      ${isOA && oaUrl ? `<a class="pub-oa" href="${esc(oaUrl)}" target="_blank" rel="noopener"><i class="fas fa-lock-open" style="font-size:.6rem;"></i>&nbsp;Open Access</a>` : ''}
+      ${cites > 0 ? `<span class="pub-cites"><i class="fas fa-quote-left" style="font-size:.58rem;"></i>&nbsp;${cites}</span>` : ''}
+    </div>`;
+  return card;
+}
+
+/* ═══════════════════════════════════════════════════
+   CLASSIFICATION
+   OpenAlex type field: "article", "proceedings-article",
+   "book-chapter", "preprint", "dissertation", etc.
+═══════════════════════════════════════════════════ */
+function classifyType(work) {
+  const t    = (work.type || '').toLowerCase();
+  const src  = (work.primary_location?.source?.type || '').toLowerCase();
+  if (t === 'article'               && src === 'journal')      return 'j';
+  if (t === 'article'               && src === 'conference')   return 'c';
+  if (t === 'proceedings-article')                             return 'c';
+  if (t === 'preprint')                                        return 'p';
+  if (t === 'book-chapter' || t === 'book' || t === 'edited-book') return 'b';
+  // Fallback: journal-like vs conference-like by source type
+  if (src === 'journal')      return 'j';
+  if (src === 'conference')   return 'c';
+  if (src === 'repository')   return 'p';
+  return 'j'; // default: treat as journal (covers most ambiguous cases)
+}
+
+/* ═══════════════════════════════════════════════════
+   FILTERS
+═══════════════════════════════════════════════════ */
+function bindFilters() {
+  document.querySelectorAll('.filter-btn').forEach(btn => {
+    btn.onclick = () => {
+      document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      const f = btn.dataset.f;
+      let visible = 0;
+      document.querySelectorAll('.year-section').forEach(sec => {
+        let secVis = 0;
+        sec.querySelectorAll('.pub-card').forEach(card => {
+          const show = f === 'all' || card.dataset.type === f;
+          card.style.display = show ? '' : 'none';
+          if (show) secVis++;
+        });
+        sec.style.display = secVis ? '' : 'none';
+        visible += secVis;
+      });
+      document.getElementById('empty').style.display = visible ? 'none' : 'block';
+    };
+  });
+}
+
+/* ═══════════════════════════════════════════════════
+   CACHE HELPERS
+═══════════════════════════════════════════════════ */
+function getCache() {
+  try {
+    const ts  = parseInt(localStorage.getItem(CACHE_TS_KEY) || '0', 10);
+    const raw = localStorage.getItem(CACHE_KEY);
+    if (!raw || Date.now() - ts > CACHE_TTL) return null;
+    return JSON.parse(raw);
+  } catch { return null; }
+}
+function setCache(data) {
+  try {
+    localStorage.setItem(CACHE_KEY,    JSON.stringify(data));
+    localStorage.setItem(CACHE_TS_KEY, String(Date.now()));
+  } catch { /* storage full — no-op */ }
+}
+function clearCache() {
+  localStorage.removeItem(CACHE_KEY);
+  localStorage.removeItem(CACHE_TS_KEY);
+}
+
+/* ═══════════════════════════════════════════════════
+   UTILS
+═══════════════════════════════════════════════════ */
+function esc(s) {
+  return String(s)
+    .replace(/&/g,'&amp;').replace(/</g,'&lt;')
+    .replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+}
+</script>
 </body>
 </html>

@@ -3,153 +3,147 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Resume</title>
-  <!-- Bootstrap CSS -->
-  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-  <!-- Font Awesome for icons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <title>Contact — Lorenzo Palazzetti</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=SUSE:wght@100..800&display=swap" rel="stylesheet">
-
-  <style>
-    html, body {
-      height: 100%;
-      margin: 0;
-      font-family: "SUSE", sans-serif;
-    }
-    .container-wrapper {
-      min-height: 100vh; /* Full viewport height */
-      display: flex;
-      flex-direction: column;
-    }
-    .content-wrapper {
-      flex: 1;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      padding: 20px;
-    }
-    .container {
-      width: 100%;
-    }
-    .footer {
-      background-color: #f0f0fc; /* Lighter cyber pink */
-      padding: 10px;
-      text-align: center;
-    }
-    .navbar {
-      background-color: #f0f0fc; /* Slightly lighter cyber pink */
-    }
-    .section-title {
-      font-size: 2.5rem; /* Larger font size for section titles */
-      margin-top: 40px; /* Increased space above section titles */
-      margin-bottom: 20px; /* Increased space below section titles */
-      color: #25ced1; /* Use cyan for section titles */
-    }
-    .section-content {
-      margin-top: 10px;
-    }
-    .contact-info {
-      margin-top: 20px;
-    }
-    .contact-info a {
-      display: block;
-      margin-bottom: 10px;
-      color: #25ced1;
-      text-decoration: none;
-    }
-    .contact-info a:hover {
-      text-decoration: underline;
-    }
-    .office-address {
-      margin-top: 20px;
-    }
-    .office-address p {
-      margin-bottom: 10px;
-    }
-  </style>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,800;1,400;1,600&family=Inter:wght@300;400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <!-- Wrapper to ensure footer sticks to bottom -->
-  <div class="container-wrapper">
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-light">
-      <a class="navbar-brand" href="#">Lorenzo Palazzetti</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ml-auto">
-          <li class="nav-item">
-            <a class="nav-link" href="index.html">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="resume.html">Resume</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="research.html">Research Activities</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="publications.html">Publications</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="contact.html">Contact</a>
-          </li>
-        </ul>
-      </div>
-    </nav>
 
-    <!-- Centered Content Section -->
-    <div class="content-wrapper">
-      <div class="container">
+<nav class="nav">
+  <div class="nav__inner">
+    <a class="nav__brand" href="index.html">Lorenzo <span>Palazzetti</span></a>
+    <ul class="nav__links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="resume.html">Resume</a></li>
+      <li><a href="research.html">Research</a></li>
+      <li><a href="publications.html">Publications</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div class="nav__hamburger"><span></span><span></span><span></span></div>
+  </div>
+  <div class="nav__mobile" style="display:none">
+    <a href="index.html">Home</a>
+    <a href="resume.html">Resume</a>
+    <a href="research.html">Research</a>
+    <a href="publications.html">Publications</a>
+    <a href="contact.html">Contact</a>
+  </div>
+</nav>
 
-        <!-- Contact Information Section -->
-        <div class="section">
-          <h2 class="section-title">Contact Information</h2>
-          <div class="section-content contact-info">
-            <div class="row">
-              <div class="col-md-4">
-                <a href="mailto:lorenzo.palazzetti@unipg.it"><i class="fas fa-envelope"></i> lorenzo.palazzetti@unipg.it</a>
-                <a href="mailto:lorenzo.palazzetti@collaboratori.unipg.it"><i class="fas fa-envelope"></i> lorenzo.palazzetti@collaboratori.unipg.it</a>
-                <a href="mailto:lorenzo.palazzetti@unifi.it"><i class="fas fa-envelope"></i> lorenzo.palazzetti@unifi.it</a>
-              </div>
-              <div class="col-md-4">
-                <a href="https://dblp.org/pid/306/6867.html" target="_blank"><i class="fas fa-book"></i> DBLP Profile</a>
-                <a href="https://scholar.google.it/citations?user=pHADTUQAAAAJ&hl=it" target="_blank"><i class="fas fa-graduation-cap"></i> Google Scholar</a>
-                <a href="https://www.linkedin.com/in/lorenzo-palazzetti-a706b61a3/" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
-              </div>
-              <div class="col-md-4">
-                <a href="https://www.scopus.com/authid/detail.uri?authorId=57422576800" target="_blank"><i class="fas fa-book"></i> Scopus</a>
-                <a href="https://orcid.org/0000-0003-3069-3971" target="_blank"><i class="fas fa-id-badge"></i> ORCID</a>
-                <a href="https://github.com/TheAnswer96/" target="_blank"><i class="fab fa-github"></i> GitHub</a>
-              </div>
-            </div>
-          </div>
+<main class="page">
+
+  <div class="page-header fade-up">
+    <div class="page-header__kicker">Get in touch</div>
+    <h1 class="page-header__title">Contact</h1>
+  </div>
+
+  <!-- Email -->
+  <div class="section fade-up-2">
+    <span class="section-label">Email</span>
+    <h2 class="section-title">Write to Me</h2>
+    <div class="contact-grid">
+      <a class="contact-link" href="mailto:ljp5812@psu.edu">
+        <div class="contact-link__icon" style="background:rgba(26,108,245,.1);color:var(--accent)"><i class="fas fa-envelope"></i></div>
+        <div>
+          <div style="font-size:.72rem;color:var(--ink-muted);margin-bottom:2px;">Primary</div>
+          <div>ljp5812@psu.edu</div>
         </div>
+      </a>
+      <a class="contact-link" href="mailto:lorenzo.palazzetti@unipg.it">
+        <div class="contact-link__icon" style="background:rgba(26,108,245,.1);color:var(--accent)"><i class="fas fa-envelope"></i></div>
+        <div>
+          <div style="font-size:.72rem;color:var(--ink-muted);margin-bottom:2px;">Perugia</div>
+          <div>lorenzo.palazzetti@unipg.it</div>
+        </div>
+      </a>
+      <a class="contact-link" href="mailto:lorenzo.palazzetti@unifi.it">
+        <div class="contact-link__icon" style="background:rgba(26,108,245,.1);color:var(--accent)"><i class="fas fa-envelope"></i></div>
+        <div>
+          <div style="font-size:.72rem;color:var(--ink-muted);margin-bottom:2px;">Florence</div>
+          <div>lorenzo.palazzetti@unifi.it</div>
+        </div>
+      </a>
+    </div>
+  </div>
 
-        <!-- Office Address Section -->
-        <div class="section">
-          <h2 class="section-title">Office Address</h2>
-          <div class="section-content office-address">
-            <p><i class="fas fa-map-marker-alt"></i> Lorenzo Palazzetti</p>
-            <p>Università degli Studi di Perugia, Dipartimento di Matematica e Informatica</p>
-            <p>Via Vanvitelli, 1 06123 Perugia, Italy</p>
-          </div>
+  <!-- Academic profiles -->
+  <div class="section fade-up-3">
+    <span class="section-label">Profiles</span>
+    <h2 class="section-title">Academic &amp; Social</h2>
+    <div class="contact-grid">
+      <a class="contact-link" href="https://scholar.google.it/citations?user=pHADTUQAAAAJ&hl=it" target="_blank">
+        <div class="contact-link__icon" style="background:rgba(0,201,177,.12);color:#009e8c"><i class="fas fa-graduation-cap"></i></div>
+        <div>
+          <div style="font-size:.72rem;color:var(--ink-muted);margin-bottom:2px;">Citations &amp; h-index</div>
+          <div>Google Scholar</div>
+        </div>
+      </a>
+      <a class="contact-link" href="https://dblp.org/pid/306/6867.html" target="_blank">
+        <div class="contact-link__icon" style="background:rgba(0,201,177,.12);color:#009e8c"><i class="fas fa-database"></i></div>
+        <div>
+          <div style="font-size:.72rem;color:var(--ink-muted);margin-bottom:2px;">Bibliography</div>
+          <div>DBLP Profile</div>
+        </div>
+      </a>
+      <a class="contact-link" href="https://orcid.org/0000-0003-3069-3971" target="_blank">
+        <div class="contact-link__icon" style="background:rgba(0,201,177,.12);color:#009e8c"><i class="fas fa-id-badge"></i></div>
+        <div>
+          <div style="font-size:.72rem;color:var(--ink-muted);margin-bottom:2px;">Researcher ID</div>
+          <div>ORCID 0000-0003-3069-3971</div>
+        </div>
+      </a>
+      <a class="contact-link" href="https://www.scopus.com/authid/detail.uri?authorId=57422576800" target="_blank">
+        <div class="contact-link__icon" style="background:rgba(0,201,177,.12);color:#009e8c"><i class="fas fa-book"></i></div>
+        <div>
+          <div style="font-size:.72rem;color:var(--ink-muted);margin-bottom:2px;">Scopus</div>
+          <div>Author 57422576800</div>
+        </div>
+      </a>
+      <a class="contact-link" href="https://www.linkedin.com/in/lorenzo-palazzetti-a706b61a3/" target="_blank">
+        <div class="contact-link__icon" style="background:rgba(26,108,245,.1);color:var(--accent)"><i class="fab fa-linkedin"></i></div>
+        <div>
+          <div style="font-size:.72rem;color:var(--ink-muted);margin-bottom:2px;">Professional</div>
+          <div>LinkedIn</div>
+        </div>
+      </a>
+      <a class="contact-link" href="https://github.com/TheAnswer96/" target="_blank">
+        <div class="contact-link__icon" style="background:rgba(13,17,23,.08);color:var(--ink)"><i class="fab fa-github"></i></div>
+        <div>
+          <div style="font-size:.72rem;color:var(--ink-muted);margin-bottom:2px;">Code</div>
+          <div>GitHub @TheAnswer96</div>
+        </div>
+      </a>
+    </div>
+  </div>
+
+  <!-- Office -->
+  <div class="section">
+    <span class="section-label">In Person</span>
+    <h2 class="section-title">Office Address</h2>
+    <div class="card" style="display:inline-flex;gap:20px;align-items:flex-start;max-width:480px;">
+      <div style="font-size:1.5rem;margin-top:4px;">📍</div>
+      <div>
+        <div style="font-weight:600;margin-bottom:6px;">Lorenzo Palazzetti</div>
+        <div style="font-size:.9rem;color:var(--ink-soft);line-height:1.7;">
+          Università degli Studi di Perugia<br>
+          Dipartimento di Matematica e Informatica<br>
+          Via Vanvitelli, 1<br>
+          06123 Perugia, Italy
         </div>
       </div>
     </div>
-
-    <!-- Footer -->
-    <footer class="footer">
-       <p>&copy; 2024 Lorenzo Palazzetti. All rights reserved.</p>
-       <p>Last update: 18/09/2024</p>
-    </footer>
   </div>
 
-  <!-- Bootstrap JS and dependencies -->
-  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</main>
+
+<footer class="footer">
+  <div class="footer__inner">
+    <p>© 2024 Lorenzo Palazzetti &nbsp;·&nbsp; University of Perugia &nbsp;·&nbsp; Last update: 14/03/2026</p>
+  </div>
+</footer>
+<script src="nav.js"></script>
 </body>
 </html>

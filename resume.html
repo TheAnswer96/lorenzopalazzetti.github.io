@@ -3,250 +3,239 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Resume</title>
-  <!-- Bootstrap CSS -->
-  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-  <!-- Font Awesome for icons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <title>Resume — Lorenzo Palazzetti</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=SUSE:wght@100..800&display=swap" rel="stylesheet">
-
-  <style>
-    html, body {
-      height: 100%;
-      margin: 0;
-      font-family: "SUSE", sans-serif;
-    }
-    .container-wrapper {
-      min-height: 100vh; /* Full viewport height */
-      display: flex;
-      flex-direction: column;
-    }
-    .content-wrapper {
-      flex: 1;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      padding: 20px;
-    }
-    .container {
-      width: 100%;
-    }
-    .footer {
-      background-color: #f0f0fc; /* Lighter cyber pink */
-      padding: 10px;
-      text-align: center;
-    }
-    .navbar {
-      background-color: #f0f0fc; /* Slightly lighter cyber pink */
-    }
-    .section-title {
-      font-size: 2.5rem; /* Larger font size for section titles */
-      margin-top: 40px; /* Increased space above section titles */
-      margin-bottom: 20px; /* Increased space below section titles */
-      color: #25ced1; /* Use cyan for section titles */
-    }
-    .section-content {
-      margin-top: 10px;
-    }
-    .education-entry, .work-experience-entry, .teaching-experience-entry {
-      margin-bottom: 20px;
-    }
-    .education-entry, .work-experience-entry, .teaching-experience-entry {
-      position: relative;
-      padding-bottom: 20px;
-    }
-    .education-entry:after, .work-experience-entry:after, .teaching-experience-entry:after {
-      content: '';
-      display: block;
-      width: 100%;
-      height: 2px;
-      background-color: #9eb3c2; /* Same color as the section title */
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      margin-top: 20px;
-    }
-    .education-entry:last-child:after, .work-experience-entry:last-child:after, .teaching-experience-entry:last-child:after {
-      display: none; /* Remove line for the last entry */
-    }
-    .education-details, .work-experience-details, .teaching-experience-details {
-      margin-top: 20px; /* Increased space above thesis details */
-    }
-    .education-details p, .work-experience-details p, .teaching-experience-details p {
-      font-size: 0.9rem; /* Reduced font size for details */
-      margin: 10px 0; /* Added vertical margin for spacing */
-    }
-    .work-experience-period, .teaching-experience-period {
-      color: #25ced1; /* Same color as the section title */
-    }
-
-    .btn-custom {
-  background-color: #25ced1; /* Same color as the section title */
-  color: #fff; /* White text color */
-  border: none; /* Remove default border */
-  padding: 10px 20px; /* Add padding */
-  font-size: 1rem; /* Font size */
-  border-radius: 5px; /* Rounded corners */
-  text-decoration: none; /* Remove underline */
-  margin-bottom: 10px;
-}
-
-.btn-custom:hover {
-  background-color: #7bdff2; /* Darker shade for hover effect */
-}
-
-  </style>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,800;1,400;1,600&family=Inter:wght@300;400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <!-- Wrapper to ensure footer sticks to bottom -->
-  <div class="container-wrapper">
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-light">
-      <a class="navbar-brand" href="#">Lorenzo Palazzetti</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ml-auto">
-          <li class="nav-item">
-            <a class="nav-link" href="index.html">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="resume.html">Resume</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="research.html">Research Activities</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="publications.html">Publications</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="contact.html">Contact</a>
-          </li>
-        </ul>
-      </div>
-    </nav>
 
-    <!-- Centered Content Section -->
-    <div class="content-wrapper">
-      <div class="container">
-        <!-- Educational Activities Section -->
-        <div class="section">
-          <h2 class="section-title">Education</h2>
-          <div class="section-content">
-            <div class="education-entry">
-              <h4>PhD in Computer Science</h4>
-              <p><strong>Institution:</strong> University of Florence</p>
-              <p><strong>Period:</strong> <span class="work-experience-period">2020-2023</span></p>
-              <p><strong>Grade:</strong> Excellent with praise</p>
-              <div class="education-details">
-                <p><strong>Thesis Title:</strong> Optimizing Drone-based Applications for Delivery and Smart Agriculture</p>
-                <p><strong>Advisor:</strong> Professor Maria Cristina Pinotti</p>
-                <p><strong>Thesis in Brief:</strong> I explored and optimized drone-based solutions for last-mile delivery and smart agriculture.
-                    I devised novel strategies for complex combinatorial problems in route optimization and agricultural operations.
-                    Additionally, I investigated computer vision techniques for pest monitoring in orchards using drones, leading to an autonomous protocol for pest management.
-                    I was honored with a PhD with distinction for his significant contributions.</p>
-              </div>
-            </div>
+<nav class="nav">
+  <div class="nav__inner">
+    <a class="nav__brand" href="index.html">Lorenzo <span>Palazzetti</span></a>
+    <ul class="nav__links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="resume.html">Resume</a></li>
+      <li><a href="research.html">Research</a></li>
+      <li><a href="publications.html">Publications</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div class="nav__hamburger"><span></span><span></span><span></span></div>
+  </div>
+  <div class="nav__mobile" style="display:none">
+    <a href="index.html">Home</a>
+    <a href="resume.html">Resume</a>
+    <a href="research.html">Research</a>
+    <a href="publications.html">Publications</a>
+    <a href="contact.html">Contact</a>
+  </div>
+</nav>
 
-            <div class="education-entry">
-              <h4>Master of Science in Computer Science</h4>
-              <p><strong>Institution:</strong> University of Perugia</p>
-              <p><strong>Period:</strong> <span class="work-experience-period">2018-2020</span></p>
-              <p><strong>Grade:</strong> Summa cum laude</p>
-              <div class="education-details">
-                <p><strong>Thesis Title:</strong> Routing Drones Being Aware of Wind Conditions</p>
-                <p><strong>Advisor:</strong> Professor Maria Cristina Pinotti</p>
-                <p><strong>Thesis in Brief:</strong>
-                    My thesis, "Routing Drones Being Aware of Wind Conditions", explored the influence of wind on drone routes, particularly in last-mile delivery contexts.
-                    I demonstrated for the first time that wind can be leveraged to extend drone flight paths.
-                    I developed several algorithms to optimize drone routes in presence of winds that can dynamically change over the time.
-                    Synthetic simulations were employed to conduct feasibility analyses leveraging on those algorithms and prove theoretical results.
-                </p>
-              </div>
-            </div>
+<main class="page">
 
-            <div class="education-entry">
-              <h4>Bachelor of Science in Computer Science</h4>
-              <p><strong>Institution:</strong> University of Perugia</p>
-              <p><strong>Period:</strong> <span class="work-experience-period">2015-2018</span></p>
-              <p><strong>Grade:</strong> 104/110</p>
-              <div class="education-details">
-                <p><strong>Thesis Title:</strong> Lattice-Based Cryptography</p>
-                <p><strong>Advisor:</strong> Professor Marco Baioletti</p>
-                <p><strong>Thesis in Brief:</strong>
-                    During my undergraduate studies, I delved into the core principles of computer science, focusing on algorithms, data structures, networking, and programming.
-                    In my thesis titled "Lattice-Based Cryptography", I embarked on an exploration of cryptographic systems robust against Quantum Computers.
-                    Inspired by NTRU, I developed a cryptosystem designed to withstand quantum attacks.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Work Experience Section -->
-        <div class="section">
-          <h2 class="section-title">Work Experience</h2>
-          <div class="section-content">
-            <div class="work-experience-entry">
-              <p><strong>Postdoctoral Researcher</strong>, University of Perugia, <span class="work-experience-period">2024 to Now</span></p>
-            </div>
-            <div class="work-experience-entry">
-              <p><strong>HALY.ID Research Fellow</strong>, University of Perugia, <span class="work-experience-period">2020 to 2024</span></p>
-            </div>
-            <div class="work-experience-entry">
-              <p><strong>Haly.ID Project Fellow</strong>, University of Perugia, <span class="work-experience-period">11/2023 to 06/2024</span></p>
-            </div>
-            <div class="work-experience-entry">
-              <p><strong>Internship on Recommender Systems</strong>, University of Perugia, <span class="work-experience-period">10/2019 to 12/2019</span></p>
-            </div>
-            <div class="work-experience-entry">
-              <p><strong>System Manager</strong>, Umbertide Municipality, <span class="work-experience-period">04/2018 to 06/2018</span></p>
-            </div>
-            <div class="work-experience-entry">
-              <p><strong>System Manager</strong>, Città di Castello Municipality, <span class="work-experience-period">10/2019 to 12/2019</span></p>
-            </div>
-          </div>
-        </div>
-
-        <!-- Teaching Experience Section -->
-        <div class="section">
-          <h2 class="section-title">Teaching Experience</h2>
-          <div class="section-content">
-            <div class="teaching-experience-entry">
-              <p><strong>Algorithm and Data Structures Teaching Assistant</strong>, University of Perugia, <span class="teaching-experience-period">02/2024 to Now</span></p>
-            </div>
-            <div class="teaching-experience-entry">
-              <p><strong>Internship on Recommender Systems</strong>, University of Perugia, <span class="teaching-experience-period">10/2019 to 12/2019</span></p>
-            </div>
-            <div class="teaching-experience-entry">
-              <p><strong>Algorithm and Data Structures Tutoring</strong>, University of Perugia, <span class="teaching-experience-period">11/2022 to 06/2023</span></p>
-            </div>
-            <div class="teaching-experience-entry">
-              <p><strong>Algorithm and Data Structures Tutoring</strong>, University of Perugia, <span class="teaching-experience-period">03/2022 to 06/2022</span></p>
-            </div>
-          </div>
-        </div>
-      </div>
+  <div class="page-header fade-up">
+    <div class="page-header__kicker">Curriculum Vitae</div>
+    <h1 class="page-header__title">Resume</h1>
+    <div style="margin-top:20px;">
+      <a class="btn btn--primary" href="CV.pdf" target="_blank"><i class="fas fa-file-pdf"></i> Download PDF</a>
     </div>
-
-    <!-- Download Button Section -->
-    <div class="section text-center">
-      <a href="src/cv.pdf" class="btn btn-custom">Download Brief Version</a>
-    </div>
-
-    <!-- Footer -->
-    <footer class="footer">
-       <p>&copy; 2024 Lorenzo Palazzetti. All rights reserved.</p>
-       <p>Last update: 18/09/2024</p>
-    </footer>
   </div>
 
-  <!-- Bootstrap JS and dependencies -->
-  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <!-- EDUCATION -->
+  <div class="section fade-up-2">
+    <span class="section-label">Academic Background</span>
+    <h2 class="section-title">Education</h2>
+    <div class="timeline">
+
+      <div class="timeline-item">
+        <div class="timeline__year">2020 – 2024</div>
+        <div class="timeline__dot"></div>
+        <div class="timeline__body">
+          <h4>PhD in Computer Science</h4>
+          <p>University of Florence, Italy</p>
+          <p style="margin-bottom:8px;"><span class="chip chip--accent">Excellent with praise</span></p>
+          <details>
+            <summary style="font-size:.875rem;font-weight:600;color:var(--ink-soft);">
+              Thesis: Optimizing Drone-based Applications for Delivery and Smart Agriculture
+            </summary>
+            <p style="font-size:.875rem;color:var(--ink-soft);margin-top:12px;line-height:1.7;">
+              Explored and optimised drone-based solutions for last-mile delivery and smart agriculture.
+              Devised novel strategies for complex combinatorial problems in route optimisation and agricultural operations.
+              Investigated computer vision techniques for pest monitoring in orchards, leading to an autonomous protocol for pest management.
+              <br><strong>Advisor:</strong> Professor Maria Cristina Pinotti
+            </p>
+          </details>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline__year">2018 – 2020</div>
+        <div class="timeline__dot"></div>
+        <div class="timeline__body">
+          <h4>Master of Science in Computer Science</h4>
+          <p>University of Perugia, Italy</p>
+          <p style="margin-bottom:8px;"><span class="chip chip--teal">Summa cum laude</span></p>
+          <details>
+            <summary style="font-size:.875rem;font-weight:600;color:var(--ink-soft);">
+              Thesis: Routing Drones Being Aware of Wind Conditions
+            </summary>
+            <p style="font-size:.875rem;color:var(--ink-soft);margin-top:12px;line-height:1.7;">
+              First demonstration that wind can be leveraged to extend drone flight paths.
+              Developed algorithms to optimise drone routes in presence of dynamically-changing winds.
+              <br><strong>Advisor:</strong> Professor Maria Cristina Pinotti
+            </p>
+          </details>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline__year">2015 – 2018</div>
+        <div class="timeline__dot"></div>
+        <div class="timeline__body">
+          <h4>Bachelor of Science in Computer Science</h4>
+          <p>University of Perugia, Italy</p>
+          <p style="margin-bottom:8px;"><span class="chip">104/110</span></p>
+          <details>
+            <summary style="font-size:.875rem;font-weight:600;color:var(--ink-soft);">
+              Thesis: Lattice-Based Cryptography
+            </summary>
+            <p style="font-size:.875rem;color:var(--ink-soft);margin-top:12px;line-height:1.7;">
+              Exploration of cryptographic systems robust against quantum computers.
+              Inspired by NTRU, designed a cryptosystem resilient to quantum attacks.
+              <br><strong>Advisor:</strong> Professor Marco Baioletti
+            </p>
+          </details>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- WORK EXPERIENCE -->
+  <div class="section fade-up-3">
+    <span class="section-label">Positions Held</span>
+    <h2 class="section-title">Work Experience</h2>
+    <div class="timeline">
+        <div class="timeline-item">
+            <div class="timeline__year">11/2025 – 11/2027</div>
+            <div class="timeline__dot"></div>
+            <div class="timeline__body">
+              <h4>Postdoctoral Researcher</h4>
+              <p>Pennsylvania State University, PA, USA</p>
+            </div>
+        </div>
+
+      <div class="timeline-item">
+        <div class="timeline__year">07/2024 – 11/2025</div>
+        <div class="timeline__dot"></div>
+        <div class="timeline__body">
+          <h4>Postdoctoral Researcher</h4>
+          <p>University of Perugia, Italy</p>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline__year">11/2023 – 06/2024</div>
+        <div class="timeline__dot"></div>
+        <div class="timeline__body">
+          <h4>Haly.ID Project Fellow</h4>
+          <p>University of Perugia, Italy</p>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline__year">10/2019 – 12/2019</div>
+        <div class="timeline__dot"></div>
+        <div class="timeline__body">
+          <h4>Internship — Recommender Systems</h4>
+          <p>University of Perugia, Italy</p>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline__year">04/2018 – 06/2018</div>
+        <div class="timeline__dot"></div>
+        <div class="timeline__body">
+          <h4>System Manager</h4>
+          <p>Umbertide Municipality, Italy</p>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline__year">03/2014 – 04/2014</div>
+        <div class="timeline__dot"></div>
+        <div class="timeline__body">
+          <h4>System Manager</h4>
+          <p>Città di Castello Municipality, Italy</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- TEACHING -->
+  <div class="section">
+    <span class="section-label">Academic Teaching</span>
+    <h2 class="section-title">Teaching Experience</h2>
+    <div class="timeline">
+      <div class="timeline-item">
+        <div class="timeline__year">08/2024 – 12/2024</div>
+        <div class="timeline__dot" style="background:var(--accent-2)"></div>
+        <div class="timeline__body">
+          <h4>Didactics of algorithms and data structures (including correctness,
+complexity and classical algorithms)” course</h4>
+          <p>University of Perugia, Italy</p>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline__year">02/2024 – now</div>
+        <div class="timeline__dot" style="background:var(--accent-2)"></div>
+        <div class="timeline__body">
+          <h4>Teaching Assistant — Algorithms &amp; Data Structures</h4>
+          <p>University of Perugia, Italy</p>
+        </div>
+      </div>
+
+        <div class="timeline-item">
+        <div class="timeline__year">10/2023 – 01/2024</div>
+        <div class="timeline__dot" style="background:var(--accent-2)"></div>
+        <div class="timeline__body">
+          <h4>Tutor — Algorithms &amp; Data Structures</h4>
+          <p>University of Perugia, Italy</p>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline__year">11/2022 – 06/2023</div>
+        <div class="timeline__dot" style="background:var(--accent-2)"></div>
+        <div class="timeline__body">
+          <h4>Tutor — Algorithms &amp; Data Structures</h4>
+          <p>University of Perugia, Italy</p>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline__year">03/2022 – 06/2022</div>
+        <div class="timeline__dot" style="background:var(--accent-2)"></div>
+        <div class="timeline__body">
+          <h4>Tutor — Algorithms &amp; Data Structures</h4>
+          <p>University of Perugia, Italy</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+</main>
+
+<footer class="footer">
+  <div class="footer__inner">
+    <p>© 2024 Lorenzo Palazzetti &nbsp;·&nbsp; University of Perugia &nbsp;·&nbsp; Last update: 14/03/2026</p>
+  </div>
+</footer>
+<script src="nav.js"></script>
 </body>
 </html>

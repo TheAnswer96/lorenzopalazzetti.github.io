@@ -3,392 +3,283 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Research Activities</title>
-  <!-- Bootstrap CSS -->
-  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-  <!-- Font Awesome for icons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <title>Research Activities — Lorenzo Palazzetti</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=SUSE:wght@100..800&display=swap" rel="stylesheet">
-
-  <style>
-    html, body {
-      height: 100%;
-      margin: 0;
-      font-family: "SUSE", sans-serif;
-    }
-    .container-wrapper {
-      min-height: 100vh; /* Full viewport height */
-      display: flex;
-      flex-direction: column;
-    }
-    .content-wrapper {
-      flex: 1;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      padding: 20px;
-    }
-    .container {
-      width: 100%;
-    }
-    .footer {
-      background-color: #f0f0fc; /* Lighter cyber pink */
-      padding: 10px;
-      text-align: center;
-    }
-    .navbar {
-      background-color: #f0f0fc; /* Slightly lighter cyber pink */
-    }
-
-    .section-title {
-      font-size: 2rem; /* Smaller font size for section titles */
-      margin-top: 40px; /* Increased space above section titles */
-      margin-bottom: 20px; /* Increased space below section titles */
-      color: #25ced1; /* Use cyan for section titles */
-    }
-    .section-content {
-      margin-top: 10px;
-    }
-    .entry-list {
-      list-style: none; /* Remove default list styles */
-      padding: 0;
-    }
-
-    .entry-list li {
-      margin-bottom: 10px; /* Adjust bottom margin for spacing */
-      font-size: 0.9rem; /* Font size for entries */
-    }
-
-    .period {
-      color: #25ced1; /* Same color as the section title */
-    }
-
-    .subsection {
-      margin-top: 30px; /* Space above the subsection */
-    }
-
-    .subsection .section-title {
-      font-size: 2rem; /* Font size for subsection titles */
-      margin-bottom: 10px; /* Space below subsection titles */
-      color: #25ced1; /* Same color as section titles */
-    }
-    .subsection-title{
-        font-size: 1.25rem; /* Font size for subsection titles */
-        margin-bottom: 8px; /* Space below subsection titles */
-        color: #000000; /* Same color as section titles */
-    }
-  </style>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,800;1,400;1,600&family=Inter:wght@300;400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <!-- Wrapper to ensure footer sticks to bottom -->
-  <div class="container-wrapper">
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-light">
-      <a class="navbar-brand" href="#">Lorenzo Palazzetti</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ml-auto">
-          <li class="nav-item">
-            <a class="nav-link" href="index.html">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="resume.html">Resume</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="research.html">Research Activities</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="publications.html">Publications</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="contact.html">Contact</a>
-          </li>
-        </ul>
-      </div>
-    </nav>
 
-    <!-- Centered Content Section -->
-    <div class="content-wrapper">
-      <div class="container">
+<nav class="nav">
+  <div class="nav__inner">
+    <a class="nav__brand" href="index.html">Lorenzo <span>Palazzetti</span></a>
+    <ul class="nav__links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="resume.html">Resume</a></li>
+      <li><a href="research.html">Research</a></li>
+      <li><a href="publications.html">Publications</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div class="nav__hamburger"><span></span><span></span><span></span></div>
+  </div>
+  <div class="nav__mobile" style="display:none">
+    <a href="index.html">Home</a>
+    <a href="resume.html">Resume</a>
+    <a href="research.html">Research</a>
+    <a href="publications.html">Publications</a>
+    <a href="contact.html">Contact</a>
+  </div>
+</nav>
 
-              <!-- Talks Section -->
-          <div class="section">
-            <h2 class="section-title">Talks and Seminars Held</h2>
-            <div class="section-content">
-              <!-- Talks list -->
-              <ul class="entry-list">
-                <li>
-                  <strong>A Gentle Introduction to Computer Vision for Pest Management</strong><br>
-                  <span class="period">21/03/2024</span> | Parma, Italy | Seminar
-                </li>
-                <li>
-                  <strong>Introduction to Computer Vision</strong><br>
-                  <span class="period">20/03/2024</span> | Perugia, Italy | Class
-                </li>
-                <li>
-                  <strong>Next-Generation Farming: Drone Technology and Computer Vision to Mitigate Stink Bug Infestations</strong><br>
-                  <span class="period">11/07/2023</span> | Braunschweig, Germany | Seminar
-                </li>
-                <li>
-                  <strong>Transforming Farming with Drones: Harnessing Data for Precision Agriculture</strong><br>
-                  <span class="period">10/05/2023</span> | Perugia, Italy | Class
-                </li>
-                <li>
-                  <strong>Halyomorpha Halys Detection using Drone-Captured Images and YOLOv5</strong><br>
-                  <span class="period">13/02/2023</span> | Perugia, Italy | Seminar
-                </li>
-                <li>
-                  <strong>Exploring the Advancements in Real-Time Object Detection: An Insight into DJI Matrice's Application</strong><br>
-                  <span class="period">14/02/2023</span> | Perugia, Italy | Seminar
-                </li>
-                <li>
-                  <strong>UNIPG Report: Release of the Latest Drone Application, Machine Learning Advancements, and Preliminary Time Series Analysis</strong><br>
-                  <span class="period">21/04/2023</span> | Perugia, Italy | Seminar
-                </li>
-                <li>
-                  <strong>Machine Learning Advancements in Haly.ID project</strong><br>
-                  <span class="period">16/06/2023</span> | Perugia, Italy | Seminar
-                </li>
-                <li>
-                  <strong>A Discussion about Smart Agriculture Technologies for Scouting Halyomorpha halys in Orchards</strong><br>
-                  <span class="period">14/10/2022</span> | Rolla, MO, USA | Seminar
-                </li>
-                <li>
-                  <strong>Routing Drones Being Aware of Wind Conditions</strong><br>
-                  <span class="period">05/04/2022</span> | Perugia, Italy | Class
-                </li>
-                <li>
-                  <strong>Drones & their Applications</strong><br>
-                  <span class="period">14/12/2021</span> | Perugia, Italy | Class
-                </li>
-                <li>
-                  <strong>Transaction & Fork Bitcoin</strong><br>
-                  <span class="period">14/03/2021</span> | Perugia, Italy | Seminar
-                </li>
-                <li>
-                  <strong>Tor & deanonymization attacks</strong><br>
-                  <span class="period">14/03/2021</span> | Perugia, Italy | Seminar
-                </li>
-              </ul>
-            </div>
-          </div>
+<main class="page">
 
-
-          <!-- Mentoring Section -->
-          <div class="section">
-            <h2 class="section-title">Visiting Period</h2>
-            <div class="section-content">
-              <!-- Mentoring list -->
-              <ul class="entry-list">
-                <li>
-                  <strong>Technische Universität Braunschweig (TUBS)</strong><br>
-                  <span class="period">07/2023</span> | Braunschweig, Germany
-                </li>
-              </ul>
-            </div>
-          </div>
-
-
-          <!-- Mentoring Section -->
-          <div class="section">
-            <h2 class="section-title">Mentoring</h2>
-            <div class="section-content">
-              <!-- Master Thesis Subsection -->
-              <div class="subsection">
-                <h3 class="subsection-title">Master Thesis</h3>
-                <ul class="entry-list">
-                  <li>
-                    <strong>Cimice Asiatica: Controllo e Monitoraggio con Dashboard Interattive e Algoritmi di Computer Vision su NVIDIA Jetson</strong><br>
-                    <span class="period">2024</span> | Fabio Bocchini, University of Perugia
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-
-
-          <!-- PhD Schools Section -->
-            <div class="section">
-              <h2 class="section-title">PhD Schools</h2>
-              <div class="section-content">
-                <!-- PhD Schools Entries -->
-                <div class="entry">
-                  <p>Algorithms to Live by, Supervisor: Professor Cristina M. Pinotti (University of Perugia)</p>
-                </div>
-                <div class="entry">
-                  <p>Calcolo Evolutivo, Supervisor: Prof. M. Baioletti & Dr. Valentino Santucci (University of Perugia)</p>
-                </div>
-                <div class="entry">
-                  <p>Blockchain technology, Supervisor: Stefano Bistarelli (University of Perugia)</p>
-                </div>
-                <div class="entry">
-                  <p>Approximation Algorithm, Supervisor: Mark de Berg</p>
-                </div>
-                <div class="entry">
-                  <p>Summer School in Discrete Mathematics 2022 - XVII Escuela de Verano en Matemáticas Discretas, Docenti: Jan Vondrak (Stanford University), Shuchi Chawla (University of Texas), Boris Bukh (Carnegie Mellon University) - Admitted according to research CV</p>
-                </div>
-                <div class="entry">
-                  <p>Deep Learning Applications for Computer Vision, Supervisor: Prof. Ioana Fleming (University of Colorado Boulder)</p>
-                </div>
-                <div class="entry">
-                  <p>Summer Graduate School "Mathematics of Machine Learning", Organizzata: Scuola Matematica Interuniversitaria (SMI) in collaboration with INdAM e MSRI - Admitted according to research CV</p>
-                </div>
-              </div>
-            </div>
-
-
-
-            <!-- Academic Service Section -->
-            <div class="section">
-              <h2 class="section-title">Academic Service</h2>
-
-              <!-- Organizational Responsibilities Subsection -->
-            <h3 class="section-subtitle">Organizational Responsibilities</h3>
-            <div class="section-content">
-              <div class="entry">
-                <p>(2024) Web Chair, IEEE ASDRoNet.</p>
-              </div>
-              <div class="entry">
-                  <p>(2024) Publicity Chair, IEEE ASDRoNet.</p>
-              </div>
-              <div class="entry">
-                  <p>(2024) Publicity Chair, IEEE MetroAgriFor.</p>
-              </div>
-              <div class="entry">
-                  <p>(2024) Publicity Chair, IEEE Wi-DroIT.</p>
-              </div>
-              <div class="entry">
-                <p>(2023) Web Chair, IEEE Wi-DroIT.</p>
-              </div>
-            </div>
-
-
-            <!-- Program Committee Subsection -->
-            <h3 class="section-subtitle">Program Committee</h3>
-            <div class="section-content">
-                <div class="entry">
-                <p>(2024) International Conference on Smart Computing (SMARTCOMP).</p>
-                </div>
-                <div class="entry">
-                <p>(2024) International Workshop on Unmanned Vehicles and IoT (UAV-IoT).</p>
-                </div>
-                <div class="entry">
-                <p>(2024) IEEE ASDRoNet.</p>
-                </div>
-                <div class="entry">
-                <p>(2024) IEEE MetroAgriFor.</p>
-                </div>
-                <div class="entry">
-                <p>(2024) ALLSENSORS.</p>
-                </div>
-                <div class="entry">
-                <p>(2024) SENSORCOMM.</p>
-                </div>
-                <div class="entry">
-                <p>(2024) SENSORDEVICES.</p>
-                </div>
-                <div class="entry">
-                <p>(2024) International Conference on Accessible Digital Agriculture Technologies (CADAT).</p>
-                </div>
-            </div>
-
-
-            <!-- Reviewing for International Journals Subsection -->
-            <h3 class="section-subtitle">Reviewing for International Journals</h3>
-                <div class="section-content">
-                  <div class="entry">
-                    <p>Taylor and Francis Transportmetrica B: Transport Dynamics.</p>
-                  </div>
-                  <div class="entry">
-                    <p>ACM Transactions on Sensor Networks (TOSN).</p>
-                  </div>
-                  <div class="entry">
-                    <p>F1000Research.</p>
-                  </div>
-                  <div class="entry">
-                    <p>Elsevier Pervasive and Mobile Computing (PMC).</p>
-                  </div>
-                  <div class="entry">
-                    <p>IEEE Transactions on Mobile Computing (TMC).</p>
-                  </div>
-                  <div class="entry">
-                    <p>IEEE Transactions on Network Science and Engineering (TNSE).</p>
-                  </div>
-                  <div class="entry">
-                    <p>PAGEPress Journal of Agricultural Engineering (JAE).</p>
-                  </div>
-                  <div class="entry">
-                    <p>Tech Science Press Computers, Materials & Continua (CMC).</p>
-                  </div>
-                  <div class="entry">
-                    <p>Elsevier Computer and Electronics in Agriculture (CEA).</p>
-                  </div>
-                  <div class="entry">
-                    <p>Elsevier Computers and Operations Research (COR).</p>
-                </div>
-              </div>
-
-              <!-- Reviewing for International Conferences Subsection -->
-              <h3 class="section-subtitle">Reviewing for International Conferences</h3>
-              <div class="section-content">
-                  <div class="entry">
-                  <p>ACM SIGKDD (2022).</p>
-                </div>
-                <div class="entry">
-                  <p>IEEE WoWMoM (2022).</p>
-                </div>
-                <div class="entry">
-                  <p>AAMAS (2022).</p>
-                </div>
-                <div class="entry">
-                  <p>IEEE MetroAgriFor (2023).</p>
-                </div>
-                <div class="entry">
-                  <p>IEEE Wi-DroIT (2023).</p>
-                </div>
-                <div class="entry">
-                  <p>IEEE WoWMoM (2024).</p>
-                </div>
-                <div class="entry">
-                  <p>IEEE DCOSS (2024).</p>
-                </div>
-                <div class="entry">
-                  <p>IEEE Wi-DroIT (2024).</p>
-                </div>
-                <div class="entry">
-                  <p>International Conference on Smart Computing (SMARTCOMP 2024).</p>
-                </div>
-                <div class="entry">
-                  <p>International Workshop on Unmanned Vehicles and IoT (UAV-IoT 2024).</p>
-                </div>
-                <div class="entry">
-                  <p>IEEE ASDRoNet (2024).</p>
-                </div>
-                <div class="entry">
-                  <p>IEEE MetroAgriFor (2024).</p>
-                </div>
-              </div>
-            </div>
-
-
-
-      </div>
-    </div>
-
-    <!-- Footer -->
-    <footer class="footer">
-      <p>&copy; 2024 Lorenzo Palazzetti. All rights reserved.</p>
-      <p>Last update: 18/09/2024</p>
-    </footer>
+  <div class="page-header fade-up">
+    <div class="page-header__kicker">Activities &amp; Service</div>
+    <h1 class="page-header__title">Research Activities</h1>
   </div>
 
-  <!-- Bootstrap JS and dependencies -->
-  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <!-- TALKS -->
+  <div class="section fade-up-2">
+    <span class="section-label">Dissemination</span>
+    <h2 class="section-title">Talks &amp Seminars</h2>
+    <ul class="entry-list">
+                        <li>
+        <strong>
+            Pest Countermeasures Development Through Digital Twin Orchard Simulations
+        </strong>
+        <span class="meta">20/02/2025 &nbsp;·&nbsp; Padova, Italy &nbsp;·&nbsp; <span class="chip chip--accent">Seminar</span></span>
+      </li>
+                <li>
+        <strong>
+            Designing UAV-Assisted Systems for Enhanced Data Collection in Wireless Sensor Networks
+        </strong>
+        <span class="meta">05/12/2024 &nbsp;·&nbsp; Perugia, Italy &nbsp;·&nbsp; <span class="chip chip--accent">Seminar</span></span>
+      </li>
+        <li>
+        <strong>
+            Optimizing Drone-Based Applications for Delivery and Smart Agriculture
+        </strong>
+        <span class="meta">25/11/2024 &nbsp;·&nbsp; Umbertide, Italy &nbsp;·&nbsp; <span class="chip chip--accent">Seminar</span></span>
+      </li>
+      <li>
+        <strong>A Gentle Introduction to Computer Vision for Pest Management</strong>
+        <span class="meta">21/03/2024 &nbsp;·&nbsp; Parma, Italy &nbsp;·&nbsp; <span class="chip chip--accent">Seminar</span></span>
+      </li>
+      <li>
+        <strong>Introduction to Computer Vision</strong>
+        <span class="meta">20/03/2024 &nbsp;·&nbsp; Perugia, Italy &nbsp;·&nbsp; <span class="chip">Class</span></span>
+      </li>
+      <li>
+        <strong>Next-Generation Farming: Drone Technology and Computer Vision to Mitigate Stink Bug Infestations</strong>
+        <span class="meta">11/07/2023 &nbsp;·&nbsp; Braunschweig, Germany &nbsp;·&nbsp; <span class="chip chip--accent">Seminar</span></span>
+      </li>
+      <li>
+        <strong>Transforming Farming with Drones: Harnessing Data for Precision Agriculture</strong>
+        <span class="meta">10/05/2023 &nbsp;·&nbsp; Perugia, Italy &nbsp;·&nbsp; <span class="chip">Class</span></span>
+      </li>
+      <li>
+        <strong>Halyomorpha Halys Detection using Drone-Captured Images and YOLOv5</strong>
+        <span class="meta">13/02/2023 &nbsp;·&nbsp; Perugia, Italy &nbsp;·&nbsp; <span class="chip chip--accent">Seminar</span></span>
+      </li>
+      <li>
+        <strong>Exploring Advancements in Real-Time Object Detection: An Insight into DJI Matrice's Application</strong>
+        <span class="meta">14/02/2023 &nbsp;·&nbsp; Perugia, Italy &nbsp;·&nbsp; <span class="chip chip--accent">Seminar</span></span>
+      </li>
+      <li>
+        <strong>UNIPG Report: Release of the Latest Drone Application, ML Advancements, and Preliminary Time Series Analysis</strong>
+        <span class="meta">21/04/2023 &nbsp;·&nbsp; Perugia, Italy &nbsp;·&nbsp; <span class="chip chip--accent">Seminar</span></span>
+      </li>
+      <li>
+        <strong>Machine Learning Advancements in Haly.ID Project</strong>
+        <span class="meta">16/06/2023 &nbsp;·&nbsp; Perugia, Italy &nbsp;·&nbsp; <span class="chip chip--accent">Seminar</span></span>
+      </li>
+      <li>
+        <strong>A Discussion about Smart Agriculture Technologies for Scouting <em>Halyomorpha halys</em> in Orchards</strong>
+        <span class="meta">14/10/2022 &nbsp;·&nbsp; Rolla, MO, USA &nbsp;·&nbsp; <span class="chip chip--accent">Seminar</span></span>
+      </li>
+      <li>
+        <strong>Routing Drones Being Aware of Wind Conditions</strong>
+        <span class="meta">05/04/2022 &nbsp;·&nbsp; Perugia, Italy &nbsp;·&nbsp; <span class="chip">Class</span></span>
+      </li>
+      <li>
+        <strong>Drones &amp; their Applications</strong>
+        <span class="meta">14/12/2021 &nbsp;·&nbsp; Perugia, Italy &nbsp;·&nbsp; <span class="chip">Class</span></span>
+      </li>
+      <li>
+        <strong>Transaction &amp; Fork Bitcoin</strong>
+        <span class="meta">14/03/2021 &nbsp;·&nbsp; Perugia, Italy &nbsp;·&nbsp; <span class="chip chip--accent">Seminar</span></span>
+      </li>
+      <li>
+        <strong>Tor &amp; Deanonymization Attacks</strong>
+        <span class="meta">14/03/2021 &nbsp;·&nbsp; Perugia, Italy &nbsp;·&nbsp; <span class="chip chip--accent">Seminar</span></span>
+      </li>
+    </ul>
+  </div>
+
+  <!-- VISITING -->
+  <div class="section fade-up-3">
+    <span class="section-label">International</span>
+    <h2 class="section-title">Visiting Periods</h2>
+    <ul class="entry-list">
+      <li>
+        <strong>Technische Universität Braunschweig (TUBS)</strong>
+        <span class="meta">07/2023 &nbsp;·&nbsp; Braunschweig, Germany</span>
+      </li>
+    </ul>
+  </div>
+
+  <!-- MENTORING -->
+  <div class="section">
+    <span class="section-label">Supervision</span>
+    <h2 class="section-title">Mentoring</h2>
+    <h3 style="font-size:1rem;font-weight:600;margin-bottom:16px;color:var(--ink-soft);">Master Thesis</h3>
+    <ul class="entry-list">
+        <li>
+        <strong>Data Structures and Didactic Exercises for Teaching Algorithms and Data Structures</strong>
+        <span class="meta">2025 &nbsp;·&nbsp; Simone Bonacorsi, University of Perugia</span>
+      </li>
+      <li>
+        <strong>Cimice Asiatica: Controllo e Monitoraggio con Dashboard Interattive e Algoritmi di Computer Vision su NVIDIA Jetson</strong>
+        <span class="meta">2024 &nbsp;·&nbsp; Fabio Bocchini, University of Perugia</span>
+      </li>
+    </ul>
+      <h3 style="font-size:1rem;font-weight:600;margin-bottom:16px;color:var(--ink-soft);">Bachelor Thesis</h3>
+        <ul class="entry-list">
+            <li>
+            <strong>Panoramica sugli approcci combinatorici nell’impiego dei droni per le spedizioni e la consegna dei pacchi</strong>
+            <span class="meta">2025 &nbsp;·&nbsp; Stefano Biagini, University of Perugia</span>
+        </ul>
+  </div>
+
+  <!-- PHD SCHOOLS -->
+  <div class="section">
+    <span class="section-label">Training</span>
+    <h2 class="section-title">PhD Schools &amp; Summer Schools</h2>
+    <ul class="entry-list">
+      <li>
+        <strong>Algorithms to Live By</strong>
+        <span class="meta">Supervisor: Prof. Cristina M. Pinotti (University of Perugia)</span>
+      </li>
+      <li>
+        <strong>Calcolo Evolutivo</strong>
+        <span class="meta">Supervisor: Prof. M. Baioletti &amp; Dr. Valentino Santucci (University of Perugia)</span>
+      </li>
+      <li>
+        <strong>Blockchain Technology</strong>
+        <span class="meta">Supervisor: Stefano Bistarelli (University of Perugia)</span>
+      </li>
+      <li>
+        <strong>Approximation Algorithms</strong>
+        <span class="meta">Supervisor: Mark de Berg</span>
+      </li>
+      <li>
+        <strong>Summer School in Discrete Mathematics 2022</strong>
+        <span class="meta">XVII Escuela de Verano en Matemáticas Discretas &nbsp;·&nbsp; Jan Vondrak (Stanford), Shuchi Chawla (UT Austin), Boris Bukh (CMU) &nbsp;·&nbsp; <span class="chip chip--orange">Admitted by CV</span></span>
+      </li>
+      <li>
+        <strong>Deep Learning Applications for Computer Vision</strong>
+        <span class="meta">Supervisor: Prof. Ioana Fleming (University of Colorado Boulder)</span>
+      </li>
+      <li>
+        <strong>Summer Graduate School: Mathematics of Machine Learning</strong>
+        <span class="meta">SMI × INdAM × MSRI &nbsp;·&nbsp; <span class="chip chip--orange">Admitted by CV</span></span>
+      </li>
+    </ul>
+  </div>
+
+  <!-- ACADEMIC SERVICE -->
+  <div class="section">
+    <span class="section-label">Community</span>
+    <h2 class="section-title">Academic Service</h2>
+
+    <!-- Organisational -->
+    <h3 style="font-size:1rem;font-weight:600;margin-bottom:16px;color:var(--ink-soft);">Organisational Responsibilities</h3>
+    <ul class="entry-list" style="margin-bottom:32px;">
+        <li><strong>General Chair</strong> <span class="meta">IEEE Wi-DroIT (2025, 2026)</span></li>
+        <li><strong>General Chair</strong> <span class="meta">Co-organizer IEEE MetroAgriFor (2024, 2025)</span></li>
+        <li><strong>Publicity Chair</strong> <span class="meta">IEEE DCOSS-IoT (2025, 2026)</span></li>
+      <li><strong>Publicity Chair</strong> <span class="meta">IEEE ASDRoNet (2024)</span></li>
+      <li><strong>Publicity Chair</strong> <span class="meta">IEEE MetroAgriFor (2024)</span></li>
+      <li><strong>Publicity Chair</strong> <span class="meta">IEEE Wi-DroIT (2024)</span></li>
+        <li><strong>Web Chair</strong> <span class="meta">IEEE ASDRoNet (2024)</span></li>
+        <li><strong>Web Chair</strong> <span class="meta">IEEE Wi-DroIT (2023, 2025, 2026)</span></li>
+    </ul>
+
+    <!-- PC -->
+    <h3 style="font-size:1rem;font-weight:600;margin-bottom:16px;color:var(--ink-soft);">Program Committee</h3>
+    <div style="display:flex;flex-wrap:wrap;gap:8px;margin-bottom:32px;">
+        <span class="chip">IEEE DCOSS-IoT 2026</span>
+        <span class="chip">SMARTCOMP - Posters/WIP 2024, 2025, 2026</span>
+        <span class="chip">IEEE PERCOM - PhD Forum 2026</span>
+        <span class="chip">ICDCN 2026</span>
+        <span class="chip">ICDCN - Doctoral Symposium 2025</span>
+        <span class="chip">ALGOWIN 2025</span>
+        <span class="chip">NetRobiCS 2025, 2026</span>
+      <span class="chip">UAV-IoT 2024, 2025</span>
+      <span class="chip">IEEE ASDRoNet 2024</span>
+      <span class="chip">ALLSENSORS 2024, 2025</span>
+      <span class="chip">SENSORCOMM 2024, 2025</span>
+      <span class="chip">SENSORDEVICES 2024, 2025</span>
+      <span class="chip">CADAT 2024, 2025, 2026</span>
+    </div>
+
+    <!-- Journal review -->
+    <h3 style="font-size:1rem;font-weight:600;margin-bottom:16px;color:var(--ink-soft);">Reviewing — International Journals</h3>
+    <div style="display:flex;flex-wrap:wrap;gap:8px;margin-bottom:32px;">
+      <span class="chip chip--teal">Taylor and Francis Geo-Spatial Information Science</span>
+      <span class="chip chip--teal">Taylor and Francis Transportmetrica B: Transport Dynamics</span>
+      <span class="chip chip--teal">ACM Transactions on Sensor Networks</span>
+      <span class="chip chip--teal">ACM Journal on Autonomous Transportation Systems</span>
+      <span class="chip chip--teal">F1000Research</span>
+      <span class="chip chip--teal">Elsevier Transportation Research Interdisciplinary Perspectives</span>
+      <span class="chip chip--teal">Elsevier European Journal of Operational Research</span>
+      <span class="chip chip--teal">Elsevier Expert Systems with Applications</span>
+      <span class="chip chip--teal">Elsevier Pervasive and Mobile Computing</span>
+      <span class="chip chip--teal">Elsevier Computer and Electronics in Agriculture</span>
+        <span class="chip chip--teal">Elsevier Computers and Operations Research</span>
+        <span class="chip chip--teal">Elsevier ARRAY</span>
+        <span class="chip chip--teal">Elsevier Smart Agricultural Technology</span>
+        <span class="chip chip--teal">Elsevier Ad Hoc Networks</span>
+        <span class="chip chip--teal">Elsevier Transportation Research Part C</span>
+        <span class="chip chip--teal">Elsevier Computer Networks</span>
+        <span class="chip chip--teal">Elsevier Reliability Engineering and Systems Safety</span>
+        <span class="chip chip--teal">Elsevier Crop Protection</span>
+        <span class="chip chip--teal">IEEE Transactions on Mobile Computing</span>
+        <span class="chip chip--teal">IEEE Transactions on Network Science and Engineering</span>
+        <span class="chip chip--teal">PAGEPress Journal of Agricultural Engineering</span>
+        <span class="chip chip--teal">Tech Science Press Computers, Materials and Continua</span>
+        <span class="chip chip--teal">Journal of Intelligent and Fuzzy Systems</span>
+    </div>
+
+    <!-- Conf review -->
+    <h3 style="font-size:1rem;font-weight:600;margin-bottom:16px;color:var(--ink-soft);">Reviewing — International Conferences</h3>
+    <div style="display:flex;flex-wrap:wrap;gap:8px;">
+      <span class="chip">ACM SIGKDD 2022</span>
+      <span class="chip">IEEE WoWMoM 2022, 2024</span>
+      <span class="chip">AAMAS 2022</span>
+      <span class="chip">IEEE MetroAgriFor 2023, 2024, 2025</span>
+      <span class="chip">IEEE Wi-DroIT 2023, 2024, 2025</span>
+      <span class="chip">IEEE DCOSS 2024, 2025, 2026</span>
+      <span class="chip">SMARTCOMP 2024, 2025</span>
+      <span class="chip">UAV-IoT 2024, 2025</span>
+      <span class="chip">IEEE ASDRoNet 2024</span>
+      <span class="chip">IEEE MetroAgriFor 2023, 2024, 2025</span>
+        <span class="chip">ICDCN 2025, 2026</span>
+      <span class="chip">ALGOWIN 2025</span>
+      <span class="chip">IEEE NetRobotics 2025, 2026</span>
+      <span class="chip">SWAT 2026</span>
+    </div>
+  </div>
+
+</main>
+
+<footer class="footer">
+  <div class="footer__inner">
+    <p>© 2024 Lorenzo Palazzetti &nbsp;·&nbsp; University of Perugia &nbsp;·&nbsp; Last update: 14/03/2026</p>
+  </div>
+</footer>
+<script src="nav.js"></script>
 </body>
 </html>
