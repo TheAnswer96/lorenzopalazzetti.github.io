@@ -721,13 +721,29 @@ details.disclosure[open] > summary::before { transform: rotate(45deg); }
 }
 
 /* ─── 8. RESPONSIVE ─────────────────────────────────────────────── */
+
+/* Tablet + phone: the hero photo shrinks to a small rectangle above the text.
+   At full width it was a 260px block that ate the whole first screen — the
+   headline and CTAs have to land above the fold. */
 @media (max-width: 900px) {
   .hero {
     grid-template-columns: 1fr;
-    gap: var(--space-6);
+    gap: var(--space-5);
     padding-top: var(--space-4);
   }
-  .hero__photo { max-width: 260px; aspect-ratio: 1; order: -1; }
+  .hero__photo {
+    /* Height is set explicitly: aspect-ratio alone let the image grow tall
+       (the intrinsic 640×800 wins when only width is constrained). */
+    width: 148px;
+    max-width: 148px;
+    height: 180px;
+    aspect-ratio: auto;
+    object-fit: cover;
+    object-position: center 12%;   /* keep the face, drop the empty pavement */
+    border-radius: var(--radius);
+    box-shadow: var(--shadow-2);
+    order: -1;
+  }
 }
 
 @media (max-width: 720px) {
@@ -736,9 +752,29 @@ details.disclosure[open] > summary::before { transform: rotate(45deg); }
   .nav__burger { display: inline-flex; }
   .page { padding: var(--space-6) var(--space-4) var(--space-8); }
   .section { margin-bottom: var(--space-8); }
+
+  .hero { gap: var(--space-4); padding-bottom: var(--space-7); }
+  .hero::before { height: 380px; }
+  .hero__photo {
+    width: 112px;
+    max-width: 112px;
+    height: 136px;
+    margin-bottom: var(--space-2);
+  }
+  .hero__name { font-size: clamp(2.5rem, 13vw, 3.5rem); }
+  .hero__bio  { font-size: var(--text-sm); }
+
   .stat { border-right: none; border-bottom: 1px solid var(--border); }
   .stat:last-child { border-bottom: none; }
   .cta-band { padding: var(--space-5); }
   .btn { width: 100%; }
   .hero__cta .btn { width: auto; flex: 1 1 auto; }
+}
+
+/* Small phones (≤380px): two stat columns instead of one long strip. */
+@media (max-width: 380px) {
+  .stats { grid-template-columns: repeat(2, 1fr); }
+  .stat { border-right: 1px solid var(--border); }
+  .stat:nth-child(2n) { border-right: none; }
+  .stat:nth-last-child(-n+2) { border-bottom: none; }
 }
