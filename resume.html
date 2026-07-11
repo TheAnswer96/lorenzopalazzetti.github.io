@@ -1,241 +1,491 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="no-js">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Resume — Lorenzo Palazzetti</title>
+  <meta name="description" content="Resume of Lorenzo Palazzetti — PhD with distinction (Florence, 2024), Postdoctoral Researcher at Penn State. Awards, grants, appointments, teaching and skills.">
+  <link rel="canonical" href="https://lorenzopalazzetti.github.io/resume.html">
+
+  <script>
+    (function () {
+      try {
+        var saved = localStorage.getItem('theme');
+        var dark = saved ? saved === 'dark'
+                         : matchMedia('(prefers-color-scheme: dark)').matches;
+        document.documentElement.dataset.theme = dark ? 'dark' : 'light';
+      } catch (e) { document.documentElement.dataset.theme = 'light'; }
+    })();
+  </script>
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,800;1,400;1,600&family=Inter:wght@300;400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;800&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
+  <script src="app.js" defer></script>
 </head>
 <body>
 
-<nav class="nav">
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="nav">
   <div class="nav__inner">
     <a class="nav__brand" href="index.html">Lorenzo <span>Palazzetti</span></a>
-    <ul class="nav__links">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="resume.html">Resume</a></li>
-      <li><a href="research.html">Research</a></li>
-      <li><a href="publications.html">Publications</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
-    <div class="nav__hamburger"><span></span><span></span><span></span></div>
+
+    <nav aria-label="Primary">
+      <ul class="nav__links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="resume.html">Resume</a></li>
+        <li><a href="research.html">Research</a></li>
+        <li><a href="publications.html">Publications</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+
+    <div class="nav__actions">
+      <button class="icon-btn" data-theme-toggle type="button" aria-label="Switch to dark theme">
+        <svg class="icon-moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>
+        <svg class="icon-sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+      </button>
+      <button class="icon-btn nav__burger" data-drawer-toggle type="button" aria-label="Open menu" aria-expanded="false" aria-controls="nav-drawer">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+      </button>
+    </div>
   </div>
-  <div class="nav__mobile" style="display:none">
+
+  <nav class="nav__drawer" id="nav-drawer" data-open="false" aria-label="Mobile">
     <a href="index.html">Home</a>
     <a href="resume.html">Resume</a>
     <a href="research.html">Research</a>
     <a href="publications.html">Publications</a>
     <a href="contact.html">Contact</a>
-  </div>
-</nav>
+  </nav>
+</header>
 
-<main class="page">
+<main class="page" id="main">
 
-  <div class="page-header fade-up">
-    <div class="page-header__kicker">Curriculum Vitae</div>
+  <div class="page-header reveal">
+    <p class="page-header__kicker">Curriculum vitae</p>
     <h1 class="page-header__title">Resume</h1>
-    <div style="margin-top:20px;">
-      <a class="btn btn--primary" href="CV.pdf" target="_blank"><i class="fas fa-file-pdf"></i> Download PDF</a>
+    <p class="page-header__lede">
+      11 journal articles · 21 peer-reviewed conference and workshop papers ·
+      Best Paper at ICDCN 2022 · Best Demo at PerCom 2022 · PhD with distinction ·
+      Guest Editor, ACM JATS.
+    </p>
+    <div class="page-header__actions">
+      <a class="btn btn--primary" href="CV.pdf" target="_blank" rel="noopener">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12m0 0 4-4m-4 4-4-4M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-2"/></svg>
+        Download full CV
+      </a>
+      <a class="btn btn--outline" href="contact.html">Contact me</a>
     </div>
   </div>
 
-  <!-- EDUCATION -->
-  <div class="section fade-up-2">
-    <span class="section-label">Academic Background</span>
-    <h2 class="section-title">Education</h2>
-    <div class="timeline">
+  <!-- ── AWARDS ──────────────────────────────────────────────────── -->
+  <section class="section">
+    <div class="section__head reveal">
+      <span class="section-label">Recognition</span>
+      <h2 class="section-title">Awards &amp; honors</h2>
+    </div>
 
-      <div class="timeline-item">
-        <div class="timeline__year">2020 – 2024</div>
-        <div class="timeline__dot"></div>
-        <div class="timeline__body">
-          <h4>PhD in Computer Science</h4>
-          <p>University of Florence, Italy</p>
-          <p style="margin-bottom:8px;"><span class="chip chip--accent">Excellent with praise</span></p>
-          <details>
-            <summary style="font-size:.875rem;font-weight:600;color:var(--ink-soft);">
-              Thesis: Optimizing Drone-based Applications for Delivery and Smart Agriculture
-            </summary>
-            <p style="font-size:.875rem;color:var(--ink-soft);margin-top:12px;line-height:1.7;">
-              Explored and optimised drone-based solutions for last-mile delivery and smart agriculture.
-              Devised novel strategies for complex combinatorial problems in route optimisation and agricultural operations.
-              Investigated computer vision techniques for pest monitoring in orchards, leading to an autonomous protocol for pest management.
-              <br><strong>Advisor:</strong> Professor Maria Cristina Pinotti
-            </p>
-          </details>
-        </div>
-      </div>
+    <ul class="entry-list" data-stagger>
+      <li class="entry reveal">
+        <p class="entry__title">Best Paper Award</p>
+        <p class="entry__meta">
+          <span class="badge badge--warm">Best paper</span>
+          <span>ACM ICDCN 2022 — International Conference on Distributed Computing and Networking</span>
+        </p>
+      </li>
+      <li class="entry reveal">
+        <p class="entry__title">Best Demo Award</p>
+        <p class="entry__meta">
+          <span class="badge badge--warm">Best demo</span>
+          <span>IEEE PerCom 2022 — International Conference on Pervasive Computing and Communications</span>
+        </p>
+      </li>
+      <li class="entry reveal">
+        <p class="entry__title">Best Paper candidate</p>
+        <p class="entry__meta">
+          <span class="badge badge--warm">Nominated</span>
+          <span>IEEE MetroAgriFor 2025 · Bologna, Italy · October 2025</span>
+        </p>
+      </li>
+      <li class="entry reveal">
+        <p class="entry__title">Travel Grant</p>
+        <p class="entry__meta">
+          <span class="badge">Travel grant</span>
+          <span>IEEE PerCom 2022</span>
+        </p>
+      </li>
+      <li class="entry reveal">
+        <p class="entry__title">Travel Grant</p>
+        <p class="entry__meta">
+          <span class="badge">Travel grant</span>
+          <span>Workshop on Digital Twins: Mathematical Analysis, Formal Methods and Scientific ML (DTW 2025)</span>
+        </p>
+      </li>
+    </ul>
+  </section>
 
-      <div class="timeline-item">
-        <div class="timeline__year">2018 – 2020</div>
-        <div class="timeline__dot"></div>
-        <div class="timeline__body">
-          <h4>Master of Science in Computer Science</h4>
-          <p>University of Perugia, Italy</p>
-          <p style="margin-bottom:8px;"><span class="chip chip--teal">Summa cum laude</span></p>
-          <details>
-            <summary style="font-size:.875rem;font-weight:600;color:var(--ink-soft);">
-              Thesis: Routing Drones Being Aware of Wind Conditions
-            </summary>
-            <p style="font-size:.875rem;color:var(--ink-soft);margin-top:12px;line-height:1.7;">
-              First demonstration that wind can be leveraged to extend drone flight paths.
-              Developed algorithms to optimise drone routes in presence of dynamically-changing winds.
-              <br><strong>Advisor:</strong> Professor Maria Cristina Pinotti
-            </p>
-          </details>
-        </div>
-      </div>
+  <!-- ── GRANTS ──────────────────────────────────────────────────── -->
+  <section class="section">
+    <div class="section__head reveal">
+      <span class="section-label">Funding</span>
+      <h2 class="section-title">Grants</h2>
+    </div>
 
-      <div class="timeline-item">
-        <div class="timeline__year">2015 – 2018</div>
-        <div class="timeline__dot"></div>
-        <div class="timeline__body">
-          <h4>Bachelor of Science in Computer Science</h4>
-          <p>University of Perugia, Italy</p>
-          <p style="margin-bottom:8px;"><span class="chip">104/110</span></p>
-          <details>
-            <summary style="font-size:.875rem;font-weight:600;color:var(--ink-soft);">
-              Thesis: Lattice-Based Cryptography
-            </summary>
-            <p style="font-size:.875rem;color:var(--ink-soft);margin-top:12px;line-height:1.7;">
-              Exploration of cryptographic systems robust against quantum computers.
-              Inspired by NTRU, designed a cryptosystem resilient to quantum attacks.
-              <br><strong>Advisor:</strong> Professor Marco Baioletti
-            </p>
-          </details>
-        </div>
-      </div>
+    <ul class="entry-list">
+      <li class="entry reveal">
+        <p class="entry__title">Efficient routing algorithms for drones for Beyond Visual Line of Sight operability</p>
+        <p class="entry__meta">
+          <span class="badge badge--warm">INdAM–GNCS · 2026</span>
+          <span>Research project</span>
+        </p>
+      </li>
+    </ul>
+  </section>
+
+  <!-- ── APPOINTMENTS ────────────────────────────────────────────── -->
+  <section class="section">
+    <div class="section__head reveal">
+      <span class="section-label">Positions held</span>
+      <h2 class="section-title">Appointments</h2>
+    </div>
+
+    <div class="timeline" data-stagger>
+
+      <article class="timeline-item reveal">
+        <span class="timeline__dot"></span>
+        <p class="timeline__year">11/2025 – 11/2027</p>
+        <h3 class="timeline__title">Postdoctoral Researcher</h3>
+        <p class="timeline__org">Pennsylvania State University, PA, USA</p>
+        <p class="timeline__meta"><span class="badge badge--accent">Current</span></p>
+        <details class="disclosure">
+          <summary>AI- and sensor-driven smart monitoring for poultry and dairy farms</summary>
+          <div class="disclosure__body">
+            <strong>System development:</strong> smart monitoring systems integrating IoT and computer vision
+            for automated, data-driven livestock management.<br>
+            <strong>IoT integration:</strong> smart-sensor networks for continuous environmental and
+            physiological data — temperature, humidity, movement, feeding.<br>
+            <strong>Computer vision:</strong> image and video algorithms to detect and track animal behaviour,
+            anomalies and health indicators (posture, activity, feeding).<br>
+            <strong>Data &amp; analytics:</strong> pipelines and dashboards for KPIs, predictive maintenance
+            and early detection of health and welfare issues.
+          </div>
+        </details>
+      </article>
+
+      <article class="timeline-item reveal">
+        <span class="timeline__dot"></span>
+        <p class="timeline__year">07/2024 – 11/2025</p>
+        <h3 class="timeline__title">Postdoctoral Researcher</h3>
+        <p class="timeline__org">University of Perugia, Italy</p>
+        <p class="timeline__meta"><span class="badge">BVLOS autonomy</span></p>
+        <details class="disclosure">
+          <summary>Computer vision and AI for autonomous BVLOS drone navigation in GNSS-denied environments</summary>
+          <div class="disclosure__body">
+            Vision-driven perception, robust routing and navigation without GNSS, and multi-sensor
+            integration for autonomous aerial systems.
+          </div>
+        </details>
+      </article>
+
+      <article class="timeline-item reveal">
+        <span class="timeline__dot"></span>
+        <p class="timeline__year">11/2023 – 06/2024</p>
+        <h3 class="timeline__title">HALY.ID Project Research Fellow</h3>
+        <p class="timeline__org">University of Perugia, Italy</p>
+        <details class="disclosure">
+          <summary>IoT data integration with drones: from raw data to activity logbook</summary>
+          <div class="disclosure__body">
+            Integration of UAV and IoT — protocol definition and implementation.
+            Design and development of data harvesting and management algorithms, including image elaboration.
+            Design and implementation of a trusted logbook for orchard data, with preliminary certification
+            techniques.
+          </div>
+        </details>
+      </article>
+
+      <article class="timeline-item reveal">
+        <span class="timeline__dot"></span>
+        <p class="timeline__year">10/2019 – 12/2019</p>
+        <h3 class="timeline__title">University Internship — Recommender Systems</h3>
+        <p class="timeline__org">University of Perugia, Italy · advisor: Valentina Poggioni</p>
+        <p class="timeline__org">Project: Neural Collaborative Filtering — a framework for recommendations</p>
+      </article>
+
+      <article class="timeline-item reveal">
+        <span class="timeline__dot"></span>
+        <p class="timeline__year">04/2018 – 06/2018</p>
+        <h3 class="timeline__title">System Manager</h3>
+        <p class="timeline__org">Comune di Umbertide, Italy</p>
+      </article>
+
+      <article class="timeline-item reveal">
+        <span class="timeline__dot"></span>
+        <p class="timeline__year">03/2014 – 05/2014</p>
+        <h3 class="timeline__title">System Manager</h3>
+        <p class="timeline__org">Comune di Città di Castello, Italy</p>
+      </article>
 
     </div>
-  </div>
+  </section>
 
-  <!-- WORK EXPERIENCE -->
-  <div class="section fade-up-3">
-    <span class="section-label">Positions Held</span>
-    <h2 class="section-title">Work Experience</h2>
-    <div class="timeline">
-        <div class="timeline-item">
-            <div class="timeline__year">11/2025 – 11/2027</div>
-            <div class="timeline__dot"></div>
-            <div class="timeline__body">
-              <h4>Postdoctoral Researcher</h4>
-              <p>Pennsylvania State University, PA, USA</p>
-            </div>
-        </div>
+  <!-- ── TEACHING ────────────────────────────────────────────────── -->
+  <section class="section">
+    <div class="section__head reveal">
+      <span class="section-label">In the classroom</span>
+      <h2 class="section-title">Teaching</h2>
+    </div>
 
-      <div class="timeline-item">
-        <div class="timeline__year">07/2024 – 11/2025</div>
-        <div class="timeline__dot"></div>
-        <div class="timeline__body">
-          <h4>Postdoctoral Researcher</h4>
-          <p>University of Perugia, Italy</p>
-        </div>
-      </div>
+    <div class="timeline" data-stagger>
 
-      <div class="timeline-item">
-        <div class="timeline__year">11/2023 – 06/2024</div>
-        <div class="timeline__dot"></div>
-        <div class="timeline__body">
-          <h4>Haly.ID Project Fellow</h4>
-          <p>University of Perugia, Italy</p>
-        </div>
-      </div>
+      <article class="timeline-item reveal">
+        <span class="timeline__dot timeline__dot--teal"></span>
+        <p class="timeline__year">06/2026</p>
+        <h3 class="timeline__title">Design of Efficient Convolutional Neural Networks for Computer Vision</h3>
+        <p class="timeline__org">Pennsylvania State University, PA, USA · lecture series</p>
+        <p class="timeline__meta"><span class="badge badge--teal">12 hours</span></p>
+      </article>
 
-      <div class="timeline-item">
-        <div class="timeline__year">10/2019 – 12/2019</div>
-        <div class="timeline__dot"></div>
-        <div class="timeline__body">
-          <h4>Internship — Recommender Systems</h4>
-          <p>University of Perugia, Italy</p>
-        </div>
-      </div>
+      <article class="timeline-item reveal">
+        <span class="timeline__dot timeline__dot--teal"></span>
+        <p class="timeline__year">03/2026 – 04/2026</p>
+        <h3 class="timeline__title">Didactics of Algorithms and Data Structures</h3>
+        <p class="timeline__org">University of Perugia, Italy · correctness, complexity, classical algorithms</p>
+        <p class="timeline__meta"><span class="badge badge--teal">12 hours · 3 CFU</span></p>
+      </article>
 
-      <div class="timeline-item">
-        <div class="timeline__year">04/2018 – 06/2018</div>
-        <div class="timeline__dot"></div>
-        <div class="timeline__body">
-          <h4>System Manager</h4>
-          <p>Umbertide Municipality, Italy</p>
-        </div>
-      </div>
+      <article class="timeline-item reveal">
+        <span class="timeline__dot timeline__dot--teal"></span>
+        <p class="timeline__year">02/2024 – present</p>
+        <h3 class="timeline__title">Teaching Assistant — Algorithms &amp; Data Structures</h3>
+        <p class="timeline__org">University of Perugia, Italy</p>
+        <p class="timeline__meta"><span class="badge badge--accent">Ongoing</span></p>
+      </article>
 
-      <div class="timeline-item">
-        <div class="timeline__year">03/2014 – 04/2014</div>
-        <div class="timeline__dot"></div>
-        <div class="timeline__body">
-          <h4>System Manager</h4>
-          <p>Città di Castello Municipality, Italy</p>
-        </div>
-      </div>
+      <article class="timeline-item reveal">
+        <span class="timeline__dot timeline__dot--teal"></span>
+        <p class="timeline__year">08/2024 – 12/2024</p>
+        <h3 class="timeline__title">Didactics of Algorithms and Data Structures</h3>
+        <p class="timeline__org">University of Perugia, Italy</p>
+        <p class="timeline__meta"><span class="badge badge--teal">12 hours · 3 CFU</span></p>
+      </article>
+
+      <article class="timeline-item reveal">
+        <span class="timeline__dot timeline__dot--teal"></span>
+        <p class="timeline__year">10/2023 – 01/2024</p>
+        <h3 class="timeline__title">Tutor — Algorithms &amp; Data Structures</h3>
+        <p class="timeline__org">University of Perugia, Italy</p>
+        <p class="timeline__meta"><span class="badge badge--teal">27 hours</span></p>
+      </article>
+
+      <article class="timeline-item reveal">
+        <span class="timeline__dot timeline__dot--teal"></span>
+        <p class="timeline__year">11/2022 – 06/2023</p>
+        <h3 class="timeline__title">Tutor — Algorithms &amp; Data Structures</h3>
+        <p class="timeline__org">University of Perugia, Italy</p>
+        <p class="timeline__meta"><span class="badge badge--teal">57 hours</span></p>
+      </article>
+
+      <article class="timeline-item reveal">
+        <span class="timeline__dot timeline__dot--teal"></span>
+        <p class="timeline__year">03/2022 – 06/2022</p>
+        <h3 class="timeline__title">Tutor — Algorithms &amp; Data Structures</h3>
+        <p class="timeline__org">University of Perugia, Italy</p>
+        <p class="timeline__meta"><span class="badge badge--teal">35 hours</span></p>
+      </article>
 
     </div>
-  </div>
 
-  <!-- TEACHING -->
-  <div class="section">
-    <span class="section-label">Academic Teaching</span>
-    <h2 class="section-title">Teaching Experience</h2>
-    <div class="timeline">
-      <div class="timeline-item">
-        <div class="timeline__year">08/2024 – 12/2024</div>
-        <div class="timeline__dot" style="background:var(--accent-2)"></div>
-        <div class="timeline__body">
-          <h4>Didactics of algorithms and data structures (including correctness,
-complexity and classical algorithms)” course</h4>
-          <p>University of Perugia, Italy</p>
-        </div>
-      </div>
+    <p style="margin-top:var(--space-5)">
+      <a class="btn btn--outline reveal" href="research.html">Thesis supervision &amp; academic service →</a>
+    </p>
+  </section>
 
-      <div class="timeline-item">
-        <div class="timeline__year">02/2024 – now</div>
-        <div class="timeline__dot" style="background:var(--accent-2)"></div>
-        <div class="timeline__body">
-          <h4>Teaching Assistant — Algorithms &amp; Data Structures</h4>
-          <p>University of Perugia, Italy</p>
-        </div>
-      </div>
+  <!-- ── EDUCATION ───────────────────────────────────────────────── -->
+  <section class="section">
+    <div class="section__head reveal">
+      <span class="section-label">Academic background</span>
+      <h2 class="section-title">Education</h2>
+    </div>
 
-        <div class="timeline-item">
-        <div class="timeline__year">10/2023 – 01/2024</div>
-        <div class="timeline__dot" style="background:var(--accent-2)"></div>
-        <div class="timeline__body">
-          <h4>Tutor — Algorithms &amp; Data Structures</h4>
-          <p>University of Perugia, Italy</p>
-        </div>
-      </div>
+    <div class="timeline" data-stagger>
 
-      <div class="timeline-item">
-        <div class="timeline__year">11/2022 – 06/2023</div>
-        <div class="timeline__dot" style="background:var(--accent-2)"></div>
-        <div class="timeline__body">
-          <h4>Tutor — Algorithms &amp; Data Structures</h4>
-          <p>University of Perugia, Italy</p>
-        </div>
-      </div>
+      <article class="timeline-item reveal">
+        <span class="timeline__dot"></span>
+        <p class="timeline__year">11/2020 – 04/2024</p>
+        <h3 class="timeline__title">PhD in Computer Science</h3>
+        <p class="timeline__org">University of Florence, Italy · advisor: Maria Cristina Pinotti</p>
+        <p class="timeline__meta"><span class="badge badge--warm">Excellent with praise</span></p>
+        <details class="disclosure">
+          <summary>Thesis: Optimizing drone-based applications for delivery and smart agriculture</summary>
+          <div class="disclosure__body">
+            Explored and optimised drone-based solutions for last-mile delivery and smart agriculture.
+            Devised novel strategies for complex combinatorial problems in route optimisation and agricultural
+            operations. Investigated computer vision techniques for pest monitoring in orchards, leading to an
+            autonomous protocol for pest management.
+          </div>
+        </details>
+      </article>
 
-      <div class="timeline-item">
-        <div class="timeline__year">03/2022 – 06/2022</div>
-        <div class="timeline__dot" style="background:var(--accent-2)"></div>
-        <div class="timeline__body">
-          <h4>Tutor — Algorithms &amp; Data Structures</h4>
-          <p>University of Perugia, Italy</p>
-        </div>
-      </div>
+      <article class="timeline-item reveal">
+        <span class="timeline__dot"></span>
+        <p class="timeline__year">12/2018 – 09/2020</p>
+        <h3 class="timeline__title">MSc in Computer Science</h3>
+        <p class="timeline__org">University of Perugia, Italy · advisor: Maria Cristina Pinotti</p>
+        <p class="timeline__meta"><span class="badge badge--warm">Summa cum laude</span></p>
+        <details class="disclosure">
+          <summary>Thesis: Routing drones being aware of wind conditions</summary>
+          <div class="disclosure__body">
+            First demonstration that wind can be leveraged to extend drone flight paths.
+            Developed algorithms to optimise drone routes in the presence of dynamically changing winds.
+          </div>
+        </details>
+      </article>
+
+      <article class="timeline-item reveal">
+        <span class="timeline__dot"></span>
+        <p class="timeline__year">09/2015 – 11/2018</p>
+        <h3 class="timeline__title">BSc in Computer Science</h3>
+        <p class="timeline__org">University of Perugia, Italy · advisor: Marco Baioletti</p>
+        <p class="timeline__meta"><span class="badge">104/110</span></p>
+        <details class="disclosure">
+          <summary>Thesis: Lattice-based cryptography</summary>
+          <div class="disclosure__body">
+            Exploration of cryptographic systems robust against quantum computers.
+            Inspired by NTRU, designed a cryptosystem resilient to quantum attacks.
+          </div>
+        </details>
+      </article>
+
+      <article class="timeline-item reveal">
+        <span class="timeline__dot"></span>
+        <p class="timeline__year">09/2010 – 07/2015</p>
+        <h3 class="timeline__title">Secondary school diploma in IT</h3>
+        <p class="timeline__org">Technical Pole Franchetti-Salviani, Città di Castello, Italy</p>
+        <p class="timeline__meta"><span class="badge">100/100</span></p>
+      </article>
 
     </div>
-  </div>
+  </section>
+
+  <!-- ── SKILLS ──────────────────────────────────────────────────── -->
+  <section class="section">
+    <div class="section__head reveal">
+      <span class="section-label">Toolbox</span>
+      <h2 class="section-title">Skills</h2>
+    </div>
+
+    <h3 class="subhead reveal">Research areas</h3>
+    <div class="cluster reveal">
+      <span class="badge badge--accent">Algorithm design</span>
+      <span class="badge badge--accent">Combinatorial optimization</span>
+      <span class="badge badge--accent">Unmanned vehicles</span>
+      <span class="badge badge--accent">Computer vision</span>
+      <span class="badge badge--accent">Internet of Things</span>
+      <span class="badge badge--accent">Ultra-constrained systems</span>
+      <span class="badge badge--accent">Edge computing</span>
+    </div>
+
+    <h3 class="subhead reveal">Programming</h3>
+    <div class="cluster reveal">
+      <span class="badge">Python</span>
+      <span class="badge">C</span>
+      <span class="badge">C++</span>
+      <span class="badge">Java</span>
+      <span class="badge">JavaScript</span>
+      <span class="badge">MATLAB</span>
+      <span class="badge">Bash</span>
+      <span class="badge">PHP</span>
+      <span class="badge">OCaml</span>
+      <span class="badge">Pascal</span>
+      <span class="badge">Visual Basic</span>
+      <span class="badge">LaTeX</span>
+    </div>
+
+    <h3 class="subhead reveal">Systems &amp; tools</h3>
+    <div class="cluster reveal">
+      <span class="badge badge--teal">Linux</span>
+      <span class="badge badge--teal">Docker</span>
+      <span class="badge badge--teal">MySQL</span>
+      <span class="badge badge--teal">PostgreSQL</span>
+      <span class="badge badge--teal">SQLite</span>
+      <span class="badge badge--teal">Apache</span>
+      <span class="badge badge--teal">Tomcat</span>
+      <span class="badge badge--teal">Laravel</span>
+      <span class="badge badge--teal">Bootstrap</span>
+      <span class="badge badge--teal">jQuery / Ajax / JSON</span>
+      <span class="badge badge--teal">PyCharm</span>
+      <span class="badge badge--teal">VirtualBox</span>
+    </div>
+
+    <h3 class="subhead reveal">Languages &amp; certifications</h3>
+    <div class="cluster reveal">
+      <span class="badge badge--warm">Italian — native</span>
+      <span class="badge badge--warm">English — B2</span>
+      <span class="badge badge--warm">French — A2</span>
+      <span class="badge badge--warm">Drone licence — A1/A3 open</span>
+    </div>
+  </section>
+
+  <!-- ── AFFILIATIONS ────────────────────────────────────────────── -->
+  <section class="section">
+    <div class="section__head reveal">
+      <span class="section-label">Memberships</span>
+      <h2 class="section-title">Professional affiliations</h2>
+    </div>
+
+    <ul class="entry-list" data-stagger>
+      <li class="entry reveal">
+        <p class="entry__title">Institute of Electrical and Electronics Engineers (IEEE) — Member</p>
+        <p class="entry__meta"><span>2022 – present</span></p>
+      </li>
+      <li class="entry reveal">
+        <p class="entry__title">Association for Computing Machinery (ACM) — Member</p>
+        <p class="entry__meta"><span>2020 – present</span></p>
+      </li>
+      <li class="entry reveal">
+        <p class="entry__title">INdAM — GNCS Group</p>
+        <p class="entry__meta"><span>2020 – present</span> <span class="sep">·</span> <span>Head: Prof. Alfredo Navarra</span></p>
+      </li>
+      <li class="entry reveal">
+        <p class="entry__title">BREADCRUMBS group</p>
+        <p class="entry__meta"><span>2024 – 2025</span> <span class="sep">·</span> <span>Head: Prof. Francesco Betti Sorbelli</span></p>
+      </li>
+      <li class="entry reveal">
+        <p class="entry__title">HALY.ID international project &amp; research group</p>
+        <p class="entry__meta"><span>2020 – 2024</span> <span class="sep">·</span> <span>Head: Prof. Cristina M. Pinotti</span></p>
+      </li>
+    </ul>
+  </section>
+
+  <section class="section">
+    <div class="cta-band reveal">
+      <div>
+        <h2 class="cta-band__title">Want the full record?</h2>
+        <p class="cta-band__text">The PDF CV lists every publication, award, committee and course in detail.</p>
+      </div>
+      <a class="btn btn--primary" href="CV.pdf" target="_blank" rel="noopener">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12m0 0 4-4m-4 4-4-4M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-2"/></svg>
+        Download CV
+      </a>
+    </div>
+  </section>
 
 </main>
 
 <footer class="footer">
   <div class="footer__inner">
-    <p>© 2024 Lorenzo Palazzetti &nbsp;·&nbsp; University of Perugia &nbsp;·&nbsp; Last update: 14/03/2026</p>
+    <p>© 2026 Lorenzo Palazzetti · Pennsylvania State University</p>
+    <nav class="footer__links" aria-label="Footer">
+      <a href="index.html">Home</a>
+      <a href="research.html">Research</a>
+      <a href="publications.html">Publications</a>
+      <a href="contact.html">Contact</a>
+    </nav>
   </div>
 </footer>
-<script src="nav.js"></script>
+
 </body>
 </html>
