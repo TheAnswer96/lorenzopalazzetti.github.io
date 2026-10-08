@@ -11,20 +11,10 @@
   <meta property="og:title" content="Lorenzo Palazzetti — Computer Scientist">
   <meta property="og:description" content="Postdoctoral Researcher at Penn State. Algorithms, UAVs, computer vision and IoT for intelligent agricultural monitoring.">
   <meta property="og:url" content="https://lorenzopalazzetti.github.io/">
-  <meta property="og:image" content="https://lorenzopalazzetti.github.io/images/profile.jpg">
+  <meta property="og:image" content="https://lorenzopalazzetti.github.io/images/profile2.jpg">
   <meta name="twitter:card" content="summary_large_image">
 
-  <script>
-    // Set the theme before first paint — prevents a flash of the wrong palette.
-    (function () {
-      try {
-        var saved = localStorage.getItem('theme');
-        var dark = saved ? saved === 'dark'
-                         : matchMedia('(prefers-color-scheme: dark)').matches;
-        document.documentElement.dataset.theme = dark ? 'dark' : 'light';
-      } catch (e) { document.documentElement.dataset.theme = 'light'; }
-    })();
-  </script>
+  <meta name="color-scheme" content="dark">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -40,7 +30,7 @@
     "jobTitle": "Postdoctoral Researcher",
     "affiliation": { "@type": "Organization", "name": "The Pennsylvania State University" },
     "url": "https://lorenzopalazzetti.github.io/",
-    "image": "https://lorenzopalazzetti.github.io/images/profile.jpg",
+    "image": "https://lorenzopalazzetti.github.io/images/profile2.jpg",
     "sameAs": [
       "https://scholar.google.it/citations?user=pHADTUQAAAAJ",
       "https://orcid.org/0000-0003-3069-3971",
@@ -71,10 +61,6 @@
     </nav>
 
     <div class="nav__actions">
-      <button class="icon-btn" data-theme-toggle type="button" aria-label="Switch to dark theme">
-        <svg class="icon-moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>
-        <svg class="icon-sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
-      </button>
       <button class="icon-btn nav__burger" data-drawer-toggle type="button" aria-label="Open menu" aria-expanded="false" aria-controls="nav-drawer">
         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
       </button>
@@ -95,35 +81,33 @@
   <!-- ── HERO ────────────────────────────────────────────────────── -->
   <section class="hero">
     <div class="reveal">
-      <p class="hero__eyebrow"><span class="pulse"></span> Postdoctoral Researcher</p>
-      <h1 class="hero__name">Lorenzo<br>Palazzetti</h1>
-      <p class="hero__role">Pennsylvania State University &nbsp;·&nbsp; Computer Science</p>
+      <h1 class="hero__name"><span class="hero__line">Lorenzo</span> <span class="hero__line">Palazzetti</span></h1>
+      <p class="hero__role">Postdoctoral Researcher, Penn State &nbsp;·&nbsp; Habilitated Associate Professor in Informatics</p>
       <p class="hero__bio">
-        I design <strong>algorithms</strong> for problems that have to survive contact with the physical world —
-        drones that must land before the battery dies, sensors that must be reached in one pass,
-        orchards that must be scouted before the pests spread.
-        PhD <strong>with distinction</strong> (Florence, 2024); now at Penn State leading work on AI- and
-        sensor-driven monitoring for livestock and agriculture, after research on
-        <strong>BVLOS</strong> autonomous drone mobility in GPS-denied environments.
-        My agenda spans <strong>combinatorial optimization</strong>, <strong>autonomous systems</strong>,
-        <strong>computer vision</strong>, <strong>edge computing</strong> and the <strong>Internet of Things</strong>.
+        My core work is on <strong>optimization algorithms</strong> and <strong>path planning for drones</strong>,
+        together with <strong>IoT</strong> and <strong>computer vision for monitoring</strong>. I also follow
+        emerging topics in the field. At Penn State I build AI- and sensor-driven monitoring systems
+        for livestock farms.
       </p>
       <div class="hero__cta">
         <a class="btn btn--primary" href="publications.html">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 4h7a3 3 0 0 1 3 3v13a2 2 0 0 0-2-2H2zM22 4h-7a3 3 0 0 0-3 3v13a2 2 0 0 1 2-2h8z"/></svg>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/><path d="M16 13H8"/><path d="M16 17H8"/><path d="M10 9H8"/></svg>
           View publications
         </a>
         <a class="btn btn--outline" href="CV.pdf" target="_blank" rel="noopener">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12m0 0 4-4m-4 4-4-4M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-2"/></svg>
           Download CV
         </a>
-        <a class="btn btn--ghost" href="contact.html">Get in touch →</a>
       </div>
 
       <div class="social-row">
         <a class="social-pill" href="https://scholar.google.it/citations?user=pHADTUQAAAAJ&hl=it" target="_blank" rel="noopener">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 9 12 4 2 9l10 5 10-5Z"/><path d="M6 11.5V16c0 1.7 2.7 3 6 3s6-1.3 6-3v-4.5"/></svg>
           Scholar
+        </a>
+        <a class="social-pill" href="https://www.scopus.com/authid/detail.uri?authorId=57422576800" target="_blank" rel="noopener">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/><path d="M16 13H8"/><path d="M16 17H8"/><path d="M10 9H8"/></svg>
+          Scopus
         </a>
         <a class="social-pill" href="https://dblp.org/pid/306/6867.html" target="_blank" rel="noopener">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><ellipse cx="12" cy="5" rx="8" ry="3"/><path d="M4 5v14c0 1.7 3.6 3 8 3s8-1.3 8-3V5"/><path d="M4 12c0 1.7 3.6 3 8 3s8-1.3 8-3"/></svg>
@@ -144,91 +128,160 @@
       </div>
     </div>
 
-    <img class="hero__photo reveal" src="images/profile.jpg" alt="Portrait of Lorenzo Palazzetti"
-         width="640" height="800" fetchpriority="high" decoding="async">
+    <img class="hero__photo reveal" src="images/profile2.jpg" alt="Portrait of Lorenzo Palazzetti"
+         width="746" height="1120" fetchpriority="high" decoding="async">
   </section>
 
-  <!-- ── AT A GLANCE ─────────────────────────────────────────────── -->
-  <section class="section" aria-label="Key figures">
-    <div class="stats reveal">
-      <div class="stat"><div class="stat__num">11</div><div class="stat__label">Journal articles</div></div>
-      <div class="stat"><div class="stat__num">21</div><div class="stat__label">Conference papers</div></div>
-      <div class="stat"><div class="stat__num">5</div><div class="stat__label">Awards &amp; honors</div></div>
-      <div class="stat"><div class="stat__num">20+</div><div class="stat__label">TPC &amp; reviewer roles</div></div>
+  <!-- ── NOW ─────────────────────────────────────────────────────── -->
+  <section class="section">
+    <div class="section__head reveal">
+      <h2 class="section-title">What I'm working on</h2>
     </div>
+
+    <ul class="now-list" data-stagger>
+      <li class="now-item reveal">
+        <span class="section-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="6" cy="19" r="3"/><path d="M9 19h8.5a3.5 3.5 0 0 0 0-7h-11a3.5 3.5 0 0 1 0-7H15"/><circle cx="18" cy="5" r="3"/></svg></span>
+        <div>
+          <h3 class="now-item__title">BVLoS drone operations</h3>
+          <p class="now-item__text">Routing and planning algorithms that let drones fly safely beyond the
+            pilot's visual line of sight. This is the topic of my INdAM–GNCS research project.</p>
+        </div>
+      </li>
+      <li class="now-item reveal">
+        <span class="section-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 7V5a2 2 0 0 1 2-2h2"/><path d="M17 3h2a2 2 0 0 1 2 2v2"/><path d="M21 17v2a2 2 0 0 1-2 2h-2"/><path d="M7 21H5a2 2 0 0 1-2-2v-2"/><circle cx="12" cy="12" r="1"/><path d="M18.94 12.33a1 1 0 0 0 0-.66 7.5 7.5 0 0 0-13.88 0 1 1 0 0 0 0 .66 7.5 7.5 0 0 0 13.88 0"/></svg></span>
+        <div>
+          <h3 class="now-item__title">Efficient computer vision for smart agriculture</h3>
+          <p class="now-item__text">Vision models for orchards and livestock that run on embedded devices,
+            keeping energy use and computation low.</p>
+        </div>
+      </li>
+      <li class="now-item reveal">
+        <span class="section-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 4.99-5.54 10.19-7.4 11.8a1 1 0 0 1-1.2 0C9.54 20.19 4 14.99 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></svg></span>
+        <div>
+          <h3 class="now-item__title">Drone localization and navigation</h3>
+          <p class="now-item__text">Locating and guiding drones when GNSS is unreliable or unavailable,
+            using onboard sensing and radio ranging.</p>
+        </div>
+      </li>
+    </ul>
+  </section>
+
+  <!-- ── NEWS ────────────────────────────────────────────────────── -->
+  <section class="section">
+    <div class="section__head reveal">
+      <h2 class="section-title">Recent news</h2>
+    </div>
+
+    <ol class="news" data-stagger>
+      <li class="news__item reveal">
+        <span class="news__date">Jul 2026</span>
+        <span class="section-icon section-icon--warm"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.85 8.62a4 4 0 0 1 4.78-4.77 4 4 0 0 1 6.74 0 4 4 0 0 1 4.78 4.78 4 4 0 0 1 0 6.74 4 4 0 0 1-4.77 4.78 4 4 0 0 1-6.75 0 4 4 0 0 1-4.78-4.77 4 4 0 0 1 0-6.76Z"/><path d="m9 12 2 2 4-4"/></svg></span>
+        <p class="news__text">I obtained the <strong>National Scientific Qualification (ASN)</strong> as Associate Professor in Informatics.</p>
+      </li>
+      <li class="news__item reveal">
+        <span class="news__date">2026</span>
+        <span class="section-icon section-icon--warm"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="8" cy="8" r="6"/><path d="M18.09 10.37A6 6 0 1 1 10.34 18"/><path d="M7 6h1v4"/><path d="m16.71 13.88.7.71-2.82 2.82"/></svg></span>
+        <p class="news__text">My <strong>INdAM–GNCS research project</strong> on efficient drone routing for BVLOS operations was funded.</p>
+      </li>
+      <li class="news__item reveal">
+        <span class="news__date">2026</span>
+        <span class="section-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/><path d="M16 13H8"/><path d="M16 17H8"/><path d="M10 9H8"/></svg></span>
+        <p class="news__text"><strong>Seven papers accepted</strong> this year, at DCOSS-IoT, IEEE ICC and IEEE GLOBECOM.</p>
+      </li>
+      <li class="news__item reveal">
+        <span class="news__date">Ongoing</span>
+        <span class="section-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20h9"/><path d="M16.5 3.5a2.12 2.12 0 0 1 3 3L7 19l-4 1 1-4Z"/></svg></span>
+        <p class="news__text">I'm guest editing an <strong>ACM JATS special issue</strong> on navigation in complex and GPS-denied environments.</p>
+      </li>
+      <li class="news__item reveal">
+        <span class="news__date">Oct 2025</span>
+        <span class="section-icon section-icon--warm"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="6"/><path d="M15.48 12.89 17 22l-5-3-5 3 1.52-9.11"/></svg></span>
+        <p class="news__text">Our paper was a <strong>Best Paper candidate</strong> at IEEE MetroAgriFor 2025 in Bologna.</p>
+      </li>
+    </ol>
   </section>
 
   <!-- ── RESEARCH INTERESTS ──────────────────────────────────────── -->
   <section class="section">
     <div class="section__head reveal">
-      <span class="section-label">Focus areas</span>
-      <h2 class="section-title">Research interests</h2>
+      <h2 class="section-title">The questions I work on</h2>
     </div>
 
     <div class="grid-cards" data-stagger>
       <article class="card card--hover reveal">
-        <div class="feature__icon"><img src="images/alg.svg" alt="" width="24" height="24" loading="lazy"></div>
-        <h3 class="feature__title">Algorithm design &amp; analysis</h3>
-        <p class="feature__desc">Exact, approximation and heuristic algorithms for NP-hard combinatorial problems.</p>
+        <div class="feature__head"><span class="section-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="6" cy="19" r="3"/><path d="M9 19h8.5a3.5 3.5 0 0 0 0-7h-11a3.5 3.5 0 0 1 0-7H15"/><circle cx="18" cy="5" r="3"/></svg></span><h3 class="feature__title">Algorithms &amp; optimization</h3></div>
+        <p class="feature__desc">How do you plan routes and schedules when energy, wind and time all push back?
+          Exact, approximation and heuristic answers to hard combinatorial problems.</p>
       </article>
       <article class="card card--hover reveal">
-        <div class="feature__icon"><img src="images/drone.svg" alt="" width="24" height="24" loading="lazy"></div>
-        <h3 class="feature__title">Unmanned aerial vehicles</h3>
-        <p class="feature__desc">Route optimization, energy-aware planning, truck–drone delivery systems.</p>
+        <div class="feature__head"><span class="section-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="3 11 22 2 13 21 11 13 3 11"/></svg></span><h3 class="feature__title">Autonomous drones</h3></div>
+        <p class="feature__desc">How can a drone deliver, scout or inspect safely, even far from the pilot
+          and without GPS?</p>
       </article>
       <article class="card card--hover reveal">
-        <div class="feature__icon"><img src="images/ag.svg" alt="" width="24" height="24" loading="lazy"></div>
-        <h3 class="feature__title">Precision agriculture</h3>
-        <p class="feature__desc">Drone- and IoT-based decision support for agricultural monitoring.</p>
+        <div class="feature__head"><span class="section-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 7V5a2 2 0 0 1 2-2h2"/><path d="M17 3h2a2 2 0 0 1 2 2v2"/><path d="M21 17v2a2 2 0 0 1-2 2h-2"/><path d="M7 21H5a2 2 0 0 1-2-2v-2"/><circle cx="12" cy="12" r="1"/><path d="M18.94 12.33a1 1 0 0 0 0-.66 7.5 7.5 0 0 0-13.88 0 1 1 0 0 0 0 .66 7.5 7.5 0 0 0 13.88 0"/></svg></span><h3 class="feature__title">Computer vision</h3></div>
+        <p class="feature__desc">How small and fast can a model be and still spot a pest, an animal or a gesture
+          on embedded hardware?</p>
       </article>
       <article class="card card--hover reveal">
-        <div class="feature__icon"><img src="images/vision.svg" alt="" width="24" height="24" loading="lazy"></div>
-        <h3 class="feature__title">Computer vision</h3>
-        <p class="feature__desc">Vision models optimized for embedded and resource-constrained devices.</p>
+        <div class="feature__head"><span class="section-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 20h10"/><path d="M10 20c5.5-2.5.8-6.4 3-10"/><path d="M9.5 9.4c1.1.8 1.8 2.2 2.3 3.7-2 .4-3.5.4-4.8-.3-1.2-.6-2.3-1.9-3-4.2 2.8-.5 4.4 0 5.5.8z"/><path d="M14.1 6a7 7 0 0 0-1.1 4c1.9-.1 3.3-.6 4.3-1.4 1-1 1.6-2.3 1.7-4.6-2.7.1-4 1-4.9 2z"/></svg></span><h3 class="feature__title">IoT for agriculture</h3></div>
+        <p class="feature__desc">How do we turn orchards and barns into places that report their own condition,
+          through sensors, drones and edge devices?</p>
       </article>
     </div>
   </section>
 
-  <!-- ── HIGHLIGHTS ──────────────────────────────────────────────── -->
+  <!-- ── PATH ────────────────────────────────────────────────────── -->
   <section class="section">
     <div class="section__head reveal">
-      <span class="section-label">Latest</span>
-      <h2 class="section-title">Recent highlights</h2>
+      <h2 class="section-title">How I got here</h2>
     </div>
 
-    <ul class="entry-list" data-stagger>
-      <li class="entry reveal">
-        <p class="entry__title">Guest Editor — ACM Journal on Autonomous Transportation Systems</p>
-        <p class="entry__meta">
-          <span class="badge badge--accent">Editorship</span>
-          <span>Special issue: navigation for autonomous vehicles in complex and GPS-denied environments</span>
-        </p>
+    <ol class="path reveal">
+      <li class="path__step">
+        <p class="path__year">2018 · 2020</p>
+        <p class="path__what">BSc &amp; MSc in Computer Science</p>
+        <p class="path__where">University of Perugia</p>
       </li>
-      <li class="entry reveal">
-        <p class="entry__title">INdAM–GNCS research project: efficient routing algorithms for BVLOS drone operability</p>
-        <p class="entry__meta">
-          <span class="badge badge--warm">Grant · 2026</span>
-          <span>Principal investigator</span>
-        </p>
+      <li class="path__step">
+        <p class="path__year">2024</p>
+        <p class="path__what">PhD with distinction</p>
+        <p class="path__where">University of Florence</p>
       </li>
-      <li class="entry reveal">
-        <p class="entry__title">Best Paper candidate — IEEE MetroAgriFor 2025</p>
-        <p class="entry__meta">
-          <span class="badge badge--warm">Award</span>
-          <span>Bologna, Italy · October 2025</span>
-        </p>
+      <li class="path__step">
+        <p class="path__year">2024</p>
+        <p class="path__what">Postdoc, BVLOS drones</p>
+        <p class="path__where">University of Perugia</p>
       </li>
-      <li class="entry reveal">
-        <p class="entry__title">Five papers accepted for 2026: three at DCOSS-IoT, two at IEEE ICC</p>
-        <p class="entry__meta">
-          <span class="badge badge--accent">Accepted</span>
-          <span>Livestock sensing, UAV gesture recognition, UWB ranging</span>
-        </p>
+      <li class="path__step">
+        <p class="path__year">2025</p>
+        <p class="path__what">Postdoc, smart farming</p>
+        <p class="path__where">Penn State, USA</p>
       </li>
-    </ul>
+      <li class="path__step path__step--now">
+        <p class="path__year">2026</p>
+        <p class="path__what">ASN, Associate Professor</p>
+        <p class="path__where">Informatics, 01/B1</p>
+      </li>
+    </ol>
+  </section>
 
-    <div style="margin-top:var(--space-5)">
-      <a class="btn btn--outline reveal" href="publications.html">All publications →</a>
+  <!-- ── NUMBERS ─────────────────────────────────────────────────── -->
+  <section class="section" aria-labelledby="numbers-title">
+    <div class="section__head reveal">
+      <h2 class="section-title" id="numbers-title">In numbers</h2>
+    </div>
+    <div class="stats reveal">
+      <div class="stat"><div class="stat__num" data-count>14</div><div class="stat__label">Journal articles</div></div>
+      <div class="stat"><div class="stat__num" data-count>22</div><div class="stat__label">Conference papers</div></div>
+      <div class="stat"><div class="stat__num" data-count>5</div><div class="stat__label">Awards &amp; honors</div></div>
+      <div class="stat"><div class="stat__num" data-count>20+</div><div class="stat__label">TPC &amp; reviewer roles</div></div>
+    </div>
+    <div class="profile-links reveal">
+      <span class="profile-links__label">Citation profiles</span>
+      <a class="btn btn--outline" href="https://www.scopus.com/authid/detail.uri?authorId=57422576800" target="_blank" rel="noopener"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/><path d="M16 13H8"/><path d="M16 17H8"/><path d="M10 9H8"/></svg> Scopus</a>
+      <a class="btn btn--outline" href="https://scholar.google.it/citations?user=pHADTUQAAAAJ" target="_blank" rel="noopener"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg> Google Scholar</a>
+      <a class="btn btn--ghost" href="publications.html">All publications →</a>
     </div>
   </section>
 
@@ -236,13 +289,11 @@
   <section class="section">
     <div class="cta-band reveal">
       <div>
-        <h2 class="cta-band__title">Open to collaboration</h2>
-        <p class="cta-band__text">Drone autonomy, combinatorial optimization, agricultural sensing — reviews, joint papers and student projects welcome.</p>
+        <h2 class="cta-band__title">Collaborations</h2>
+        <p class="cta-band__text">I am open to research collaborations, joint papers and student projects.
+          Feel free to contact me by email.</p>
       </div>
-      <a class="btn btn--primary" href="contact.html">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 5h16v14H4z"/><path d="m4 7 8 5 8-5"/></svg>
-        Contact me
-      </a>
+      <a class="btn btn--primary" href="contact.html">Contact</a>
     </div>
   </section>
 
@@ -256,6 +307,7 @@
       <a href="research.html">Research</a>
       <a href="publications.html">Publications</a>
       <a href="CV.pdf" target="_blank" rel="noopener">CV (PDF)</a>
+      <a href="https://www.scopus.com/authid/detail.uri?authorId=57422576800" target="_blank" rel="noopener">Scopus</a>
     </nav>
   </div>
 </footer>

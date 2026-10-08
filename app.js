@@ -1,4 +1,4 @@
-/* Site behaviour: theme, navigation, scroll reveals.
+/* Site behaviour: navigation, scroll reveals, small motion touches.
    Loaded with `defer` — the DOM is parsed by the time this runs. */
 (function () {
   'use strict';
@@ -6,23 +6,14 @@
   const root = document.documentElement;
   root.classList.remove('no-js');
 
-  /* ── Theme ───────────────────────────────────────────── */
-  // The initial theme is applied by an inline script in <head> to avoid a
-  // flash of the wrong palette; here we only handle toggling.
-  const toggle = document.querySelector('[data-theme-toggle]');
-  if (toggle) {
-    const sync = () => {
-      const dark = root.dataset.theme === 'dark';
-      toggle.setAttribute('aria-label', dark ? 'Switch to light theme' : 'Switch to dark theme');
-      toggle.setAttribute('aria-pressed', String(dark));
-    };
-    sync();
-    toggle.addEventListener('click', () => {
-      root.dataset.theme = root.dataset.theme === 'dark' ? 'light' : 'dark';
-      try { localStorage.setItem('theme', root.dataset.theme); } catch (e) { /* private mode */ }
-      sync();
-    });
-  }
+  /* ── Back to top (enhancement only, so built here) ───── */
+  const toTop = document.createElement('button');
+  toTop.type = 'button';
+  toTop.className = 'to-top';
+  toTop.setAttribute('aria-label', 'Back to top');
+  toTop.innerHTML = '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19V5m-6 6 6-6 6 6"/></svg>';
+  toTop.addEventListener('click', () => window.scrollTo({ top: 0 }));
+  document.body.appendChild(toTop);
 
   /* ── Nav: elevation on scroll ────────────────────────── */
   const nav = document.querySelector('.nav');
@@ -33,6 +24,7 @@
       ticking = true;
       requestAnimationFrame(() => {
         nav.classList.toggle('is-scrolled', window.scrollY > 8);
+        toTop.classList.toggle('is-shown', window.scrollY > window.innerHeight * 1.2);
         ticking = false;
       });
     };
@@ -79,6 +71,67 @@
     }, { rootMargin: '0px 0px -8% 0px', threshold: 0.1 });
 
     targets.forEach((el) => io.observe(el));
+  }
+
+  /* ── In-page jump bar: mark the section being read ───── */
+  // Re-run on `toc:ready`: publications.html builds its year bar after fetching.
+  let spy;
+  const initToc = () => {
+    if (spy) spy.disconnect();
+    const links = [...document.querySelectorAll('.toc a[href^="#"]')];
+    if (!links.length || !('IntersectionObserver' in window)) return;
+    const byId = new Map(links.map((a) => [a.hash.slice(1), a]));
+    const mark = (id) => links.forEach((a) => {
+      const on = a === byId.get(id);
+      if (on) a.setAttribute('aria-current', 'true'); else a.removeAttribute('aria-current');
+      // Keep the active chip visible when the bar overflows on phones.
+      if (on) a.parentElement.scrollTo({ left: a.offsetLeft - 24, behavior: still ? 'auto' : 'smooth' });
+    });
+    // A section counts as "current" while it crosses a band near the top.
+    spy = new IntersectionObserver((entries) => {
+      entries.forEach((e) => { if (e.isIntersecting) mark(e.target.id); });
+    }, { rootMargin: '-20% 0px -70% 0px' });
+    byId.forEach((_, id) => { const s = document.getElementById(id); if (s) spy.observe(s); });
+  };
+  initToc();
+  window.addEventListener('toc:ready', initToc);
+
+  /* ── Pointer spotlight on cards (fine pointers only) ─── */
+  if (!still && matchMedia('(pointer: fine)').matches) {
+    document.addEventListener('pointermove', (e) => {
+      const card = e.target instanceof Element && e.target.closest('.card--hover, .entry, .pub-card');
+      if (!card) return;
+      const r = card.getBoundingClientRect();
+      card.style.setProperty('--mx', e.clientX - r.left + 'px');
+      card.style.setProperty('--my', e.clientY - r.top + 'px');
+    }, { passive: true });
+  }
+
+  /* ── Stat count-up: figures tick up once when first seen ── */
+  const counters = document.querySelectorAll('[data-count]');
+  if (counters.length && !still && 'IntersectionObserver' in window) {
+    const countIo = new IntersectionObserver((entries) => {
+      entries.forEach(({ isIntersecting, target }) => {
+        if (!isIntersecting) return;
+        countIo.unobserve(target);
+        const final = target.dataset.count;          // e.g. "14" or "20+"
+        const n = parseInt(final, 10);
+        if (!n) { target.textContent = final; return; }
+        const suffix = final.slice(String(n).length);
+        const t0 = performance.now();
+        const tick = (now) => {
+          const p = Math.min((now - t0) / 900, 1);
+          target.textContent = Math.round(n * (1 - Math.pow(1 - p, 3))) + suffix;
+          if (p < 1) requestAnimationFrame(tick);
+        };
+        requestAnimationFrame(tick);
+      });
+    }, { threshold: 0.6 });
+    counters.forEach((el) => {
+      el.dataset.count = el.textContent;             // remember the real figure
+      el.textContent = el.textContent.replace(/\d+/, '0');
+      countIo.observe(el);
+    });
   }
 
   /* Stagger siblings inside a [data-stagger] container (40ms apart). */

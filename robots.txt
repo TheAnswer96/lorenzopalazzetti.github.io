@@ -1,0 +1,6 @@
+User-agent: *
+# Old site version and source copies: keep them out of search results
+Disallow: /OLD/
+Disallow: /src/
+
+Sitemap: https://lorenzopalazzetti.github.io/sitemap.xml
